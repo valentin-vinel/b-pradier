@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+:root {
+  --font-playfair: "Playfair Display", serif;
+  --font-open-sans: "Open Sans", sans-serif;
+  --font-lora: 'Lora', serif;
+
+  --color-title: #6B1E1E;
+  --color-text: rgb(0, 0, 58);
+  --color-border: #C5A572;
+}
+
+/* @theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+} */
+
+body {
+  /* font-family: var(--font-open-sans); */
+  font-family: var(--font-lora);
+  color: var(--color-text);
+  background-image: url('../../public/papier-ancien.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair);
+  color: var(--color-title);
+  font-weight: 700;
+}
+
+a:hover {
+  color: var(--color-title);
+  font-weight: bold;
+}
+
+.border-custom {
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+}
