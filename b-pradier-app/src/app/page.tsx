@@ -1,17 +1,9 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
 import accueilImg from "../../public/dessin-neutre.png";
-import menu from "../../public/menu.png";
 import Header from "./shared/Header";
 
 export default function Home() {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMobileMenuOpen(!mobileMenuOpen);
-    };
-
     return (
         <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat text-gray-800 max-w-[1200px] m-auto px-3 lg:px-0">
             <Header />
