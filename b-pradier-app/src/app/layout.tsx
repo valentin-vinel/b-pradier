@@ -32,7 +32,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
-            <body className={`${playfair.variable} ${openSans.variable} ${lora.variable} antialiased`}>{children}</body>
+            <body className={`${playfair.variable} ${openSans.variable} ${lora.variable} antialiased`}>
+                {children}
+            </body>
         </html>
     );
 }

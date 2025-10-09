@@ -5,7 +5,7 @@ import Header from "./shared/Header";
 
 export default function Home() {
     return (
-        <div className="min-h-screen flex flex-col bg-cover bg-center bg-no-repeat text-gray-800 max-w-[1200px] m-auto px-3 lg:px-0">
+        <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
             <Header />
 
             <figure className="mx-auto mt-6">
@@ -29,7 +29,7 @@ export default function Home() {
                 <p className="italic">Bernard Pradier, avec mes bons souvenirs... et à bientôt de vous lire !</p>
             </main>
 
-            <footer className="mt-8 py-2 text-center border-t border-[#C5A572] text-sm text-gray-700 bg-[#f9f6f11c]">
+            <footer className="mt-8 py-2 text-center border-t border-[#C5A572] text-sm text-gray-700 bg-[#f9f6f11c] md:mt-auto">
                 <div className="space-x-6 mb-2">
                     <a href="#" className="">
                         Facebook
