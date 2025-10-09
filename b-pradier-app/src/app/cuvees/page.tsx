@@ -8,11 +8,11 @@ export default function Cuvees() {
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
             <Header />
 
-            <main className="flex flex-col gap-10 mt-10">
+            <main className="flex flex-col gap-10 mt-6">
                 <h2 className="text-2xl text-center">LES 3 TYPES DE CUVÉE DU CHÂTEAU D'HUGUES</h2>
 
                 <article className="flex gap-10">
-                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px]"></Image>
+                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px] h-[150px]"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Grande Réserve</h3>
                         <p className="self-center">
@@ -22,7 +22,7 @@ export default function Cuvees() {
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px]"></Image>
+                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px] h-[150px]"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Cuvée Sylviane</h3>
                         <p className="self-center">
@@ -32,7 +32,7 @@ export default function Cuvees() {
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px]"></Image>
+                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px] h-[150px]"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">L'orée des Collines</h3>
                         <p className="self-center">

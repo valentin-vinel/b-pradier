@@ -34,7 +34,6 @@ body {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -52,4 +51,8 @@ a:hover {
 .border-custom {
     border: 1px solid var(--color-border);
     border-radius: 4px;
+}
+
+.img-shadow {
+  box-shadow: -7px 10px 30px 0px rgba(0,0,0,0.8);
 }

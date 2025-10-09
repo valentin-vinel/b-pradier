@@ -9,9 +9,9 @@ export default function Histoire() {
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
             <Header />
 
-            <main className="flex flex-col gap-12 mt-auto">
+            <main className="flex flex-col gap-4 mt-auto">
                 <article className="flex gap-8">
-                    <Image src={testImg} alt="Photo de l'entré de la cave"></Image>
+                    <Image src={testImg} alt="Photo de l'entré de la cave" className="w-[300px] h-[200px]"></Image>
                     <p className="self-center">
                         Cette idée a germé dans l'esprit de mon épouse Sylviane. Quelques temps plus tard, un soir, elle me dit : "Et si on faisait notre vin !". C'est ainsi que l'année 1988, nous avons pris la succession de mes parents et créé notre cave. Au printemps commencèrent les travaux, avec de petits moyens, l'aide de la famille et de nos amis. Et en septembre, nous étions prêts à vendanger... puis à vinifier notre premier Millésimé... Le Millésime 1988 !
                     </p>
@@ -21,11 +21,11 @@ export default function Histoire() {
                     <p className="self-center">
                         Situé en Côtes du Rhône sur nos 7 hectares d'une sélection de vielles vignes, et donc à petit rendement, essentiellement en "gobelet" pour un meilleur ensoleillement, exposées sur le versant sud des collines du Massif d'Uchaux où se mêlent pins, chênes et genévriers, nous privilégions les petits rendements. Les raisins, cueillis à la main, triés, transportés en caisses étaient retriés sur table à la cave. S'en suivait une cuvaison de deux semaines pour [...]
                     </p>
-                    <Image src={testImg2} alt="Photo de l'entré de la cave"></Image>
+                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="w-[500px] h-[200px]"></Image>
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={testImg} alt="Photo de l'entré de la cave"></Image>
+                    <Image src={testImg} alt="Photo de l'entré de la cave" className="w-[300px] h-[200px]"></Image>
                     <p className="self-center">
                         Nos 23 millésimes, à la fois semblables, car issu d'un même terroir et tout à la fois unique, tel les enfants d'une même famille. L'alchimie de notre sol silico-calcaire, nos cépages et notre façon de travailler, nous ont donné des Millésimes de 1988 à 2010, des vins de grande garde. Mais avec, chaque fois, une richesse aromatiques, une finesse en bouche et une puissante structure, différente. Mon épouse disait : "Ils sont vrais !". Cette expression leur convient, c'est la personnalité qui importe avant tout dans un vin, comme chez une personne.
                     </p>
