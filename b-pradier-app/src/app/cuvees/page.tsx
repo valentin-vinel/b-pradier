@@ -1,7 +1,9 @@
 "use client";
 import Image from "next/image";
 import Header from "../../app/shared/Header";
-import testImg2 from "../../../public/500x200.webp"
+import grandeReserveImg from "../../../public/etq-grande-reserve.png"
+import cuveeSylvianeImg from "../../../public/etq-cuvee-sylviane.png"
+import oreeImg from "../../../public/etq-oree.png"
 
 export default function Cuvees() {
     return (
@@ -12,31 +14,31 @@ export default function Cuvees() {
                 <h2 className="text-2xl text-center">LES 3 TYPES DE CUVÉE DU CHÂTEAU D'HUGUES</h2>
 
                 <article className="flex gap-10">
-                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px] h-[150px]"></Image>
+                    <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className=" shadow-2xl w-[500px] h-[200px]"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Grande Réserve</h3>
                         <p className="self-center">
-                            Son nom l'indique, c'est un vin de garde, fruit d'une longue cuvaison de trois semaines. Le mariage de la Syrah avec le Grenache, nous donne une couleur soutenue avec une palette d'arômes complexes. Nous avons choisi de ne pas l'élever en fût, c'est pour lui conserver toute sa fraîcheur. Avec une bouche riche de fruits confiturés et d'épices, elle accompagnera les viandes rouges, tel un magret de canard, ainsi que de belles pièces de boeuf.
+                        Son nom l'indique, c'est un vin de garde, issu d'une longue cuvaison de trols semaines. Le mariage Syrah et Grenache, nous donne une couleur soutenue avec une palette d'arômes complexes. Nous avons choisi de ne pas l'élever en fut, pour lui conserver toute sa fraîcheur. Sa bouche riche de fruits confiturés et d'épices, accompagnera un magret de canard, ainsi que des pièces de bœuf.
                         </p>
                     </div>
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px] h-[150px]"></Image>
+                    <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="shadow-2xl w-[500px] h-[200px]"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Cuvée Sylviane</h3>
                         <p className="self-center">
-                           En 1988, nous avons vinifié une cuvée en hommage à mon épouse Sylviane, représentée sur le visuel de l'étiquette. Alliance Grenache, Syrah et Mourvèdre, vendangés tardivement, vinifié sans éraflage, ni élevée en fût de chêne, pour exprimer toute son authenticité. Cela nous donne un vin riche, puissant et structuré. Sa robe parée d'arômes de gingembre, de réglisse, et de touche poivrée. Servir sur les plats régionaux traditionnels, les viandes et gibiers, sauces au vin rouge.
+                        En 1998, nous avons vinifié une cuvée en hommage à mon épouse Sylviane. Alliance de Grenache, Syrah et Mourvedre, vendangés tardivement et vinifiée sans éraflage, ni passage en fûts de chêne, pour lui conserver son authenticité. Un vin puissant, structuré et riche aux arômes de réglisse, et d'une touche poivrée. Sur les plats régionaux, les viandes et gibiers, sauces au vin rouge.
                         </p>
                     </div>
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={testImg2} alt="Photo de l'entré de la cave" className="-rotate-5 shadow-2xl w-[400px] h-[150px]"></Image>
+                    <Image src={oreeImg} alt="Photo de l'entré de la cave" className="shadow-2xl w-[500px] h-[200px]"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">L'orée des Collines</h3>
                         <p className="self-center">
-                            Son nom est dû à l'exposition de ses vignes sur le flan sud de nos Collines. Cette entité géologique collinaire du Crétacé Supérieur, composée de grès silicieux et de grés calcaires, lui a permis d'obtenir l'appellation "Villages Massif d'Uchaux". Ce même assemblage que la Cuvée Sylviane, mais élevé une année en vieux fûts de chêne, lui donne élégance et finesse. Sous sa robe, se mêlent des fruits confiturés, des notes de garrigue, d'épices douces. Avec volailles, agneau, lapin aux herbes... et fromages !
+                            Son nom est dû à l’exposition de ses vignes sur le flanc sud de nos "Collines".    Composée de grès siliceux et de grés calcaires a obtenU l’appellation Villages Massif d’Uchaux. Même assemblage que la Cuvée Sylviane, mais élevée  en fûts, lui donne une élégance et finesse, où se mêlent fruits confiturés, notes de garrigue, d’épices douces… Sur viandes blanches, agneau, et fromages.
                         </p>
                     </div>
                 </article>
