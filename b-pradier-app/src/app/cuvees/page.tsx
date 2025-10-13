@@ -1,40 +1,42 @@
 "use client";
 import Image from "next/image";
 import Header from "../../app/shared/Header";
-import grandeReserveImg from "../../../public/etq-grande-reserve.png"
-import cuveeSylvianeImg from "../../../public/etq-cuvee-sylviane.png"
-import oreeImg from "../../../public/etq-oree.png"
+import grandeReserveImg from "../../../public/cuvees/etq-grande-reserve.png"
+import cuveeSylvianeImg from "../../../public/cuvees/etq-cuvee-sylviane.png"
+import oreeImg from "../../../public/cuvees/etq-oree.png"
 
 export default function Cuvees() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
+            {/* <div className="fixed top-0 left-0 w-full h-full bg-[#72605e]/30 z-[-1]"></div> */}
+            {/* <div className="fixed top-0 left-0 w-full h-full bg-[#afad8e]/50 z-[-1]"></div> */}
             <Header />
 
             <main className="flex flex-col gap-10 mt-6">
-                <h2 className="text-2xl text-center">LES 3 TYPES DE CUVÉE DU CHÂTEAU D'HUGUES</h2>
+                <h2 className="text-2xl text-center font-bold">LES 3 TYPES DE CUVÉE DU CHÂTEAU D'HUGUES</h2>
 
                 <article className="flex gap-10">
-                    <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className=" shadow-2xl w-[500px] h-[200px]"></Image>
+                    <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className="img-shadow w-[400px] h-auto -rotate-5"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Grande Réserve</h3>
                         <p className="self-center">
-                        Son nom l'indique, c'est un vin de garde, issu d'une longue cuvaison de trols semaines. Le mariage Syrah et Grenache, nous donne une couleur soutenue avec une palette d'arômes complexes. Nous avons choisi de ne pas l'élever en fut, pour lui conserver toute sa fraîcheur. Sa bouche riche de fruits confiturés et d'épices, accompagnera un magret de canard, ainsi que des pièces de bœuf.
+                            Son nom l'indique, c'est un vin de garde, issu d'une longue cuvaison de trols semaines. Le mariage Syrah et Grenache, nous donne une couleur soutenue avec une palette d'arômes complexes. Nous avons choisi de ne pas l'élever en fut, pour lui conserver toute sa fraîcheur. Sa bouche riche de fruits confiturés et d'épices, accompagnera un magret de canard, ainsi que des pièces de bœuf.
                         </p>
                     </div>
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="shadow-2xl w-[500px] h-[200px]"></Image>
+                    <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[400px] h-auto -rotate-5"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Cuvée Sylviane</h3>
                         <p className="self-center">
-                        En 1998, nous avons vinifié une cuvée en hommage à mon épouse Sylviane. Alliance de Grenache, Syrah et Mourvedre, vendangés tardivement et vinifiée sans éraflage, ni passage en fûts de chêne, pour lui conserver son authenticité. Un vin puissant, structuré et riche aux arômes de réglisse, et d'une touche poivrée. Sur les plats régionaux, les viandes et gibiers, sauces au vin rouge.
+                            En 1998, nous avons vinifié une cuvée en hommage à mon épouse Sylviane. Alliance de Grenache, Syrah et Mourvedre, vendangés tardivement et vinifiée sans éraflage, ni passage en fûts de chêne, pour lui conserver son authenticité. Un vin puissant, structuré et riche aux arômes de réglisse, et d'une touche poivrée. Sur les plats régionaux, les viandes et gibiers, sauces au vin rouge.
                         </p>
                     </div>
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={oreeImg} alt="Photo de l'entré de la cave" className="shadow-2xl w-[500px] h-[200px]"></Image>
+                    <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[400px] h-auto -rotate-5"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">L'orée des Collines</h3>
                         <p className="self-center">

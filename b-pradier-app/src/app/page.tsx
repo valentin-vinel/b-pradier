@@ -1,11 +1,13 @@
 "use client";
 import Image from "next/image";
-import accueilImg from "../../public/dessin-neutre.png";
+import accueilImg from "../../public/accueil/dessin-accueil.png";
 import Header from "./shared/Header";
 
 export default function Home() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
+            {/* <div className="fixed top-0 left-0 w-full h-full bg-[#72605e] z-[-1]"></div> */}
+            {/* <div className="fixed top-0 left-0 w-full h-full bg-[#afad8e]/50 z-[-1]"></div> */}
             <Header />
 
             <figure className="mx-auto mt-6">

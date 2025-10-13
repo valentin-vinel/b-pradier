@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import menu from "../../../public/bar.png";
+import Link from "next/link";
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -28,22 +29,17 @@ export default function Header() {
 
                 {/* Menu desktop */}
                 <nav className="hidden md:flex md:gap-[50px] md:items-end text-[#6B1E1E] font-medium" aria-label="Menu principal">
-              <a href="/" className="hover:text-[#C5A572] transition-colors">Histoire</a>
-              <a href="/" className="hover:text-[#C5A572] transition-colors">Cuvées</a>
-              <a href="/" className="hover:text-[#C5A572] transition-colors">Millésimes</a> </nav>
+                    <Link href={'/histoire'} className="hover:text-[#C5A572] transition-colors">Histoire</Link>
+                    <Link href={'/cuvees'} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
+                    <Link href={'/millesimes'} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
+                </nav>
             </header>
             {/* Menu mobile déroulant */}
             {mobileMenuOpen && (
-                <nav className="flex flex-col gap-3 text-[#6B1E1E] font-medium  items-center hover:font-bold lg:hidden">
-                    <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">
-                        Histoire
-                    </a>
-                    <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">
-                        Cuvées
-                    </a>
-                    <a href="/" onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">
-                        Millésimes
-                    </a>
+                <nav className="flex flex-col gap-3 text-[#6B1E1E] font-medium  items-center lg:hidden">
+                    <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Histoire</Link>
+                    <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
+                    <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
                 </nav>
             )}
         </>
