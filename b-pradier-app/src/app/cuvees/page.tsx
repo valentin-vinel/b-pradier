@@ -20,7 +20,7 @@ export default function Cuvees() {
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Grande Réserve</h3>
                         <p className="self-center">
-                            Son nom l'indique, c'est un vin de garde, issu d'une longue cuvaison de trols semaines. Le mariage Syrah et Grenache, nous donne une couleur soutenue avec une palette d'arômes complexes. Nous avons choisi de ne pas l'élever en fut, pour lui conserver toute sa fraîcheur. Sa bouche riche de fruits confiturés et d'épices, accompagnera un magret de canard, ainsi que des pièces de bœuf.
+                            Son nom l'indique, c'est un vin de garde, issu d'une longue cuvaison de trois semaines. Le mariage Syrah et Grenache, nous donne une couleur soutenue avec une palette d'arômes complexes. Nous avons choisi de ne pas l'élever en fut, pour lui conserver toute sa fraîcheur. Sa bouche riche de fruits confiturés et d'épices, accompagnera un magret de canard, ainsi que des pièces de bœuf.
                         </p>
                     </div>
                 </article>
