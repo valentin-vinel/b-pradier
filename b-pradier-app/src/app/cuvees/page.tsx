@@ -12,11 +12,11 @@ export default function Cuvees() {
             {/* <div className="fixed top-0 left-0 w-full h-full bg-[#afad8e]/50 z-[-1]"></div> */}
             <Header />
 
-            <main className="flex flex-col gap-10 mt-6">
+            <main className="flex flex-col gap-10 mt-4">
                 <h2 className="text-2xl text-center font-bold">LES 3 TYPES DE CUVÉE DU CHÂTEAU D'HUGUES</h2>
 
-                <article className="flex gap-10">
-                    <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className="img-shadow w-[400px] h-auto -rotate-5"></Image>
+                <article className="flex gap-8 justify-between">
+                    <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className="img-shadow w-[350px] h-[150px]  -rotate-5"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Grande Réserve</h3>
                         <p className="self-center">
@@ -26,7 +26,7 @@ export default function Cuvees() {
                 </article>
 
                 <article className="flex gap-8">
-                    <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[400px] h-auto -rotate-5"></Image>
+                    <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[350px] h-[150px]  -rotate-5"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">La Cuvée Sylviane</h3>
                         <p className="self-center">
@@ -35,12 +35,12 @@ export default function Cuvees() {
                     </div>
                 </article>
 
-                <article className="flex gap-8">
-                    <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[400px] h-auto -rotate-5"></Image>
+                <article className="flex gap-8 mb-8">
+                    <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[350px] h-[150px]  -rotate-5"></Image>
                     <div className="flex flex-col justify-center items-center gap-2">
                         <h3 className="text-xl">L'orée des Collines</h3>
                         <p className="self-center">
-                            Son nom est dû à l’exposition de ses vignes sur le flanc sud de nos "Collines".    Composée de grès siliceux et de grés calcaires a obtenU l’appellation Villages Massif d’Uchaux. Même assemblage que la Cuvée Sylviane, mais élevée  en fûts, lui donne une élégance et finesse, où se mêlent fruits confiturés, notes de garrigue, d’épices douces… Sur viandes blanches, agneau, et fromages.
+                            Son nom est dû à l’exposition de ses vignes sur le flanc sud de nos "Collines". Composée de grès siliceux et de grés calcaires a obtenu l’appellation Villages Massif d’Uchaux. Même assemblage que la Cuvée Sylviane, mais élevée  en fûts, lui donne une élégance et finesse, où se mêlent fruits confiturés, notes de garrigue, d’épices douces… Sur viandes blanches, agneau, et fromages.
                         </p>
                     </div>
                 </article>
