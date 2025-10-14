@@ -20,7 +20,7 @@ export default function Histoire() {
 
                 <article className="flex gap-8">
                     <p className="self-center">
-                        Situé en Côtes du Rhône sur nos 7 hectares d'une sélection de vielles vignes, et donc à petit rendement, essentiellement en "gobelet" pour un meilleur ensoleillement, exposées sur le versant sud des collines du Massif d'Uchaux où se mêlent pins, chênes et genévriers, nous privilégions les petits rendements. Les raisins, cueillis à la main, triés, transportés en caisses étaient retriés sur table à la cave. S'en suivait une cuvaison de deux semaines pour [...]
+                        Situé en Côtes du Rhône sur nos 7 hectares d'une sélection de vielles vignes, et donc à petit rendement, essentiellement en "gobelet" pour un meilleur ensoleillement, exposées sur le versant sud des collines du Massif d'Uchaux où se mêlent pins, chênes et genévriers, nous privilégions les petits rendements. Les raisins, cueillis à la main, triés, transportés en caisses étaient retriés sur table à la cave. S'en suivait une cuvaison de deux semaines pour donner 3 cuvées de vin rouge de grande garde.
                     </p>
                     <Image src={dessinVendange} alt="Photo de l'entré de la cave" className="w-[500px] h-[200px]"></Image>
                 </article>
