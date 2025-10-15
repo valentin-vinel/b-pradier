@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { useState } from "react";
-import menu from "../../../public/bar.png";
+import menu from "../../public/bar.png";
 import Link from "next/link";
-import panier from "../../../public/coffret-a-vin.png"
+import panier from "../../public/coffret-a-vin.png"
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import accueilImg from "../../public/accueil/dessin-accueil.png";
-import Header from "./shared/Header";
+import Header from "../shared/Header";
 
 export default function Home() {
     return (
@@ -19,18 +19,18 @@ export default function Home() {
                 <h2 className="mt-4 text-xl inline-block md:text-xl mb-2">
                     Il n'y aura pas de millésimé 2025... Le domaine viticole du Château d'Hugues a cessé... <br /> Il est définitivement rentré dans la légende.
                 </h2>
-                <p>
+                <p className="text-justify">
                     Depuis 1988, nous conservions des bouteilles de chaque millésime des cuvées de garde. Mon successeur n'avais pu racheter mes millésimes rares de 1988 ininterrompu à 2010, ce qui me permet de vous les proposer. Si je les vends, uniquement par ce site, c'est que j'ai fais l'année dernière, un AVC...
                 </p>
-                <p className="">J'en ai réchappé, mais avec des séquelles qui m'empêchent de recevoir pour déguster.</p>
-                <p className="">
+                <p  className="text-justify">J'en ai réchappé, mais avec des séquelles qui m'empêchent de recevoir pour déguster.</p>
+                <p  className="text-justify">
                     <strong>Mon concept, cette année, est la mise à l'honneur des 3 cuvées du millésimé 2005... C'est "son 20ème anniversaire" !</strong>
                 </p>
                 <p>
                     Je peux vous garantir de sa bonification, avec le temps et de l'excellent état de conservation des bouchons. Tout comme pour les millésimes 2006 à 2010, car avec mes amis,
                     chaque semaine nous... "les contrôlons !"
                 </p>
-                <p className="mt-2 mb-2 leading-relaxed">
+                <p className="mt-2 mb-2 leading-relaxed text-justify">
                     Chers amis-clients des quelques 20 premières années, Madame, Monsieur... Avec toute mon amitié et je l'espère, à bientôt de vous lire !
                 </p>
                 <p className="italic">Bernard Pradier</p>

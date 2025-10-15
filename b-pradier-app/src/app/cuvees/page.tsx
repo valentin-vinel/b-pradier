@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Header from "../../app/shared/Header";
+import Header from "../../shared/Header";
 import grandeReserveImg from "../../../public/cuvees/etq-grande-reserve.png"
 import cuveeSylvianeImg from "../../../public/cuvees/etq-cuvee-sylviane.png"
 import oreeImg from "../../../public/cuvees/etq-oree.png"

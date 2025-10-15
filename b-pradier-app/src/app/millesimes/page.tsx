@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Header from "../../app/shared/Header";
+import Header from "../../shared/Header";
 import bouteilles from "../../../public/millesimes/bouteilles.png"
 import bouteillesCopie from "../../../public/millesimes/bouteilles-Copie.png"
 
