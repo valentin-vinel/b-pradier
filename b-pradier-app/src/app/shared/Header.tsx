@@ -2,6 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import menu from "../../../public/bar.png";
 import Link from "next/link";
+import panier from "../../../public/coffret-a-vin.png"
 
 export default function Header() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -32,14 +33,20 @@ export default function Header() {
                     <Link href={'/histoire'} className="hover:text-[#C5A572] transition-colors">Histoire</Link>
                     <Link href={'/cuvees'} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
                     <Link href={'/millesimes'} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
+                    <Link href={'/'} className="hover:text-[#C5A572] transition-colors">
+                        <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
+                    </Link>
                 </nav>
             </header>
             {/* Menu mobile déroulant */}
             {mobileMenuOpen && (
-                <nav className="flex flex-col gap-3 text-[#6B1E1E] font-medium  items-center lg:hidden">
+                <nav className="flex flex-col gap-3 text-[#6B1E1E] font-medium  items-center lg:hidden mb-10">
                     <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Histoire</Link>
                     <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
                     <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
+                    <Link href={'/'} className="hover:text-[#C5A572] transition-colors">
+                        <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
+                    </Link>
                 </nav>
             )}
         </>
