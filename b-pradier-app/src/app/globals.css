@@ -34,7 +34,6 @@ body {
 }
 
 h1,
-h3,
 h5,
 h6 {
     font-family: var(--font-playfair);
@@ -42,7 +41,7 @@ h6 {
     font-weight: 700;
 }
 
-h4 {
+h4, h3, .lgd-bouchon, .title-millesime {
     font-family: var(--font-playfair);
 }
 
@@ -81,4 +80,18 @@ a:hover {
 
 .border-article {
   border: 2px solid #6b1e1e;
+}
+
+.bg-total-cave {
+  background: radial-gradient(circle, #e4ceb6 0%, #05050e 70%, #000000 80%, #331b05 100%);
+  /* background: linear-gradient(90deg, #2b2a2a 0%, #dac1a4 100%); */
+  /* background: linear-gradient(#dac1a4 0%, #2b2a2a 100%); */
+}
+
+.border-img {
+  border: 6px solid #D5BFA7;
+}
+
+.border-bouteille {
+  border: 5px solid rgb(0, 0, 58);
 }
