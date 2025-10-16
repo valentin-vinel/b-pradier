@@ -1,10 +1,16 @@
+'use client'
+
 import Image from "next/image";
 import { useState } from "react";
 import menu from "../../public/bar.png";
 import Link from "next/link";
 import panier from "../../public/coffret-a-vin.png"
 
-export default function Header() {
+interface HeaderProps {
+  cartQuantity?: number; // optionnel si tu veux
+}
+
+export default function Header({ cartQuantity }: HeaderProps) {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -37,6 +43,12 @@ export default function Header() {
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                     </Link>
                 </nav>
+
+                {cartQuantity && (
+                    <div className="ml-4 rounded-full bg-[#C5A572] text-white w-6 h-6 flex items-center justify-center text-xs">
+                        {cartQuantity}
+                    </div>
+                )}
             </header>
             {/* Menu mobile déroulant */}
             {mobileMenuOpen && (

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Open_Sans, Playfair_Display } from "next/font/google";
+import { Lora, Open_Sans, Playfair_Display, Caveat } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -8,7 +8,7 @@ const playfair = Playfair_Display({
     variable: "--font-playfair",
 });
 
-const openSans = Open_Sans({
+const caveat = Caveat({
     subsets: ["latin"],
     weight: ["400", "500", "600", "700"],
     variable: "--font-open-sans",
@@ -17,7 +17,7 @@ const openSans = Open_Sans({
 const lora = Lora({
     subsets: ["latin"],
     weight: ["400", "700"],
-    variable: "--font-cinzel",
+    variable: "--font-lora",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
-            <body className={`${playfair.variable} ${openSans.variable} ${lora.variable} antialiased text-xl`}>
+            <body className={`${playfair.variable} ${caveat.variable} ${lora.variable} antialiased text-xl`}>
                 {children}
             </body>
         </html>

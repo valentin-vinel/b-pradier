@@ -4,7 +4,9 @@ import Header from "../../shared/Header";
 import bouteilles from "../../../public/millesimes/bouteilles-Copie.png"
 // import heroImg from "../../../public/cadre-hero.png"
 // import cadre from "../../../public/cadre.png"
-import ardoise from "../../../public/millesimes/ardoise.png"
+// import ardoise from "../../../public/millesimes/ardoise.png"
+import ardoise2 from "../../../public/ardoise-8.png"
+import ardoise3 from "../../../public/test-ardoise.png"
 import bouchon from "../../../public/bouchon.png"
 
 
@@ -58,16 +60,31 @@ export default function Histoire() {
 
                 <div className="grid grid-cols-3 gap-6 m-auto text-center w-fit">
                     <figure className="flex flex-col justify-center items-center relative">
-                        <Image src={ardoise} alt="Image d'un cadre suspendu" className="max-w-[240px]"></Image>
-                        <h3 className="text-2xl text-white absolute h-fit m-auto translate-y-1/4 w-[140px] font-bold -rotate-6">GRANDE RÉSERVE</h3>
+                        <Image src={ardoise2} alt="Image d'un cadre suspendu" className="max-w-[240px]"></Image>
+                        <div className="z-[-1] w-[240px] h-[160px] absolute translate-y-5 ardoise-shadow rounded-xl"></div>
+                        <p className="text-3xl text-white absolute h-fit m-auto translate-y-6 w-[180px] font-bold">GRANDE RÉSERVE</p>
+
+                        {/* <Image src={ardoise3} alt="Image d'un cadre suspendu" className="max-w-[220px]"></Image>
+                        <div className=" z-[-1] w-[220px] h-[145px] absolute translate-y-9 ardoise-shadow"></div>
+                        <p className="text-3xl text-white absolute h-fit m-auto translate-y-1/2 w-[200px] font-bold">GRANDE RÉSERVE</p> */}
                     </figure>
                     <figure className="flex flex-col justify-center items-center relative">
-                        <Image src={ardoise} alt="Image d'un cadre suspendu" className="max-w-[240px]"></Image>
-                        <h3 className="text-2xl text-white absolute h-fit m-auto translate-y-1/4 w-[140px] font-bold -rotate-6">CUVÉE SYLVIANE</h3>
+                        <Image src={ardoise2} alt="Image d'un cadre suspendu" className="max-w-[240px]"></Image>
+                        <div className="z-[-1] w-[240px] h-[160px] absolute translate-y-5 ardoise-shadow rounded-xl"></div>
+                        <h3 className="text-3xl text-white absolute h-fit m-auto translate-y-6 w-[180px] font-bold">CUVÉE SYLVIANE</h3>
+
+                        {/* <Image src={ardoise3} alt="Image d'un cadre suspendu" className="max-w-[220px]"></Image>
+                        <div className=" z-[-1] w-[220px] h-[145px] absolute translate-y-9 ardoise-shadow"></div>
+                        <h3 className="text-3xl text-white absolute h-fit m-auto translate-y-1/2 w-[200px] font-bold">CUVÉE SYLVIANE</h3> */}
                     </figure>
                     <figure className="flex flex-col justify-center items-center relative">
-                        <Image src={ardoise} alt="Image d'un cadre suspendu" className="max-w-[240px]"></Image>
-                        <h3 className="text-2xl text-white absolute h-fit m-auto translate-y-1/4 w-[140px] font-bold -rotate-6">L'ORÉE DES COLLINES</h3>
+                        <Image src={ardoise2} alt="Image d'un cadre suspendu" className="max-w-[240px]"></Image>
+                        <div className="z-[-1] w-[240px] h-[160px] absolute translate-y-5 ardoise-shadow rounded-xl"></div>
+                        <h3 className="text-3xl text-white absolute h-fit m-auto translate-y-6 w-[180px] font-bold text-warning">L'ORÉE DES COLLINES</h3>
+
+                        {/* <Image src={ardoise3} alt="Image d'un cadre suspendu" className="max-w-[220px]"></Image>
+                        <div className=" z-[-1] w-[220px] h-[145px] absolute translate-y-9 ardoise-shadow"></div>
+                        <h3 className="text-3xl text-white absolute h-fit m-auto translate-y-1/2 w-[200px] font-bold text-warning">L'ORÉE DES COLLINES</h3> */}
                     </figure>
 
                     {/* {millesimes.map((element, i) => (
