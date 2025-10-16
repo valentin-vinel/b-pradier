@@ -32,7 +32,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
-            <body className={`${playfair.variable} ${caveat.variable} ${lora.variable} antialiased text-xl`}>
+            <body className={`${playfair.variable} ${caveat.variable} ${lora.variable} antialiased md:text-xl`}>
                 {children}
             </body>
         </html>
