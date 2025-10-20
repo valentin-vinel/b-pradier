@@ -4,6 +4,7 @@
     --font-playfair: "Playfair Display", serif;
     --font-caveat: "Caveat", sans-serif;
     --font-lora: "Lora", serif;
+    --font-playball: "Playball", serif;
 
     --color-title: #6b1e1e;
     --color-text: rgb(0, 0, 58);
@@ -43,6 +44,10 @@ body {
 
 .text-warning {
   font-family: var(--font-caveat);
+}
+
+.text-cookie {
+  font-family: var(--font-playball);
 }
 
 h1,

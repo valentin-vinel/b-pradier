@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lora, Open_Sans, Playfair_Display, Caveat } from "next/font/google";
+import { Lora, Playfair_Display, Caveat, Playball } from "next/font/google";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -20,6 +20,12 @@ const lora = Lora({
     variable: "--font-lora",
 });
 
+const playball = Playball({
+    subsets: ["latin"],
+    weight: ["400"],
+    variable: "--font-playball",
+});
+
 export const metadata: Metadata = {
     title: "B. Pradier — Millésimes rares de 1988 à 2010 | Château d'Hugues",
     description: "Découvrez les millésimes rares du Château d'Hugues signés B. Pradier, de 1988 à 2010, conservés avec passion et proposés à la vente en ligne.",
@@ -32,7 +38,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="fr">
-            <body className={`${playfair.variable} ${caveat.variable} ${lora.variable} antialiased md:text-xl`}>
+            <body className={`${playfair.variable} ${caveat.variable} ${lora.variable} ${playball.variable} antialiased md:text-xl`}>
                 {children}
             </body>
         </html>

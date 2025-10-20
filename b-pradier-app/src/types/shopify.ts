@@ -5,6 +5,16 @@ export interface Product {
   featuredImage?: {
     url: string;
   };
+  collections: {
+    edges: {
+      node: {
+        id: string;
+        handle: string;
+        title: string;
+      };
+    }[];
+  };
+  annee?: number;
 }
 
 export interface ProductsResponse {
@@ -15,22 +25,15 @@ export interface ProductsResponse {
   };
 }
 
-
-export interface ShopifyProduct {
-  id: string;
+export interface CollectionWithProducts {
   title: string;
-  variants: {
-    edges: {
-      node: {
-        id: string;
-        title: string;
-        price: {
-          amount: string;
-          currencyCode: string;
-        };
-      };
-    }[];
-  };
+  products: Product[];
+}
+
+export interface CuveesResponse {
+  grandeReserve: { title: string; products: { edges: { node: Product }[] } };
+  sylviane: { title: string; products: { edges: { node: Product }[] } };
+  loree: { title: string; products: { edges: { node: Product }[] } };
 }
 
 export interface ShopifyCart {
