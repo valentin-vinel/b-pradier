@@ -14,6 +14,14 @@ export interface Product {
       };
     }[];
   };
+  variants?: {
+    edges: {
+      node: {
+        id: string;
+        title: string;
+      };
+    }[];
+  };
   annee?: number;
 }
 
@@ -36,13 +44,27 @@ export interface CuveesResponse {
   loree: { title: string; products: { edges: { node: Product }[] } };
 }
 
-export interface ShopifyCart {
+export interface CartLine {
   id: string;
-  totalQuantity: number;
-  cost: {
-    totalAmount: {
-      amount: string;
-      currencyCode: string;
+  quantity: number;
+  merchandise: {
+    id: string;
+    title: string;
+    product: {
+      title: string;
     };
   };
+}
+
+export interface Cart {
+  id: string;
+  lines: {
+    edges: { node: CartLine }[];
+  };
+}
+
+export interface CartContextType {
+  cartId: string | null;
+  totalQuantity: number;
+  addItem: (variantId: string, quantity?: number) => Promise<void>;
 }

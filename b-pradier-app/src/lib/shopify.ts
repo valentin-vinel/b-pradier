@@ -1,4 +1,4 @@
-import { CollectionWithProducts, CuveesResponse, Product, ProductsResponse } from "@/types/shopify";
+import { Cart, CartLine, CollectionWithProducts, CuveesResponse, Product, ProductsResponse } from "@/types/shopify";
 
 const endpoint = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/2025-01/graphql.json`;
 const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN;
@@ -31,6 +31,14 @@ export async function getProducts(): Promise<ProductsResponse["products"]["edges
           title
           handle
           featuredImage { url }
+          variants(first: 1) {
+            edges {
+              node {
+                id
+                title
+              }
+            }
+          }
           collections(first: 5) {
             edges {
               node {
@@ -63,6 +71,14 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
             title
             handle
             featuredImage { url }
+            variants(first: 1) {
+              edges {
+                node {
+                  id
+                  title
+                }
+              }
+            }
             collections(first: 5) {
               edges {
                 node {
@@ -85,6 +101,14 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
             title
             handle
             featuredImage { url }
+            variants(first: 1) {
+              edges {
+                node {
+                  id
+                  title
+                }
+              }
+            }
             collections(first: 5) {
               edges {
                 node {
@@ -107,6 +131,14 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
             title
             handle
             featuredImage { url }
+            variants(first: 1) {
+              edges {
+                node {
+                  id
+                  title
+                }
+              }
+            }
             collections(first: 5) {
               edges {
                 node {
@@ -156,12 +188,8 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
   };
 }
 
-
-
-
-
-
-export async function createCart(): Promise<string> {
+// Création d'un panier
+export async function createCart(): Promise<{ id: string }> {
   const query = `
     mutation {
       cartCreate {
@@ -171,35 +199,31 @@ export async function createCart(): Promise<string> {
       }
     }
   `;
-
   const data = await fetchFromShopify<{ cartCreate: { cart: { id: string } } }>(query);
-  return data.cartCreate.cart.id;
+  return data.cartCreate.cart;
 }
 
-export async function addToCart(cartId: string, variantId: string, quantity: number = 1) {
+// Ajout un produit au panier
+export async function addToCart(cartId: string, variantId: string, quantity = 1): Promise<Cart> {
   const query = `
-    mutation addToCart($cartId: ID!, $lines: [CartLineInput!]!) {
+    mutation cartLinesAdd($cartId: ID!, $lines: [CartLineInput!]!) {
       cartLinesAdd(cartId: $cartId, lines: $lines) {
         cart {
           id
-          totalQuantity
-          cost {
-            totalAmount {
-              amount
-              currencyCode
-            }
-          }
-          lines(first: 5) {
+          lines(first: 10) {
             edges {
               node {
                 id
+                quantity
                 merchandise {
                   ... on ProductVariant {
                     id
                     title
+                    product {
+                      title
+                    }
                   }
                 }
-                quantity
               }
             }
           }
@@ -210,14 +234,39 @@ export async function addToCart(cartId: string, variantId: string, quantity: num
 
   const variables = {
     cartId,
-    lines: [
-      {
-        merchandiseId: variantId,
-        quantity,
-      },
-    ],
+    lines: [{ merchandiseId: variantId, quantity }],
   };
 
-  const data = await fetchFromShopify<{ cartLinesAdd: { cart: any } }>(query, variables);
+  const data = await fetchFromShopify<{ cartLinesAdd: { cart: Cart } }>(query, variables);
   return data.cartLinesAdd.cart;
+}
+
+export async function fetchCart(cartId: string) {
+  const query = `
+    query getCart($cartId: ID!) {
+      cart(id: $cartId) {
+        id
+        lines(first: 50) {
+          edges {
+            node {
+              id
+              quantity
+              merchandise {
+                ... on ProductVariant {
+                  id
+                  title
+                  product {
+                    title
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+  const variables = { cartId };
+  const data = await fetchFromShopify<{ cart: { id: string; lines: { edges: any[] } } }>(query, variables);
+  return data.cart.lines.edges.map(e => e.node);
 }

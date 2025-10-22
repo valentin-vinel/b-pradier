@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { useCart } from "@/context/CartContext";
 import menu from "../../public/bar.png";
 import Link from "next/link";
 import panier from "../../public/coffret-a-vin.png"
@@ -11,11 +12,14 @@ interface HeaderProps {
 }
 
 export default function Header({ cartQuantity }: HeaderProps) {
+    const { totalQuantity } = useCart();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     const toggleMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
+
+    console.log(totalQuantity)
 
     return (
         <>
@@ -39,16 +43,21 @@ export default function Header({ cartQuantity }: HeaderProps) {
                     <Link href={'/histoire'} className="hover:text-[#C5A572] transition-colors">Histoire</Link>
                     <Link href={'/cuvees'} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
                     <Link href={'/millesimes'} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
-                    <Link href={'/'} className="hover:text-[#C5A572] transition-colors">
+                    <Link href={'/'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
+                        {totalQuantity > 0 && (
+                            <span className="absolute -top-2 -right-4 bg-[#6B1E1E] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
+                                {totalQuantity}
+                            </span>
+                        )}
                     </Link>
                 </nav>
 
-                {cartQuantity && (
+                {/* {cartQuantity && (
                     <div className="ml-4 rounded-full bg-[#C5A572] text-white w-6 h-6 flex items-center justify-center text-xs">
                         {cartQuantity}
                     </div>
-                )}
+                )} */}
             </header>
             {/* Menu mobile déroulant */}
             {mobileMenuOpen && (
@@ -57,7 +66,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
                     <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
                     <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
                     <Link href={'/'} className="hover:text-[#C5A572] transition-colors">
-                        <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
+                        {/* <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image> */}
                     </Link>
                 </nav>
             )}

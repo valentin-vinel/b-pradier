@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { CartProvider } from "../context/CartContext";
 import { Lora, Playfair_Display, Caveat, Playball } from "next/font/google";
 import "./globals.css";
 
@@ -39,7 +40,9 @@ export default function RootLayout({
     return (
         <html lang="fr">
             <body className={`${playfair.variable} ${caveat.variable} ${lora.variable} ${playball.variable} antialiased md:text-xl`}>
-                {children}
+                <CartProvider>
+                    {children}
+                </CartProvider>
             </body>
         </html>
     );
