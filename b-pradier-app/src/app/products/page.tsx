@@ -6,7 +6,7 @@ import bouchon from "../../../public/bouchon.png"
 import Link from "next/link";
 import ardoise2 from "../../../public/ardoise-8.png"
 import Image from "next/image";
-import bouteilles from "../../../public/millesimes/bouteilles-Copie.png"
+import bouteilles from "../../../public/millesimes/bouteilles-2.png"
 import Footer from "@/shared/Footer";
 import AddToCartButton from "@/shared/AddToCartButton";
 
@@ -52,7 +52,7 @@ export default async function Products({ product }: { product: any }) {
                       <figure className="flex flex-col justify-center items-center relative">
                         <Image src={ardoise2} alt="Image d'un cadre suspendu" className="max-w-[240px]" />
                         <div className="z-[-1] w-[240px] h-[160px] absolute translate-y-5 ardoise-shadow rounded-xl"></div>
-                        <h3 className={`text-3xl text-white absolute h-fit m-auto translate-y-6 w-[180px] font-bold uppercase ${collectionFonts[collection.title]}`}>
+                        <h3 className={`text-3xl text-white absolute h-fit m-auto translate-y-6 w-[190px] font-bold uppercase ${collectionFonts[collection.title]}`}>
                           {collection.title}
                         </h3>
                       </figure>

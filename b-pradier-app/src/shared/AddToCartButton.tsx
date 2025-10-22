@@ -38,9 +38,12 @@ export default function AddToCartButton({
     <button
       onClick={handleClick}
       disabled={loading}
-      className={`bg-[#D4BFA6] border-2 text-base relative w-[210px] px-4 py-2 
-        hover:text-[#6b1e1e] transition-all disabled:opacity-70 ${className}`}
+      className={`bg-[#D4BFA6] border-2  text-base hover:cursor-pointer hover:text-[#6b1e1e] relative w-[210px] ${className}`}
     >
+      <span className="w-[3px] h-[3px] bg-black absolute top-1 left-1 rounded-xl" />
+      <span className="w-[3px] h-[3px] bg-black absolute top-1 right-1 rounded-xl" />
+      <span className="w-[3px] h-[3px] bg-black absolute bottom-1 left-1 rounded-xl" />
+      <span className="w-[3px] h-[3px] bg-black absolute bottom-1 right-1 rounded-xl" />
       {loading ? "Ajout..." : "Ajouter au panier"}
     </button>
   );

@@ -52,7 +52,7 @@ export default async function Products() {
                                     <Link href={"/millesimes/X"}><span className="text-base">VOIR</span> <br />{product.annee}</Link>
                                 </figcaption>
                             </figure>
-                            <button className="bg-[#D4BFA6] border-2  text-base hover: hover:cursor-pointer hover:text-[#6b1e1e] relative w-[210px]">
+                            <button className="bg-[#D4BFA6] border-2  text-base hover:cursor-pointer hover:text-[#6b1e1e] relative w-[210px]">
                                 <span className="w-[3px] h-[3px] bg-black absolute top-1 left-1 rounded-xl" />
                                 <span className="w-[3px] h-[3px] bg-black absolute top-1 right-1 rounded-xl" />
                                 <span className="w-[3px] h-[3px] bg-black absolute bottom-1 left-1 rounded-xl" />
