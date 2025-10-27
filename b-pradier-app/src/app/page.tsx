@@ -11,9 +11,9 @@ export default function Home() {
             {/* <div className="fixed top-0 left-0 w-full h-full bg-[#afad8e]/50 z-[-1]"></div> */}
             <Header />
 
-            <figure className="mx-auto mt-6">
+            <figure className="mx-auto mt-4 lg:mt-6">
                 <Image src={accueilImg} alt="Peinture du Château d'Hugues et son vignoble au flanc des collines du Massif d'Uchaux" className="w-lg rounded-lg img-shadow m-auto" />
-                <figcaption className="text-sm text-center mt-6">Dessin du Château d'Hugues et son vignoble au flanc des collines du Massif d'Uchaux</figcaption>
+                <figcaption className="text-sm text-center mt-4 lg:mt-6">Dessin du Château d'Hugues et son vignoble au flanc des collines du Massif d'Uchaux</figcaption>
             </figure>
 
             <main className="md:text-justify">

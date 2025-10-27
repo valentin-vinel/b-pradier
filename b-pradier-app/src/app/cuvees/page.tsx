@@ -11,13 +11,13 @@ export default function Cuvees() {
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
             <Header />
 
-            <main className="flex flex-col gap-2 mt-4">
+            <main className="flex flex-col gap-2 mt-4 text-center lg:text-start">
                 <h2 className="text-2xl text-center font-bold">LES 3 TYPES DE CUVÉE DU CHÂTEAU D'HUGUES</h2>
                 <p className="mb-8">Pourquoi complémentaires ? Parce qu'elles sont comme des « Poupées Russes », mais imbriquées à l'inverse des étiquettes présentées ci-dessous, c'est à dire que la Grande Réserve est dans la cuvée Sylviane et celles-ci sont dans L'Orée des Collines !</p>
 
-                <div className="flex flex-col gap-8">
-                    <article className="flex gap-8 justify-between">
-                        <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className="img-shadow w-[350px] h-[150px]  -rotate-5"></Image>
+                <div className="flex flex-col gap-14 lg:gap-8">
+                    <article className="flex flex-col gap-8 justify-between lg:flex-row">
+                        <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center gap-2">
                             <h3 className="text-xl font-bold">La Grande Réserve</h3>
                             <p className="self-center">
@@ -26,8 +26,8 @@ export default function Cuvees() {
                         </div>
                     </article>
 
-                    <article className="flex gap-8">
-                        <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[350px] h-[150px]  -rotate-5"></Image>
+                    <article className="flex flex-col gap-8 justify-between lg:flex-row">
+                        <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center gap-2">
                             <h3 className="text-xl font-bold">La Cuvée Sylviane</h3>
                             <p className="self-center">
@@ -36,8 +36,8 @@ export default function Cuvees() {
                         </div>
                     </article>
 
-                    <article className="flex gap-8 mb-8">
-                        <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow w-[350px] h-[150px]  -rotate-5"></Image>
+                    <article className="flex flex-col gap-8 justify-between lg:flex-row">
+                        <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center gap-2">
                             <h3 className="text-xl font-bold">L'orée des Collines</h3>
                             <p className="self-center">

@@ -11,8 +11,8 @@ export default function Histoire() {
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
             <Header />
 
-            <main className="flex flex-col gap-12 mt-auto">
-                <article className="flex gap-6 items-center">
+            <main className="flex flex-col gap-20 lg:gap-12 mt-auto">
+                <article className="flex flex-col gap-6 items-center lg:flex-row">
                     <figure className="w-[280px] h-[210px] flex flex-col justify-center">
                         <Image src={histoire1} alt="Photo de l'entré de la cave" className="min-w-[250px] "></Image>
                         <figcaption className="text-sm text-center mt-1">Si vous êtes venu, l'entrée dans le temps... le caveau de dégustation.</figcaption>
@@ -22,17 +22,17 @@ export default function Histoire() {
                     </p>
                 </article>
 
-                <article className="flex gap-8 items-center">
+                <article className="flex flex-col-reverse gap-6 items-center lg:flex-row">
                     <p className="self-center hyphens-auto">
                         Exposées au flanc sud des collines du Massif d’Uchaux, arboré de pins, chênes et genévriers, nos vignes bénéficiaient d’un terroir silico-calcaire, en Côtes du Rhône. Les vieux ceps, à petit rendement, étaient « taillées en gobelet » pour un meilleur ensoleillement. Les grappes, cueillies à la main, transportées en caisses, puis retriés sur table à la cave. S’en suivait diverses cuvaisons pour nous donner des typicités complémentaires, à chacune de nos 3 cuvées de grande garde…
                     </p>
-                    <figure className="w-[280px] h-[200px] flex flex-col justify-center">
+                    <figure className="w-[280px] h-[200px] flex flex-col justify-center mb-6 lg:mb-0">
                         <Image src={histoire2} alt="Tableau de vignes taillées en gobelet" className="min-w-[260px] border-6 border-white"></Image>
                         <figcaption className="text-sm text-center mt-1">« Ceps de vignes taillées en gobelets sur sol silico-calcaire ». Tableau de B P</figcaption>
                     </figure>
                 </article>
 
-                <article className="flex gap-8 items-center mb-10">
+                <article className="flex  flex-col gap-8 items-center mb-10 lg:flex-row">
                     <figure className="w-[280px] h-[210px] flex flex-col justify-center">
                         <Image src={histoire3} alt="Photo de l'entré de la cave" className="min-w-[260px] border-6 border-white"></Image>
                         <figcaption className="text-sm text-center mt-1">Vendange à la main. Tableau de B P</figcaption>
