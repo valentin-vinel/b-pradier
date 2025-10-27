@@ -1,6 +1,7 @@
 export default function Footer() {
     return (
-        <footer className="mt-8 py-2 text-center border-t border-[#C5A572] text-sm text-gray-700 bg-[#f9f6f11c] md:mt-auto">
+        <footer className="mt-8 py-2 text-center text-sm text-gray-700 md:mt-auto">
+            <p className="p-2 border-t border-[#C5A572] text-gray-600"><em>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</em></p>
                 <div className="space-x-6 mb-2">
                     <a href="#" className="">
                         Facebook
