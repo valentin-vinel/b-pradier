@@ -26,7 +26,6 @@
 } */
 
 body {
-    /* font-family: var(--font-open-sans); */
     font-family: var(--font-lora);
     color: var(--color-text);
     background-image: url("../../public/papier-ancien.jpg");
@@ -48,6 +47,14 @@ body {
 
 .text-cookie {
   font-family: var(--font-playball);
+}
+
+.text-red {
+  color: var(--color-title);
+}
+
+.text-blue {
+  color: var(--color-text);
 }
 
 h1,
@@ -101,8 +108,6 @@ a:hover {
 
 .bg-total-cave {
   background: radial-gradient(circle, #e4ceb6 0%, #331b05 60%, #020203 75%, #030303 90%);
-  /* background: linear-gradient(90deg, #2b2a2a 0%, #dac1a4 100%); */
-  /* background: linear-gradient(#dac1a4 0%, #2b2a2a 100%); */
 }
 
 .border-img {

@@ -4,7 +4,7 @@ import bouchon from "../../../public/bouchon.png"
 import Link from "next/link";
 import ardoise2 from "../../../public/ardoise-8.png"
 import Image from "next/image";
-import bouteilles from "../../../public/millesimes/bouteilles-Copie.png"
+import bouteilles from "../../../public/millesimes/bouteilles-2.png"
 import Footer from "@/shared/Footer";
 
 export default async function Products() {
@@ -31,7 +31,7 @@ export default async function Products() {
             <main className="mb-6">
                 <h2 className="text-center font-bold mb-2 text-3xl title-millesime">Nos trois cuvées</h2>
                 <figure className="m-auto text-center mb-8 ">
-                    <Image src={bouteilles} alt="Photo des bouteilles de nos 3 cuvées, non contractuelle." className="m-auto w-[240px] shadow-2xl border-bouteille relative"></Image>
+                    <Image src={bouteilles} alt="Photo des bouteilles de nos 3 cuvées, non contractuelle." className="m-auto max-w-[200px] shadow-2xl border-bouteille relative"></Image>
                     <figcaption className="text-base mt-2">Photo non contractuelle.</figcaption>
                 </figure>
 
