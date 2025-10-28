@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
+import { usePathname } from "next/navigation";
 import menu from "../../public/bar.png";
 import Link from "next/link";
 import panier from "../../public/coffret-a-vin.png"
@@ -14,12 +15,20 @@ interface HeaderProps {
 export default function Header({ cartQuantity }: HeaderProps) {
     const { totalQuantity } = useCart();
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const pathname = usePathname(); // ✅ récupère la route actuelle
 
     const toggleMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
 
-    console.log(totalQuantity)
+    // ✅ Fonction pour savoir si un lien est actif
+    const isActive = (path: string) => pathname === path;
+
+    // ✅ Fonction pour générer les classes dynamiques
+    const linkClass = (path: string) =>
+        `hover:text-[#C5A572] transition-colors ${
+        isActive(path) ? "font-bold" : ""
+    }`;
 
     return (
         <>
@@ -40,10 +49,10 @@ export default function Header({ cartQuantity }: HeaderProps) {
 
                 {/* Menu desktop */}
                 <nav className="hidden lg:flex md:gap-[50px] md:items-end text-[#6B1E1E] font-medium" aria-label="Menu principal">
-                    <Link href={'/histoire'} className="hover:text-[#C5A572] transition-colors">Histoire</Link>
-                    <Link href={'/cuvees'} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
-                    <Link href={'/degustation'} className="hover:text-[#C5A572] transition-colors"> Dégustation</Link>
-                    <Link href={'/millesimes'} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
+                    <Link href={'/histoire'} className={linkClass("/histoire")}>Histoire</Link>
+                    <Link href={'/cuvees'} className={linkClass("/cuvees")}>Cuvées</Link>
+                    <Link href={'/degustation'} className={linkClass("/degustation")}> Dégustation</Link>
+                    <Link href={'/millesimes'} className={linkClass("/millesimes")}>Millésimes</Link>
                     <Link href={'/'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                         {totalQuantity > 0 && (
@@ -58,10 +67,10 @@ export default function Header({ cartQuantity }: HeaderProps) {
             {/* Menu mobile déroulant */}
             {mobileMenuOpen && (
                 <nav className="flex flex-col gap-4 text-[#6B1E1E] font-medium items-center lg:hidden bg-white/50">
-                    <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Histoire</Link>
-                    <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Cuvées</Link>
-                    <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Dégustation</Link>
-                    <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className="hover:text-[#C5A572] transition-colors">Millésimes</Link>
+                    <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/histoire")}>Histoire</Link>
+                    <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/cuvees")}>Cuvées</Link>
+                    <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/degustation")}>Dégustation</Link>
+                    <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/millesimes")}>Millésimes</Link>
                     <Link href={'/'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                         {totalQuantity > 0 && (

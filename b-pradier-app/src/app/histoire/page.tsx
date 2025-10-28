@@ -9,6 +9,8 @@ import Footer from "@/shared/Footer";
 export default function Histoire() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
+            <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
+
             <Header />
 
             <main className="flex flex-col mt-auto text-justify">
@@ -51,11 +53,14 @@ export default function Histoire() {
                     <div>
                         <h2 className="text-red text-center my-2">- NOS 3 CUVÉES DE GARDE -</h2>
                         <p className="[text-align-last:justify]">
-                            Ce sont La Grande Réserve, La cuvée Sylviane et L’Orée des Collines... dans ces 23 années que nous vous proposons, qui sont semblables car issues d’un même terroir, telles les membres d’une famille, <br />et tout à la fois uniques car chaque Millésime de 1988 à 2010 sont comme leurs enfants ! </p>
-                            <p>
-                                Donc différents dans leurs diversités aromatiques, dans leurs structures tanniques...
-                                Mon épouse disait : « Ils sont vrais ! » Cette expression leur convient à souhait, en effet c’est la personnalité qui importe avant tout dans un vin... comme chez une personne !
-                            </p>
+                            Ce sont La Grande Réserve, La cuvée Sylviane et L’Orée des Collines... dans ces 23 années que nous vous proposons, qui sont semblables car issues d’un même terroir, telles les membres d’une famille, <br />et tout à la fois uniques car chaque Millésime de 1988 à 2010 sont comme leurs enfants ! 
+                        </p>
+                        <p className="[text-align-last:justify]">
+                            Donc différents dans leurs diversités aromatiques, dans leurs structures tanniques... 
+                        </p>
+                        <p>
+                            Mon épouse disait : « Ils sont vrais ! » Cette expression leur convient à souhait, en effet c’est la personnalité qui importe avant tout dans un vin... comme chez une personne !
+                        </p>
                         
                     </div>
                 </article>

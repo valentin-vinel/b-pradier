@@ -7,10 +7,12 @@ import Footer from "@/shared/Footer";
 export default function Cuvees() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
+            <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
+
             <Header />
 
-            <main className="flex flex-col gap-4 mt-4 text-center lg:text-justify ">
-                <h2 className="text-center text-red">LES DÉGUSTATIONS « EN LIGNES... GÉOMÉTRQUES »</h2>
+            <main className="flex flex-col gap-4 mt-4 text-center lg:text-justify">
+                <h2 className="text-center text-red">LES DÉGUSTATIONS « EN LIGNES... GÉOMÉTRIQUES »</h2>
                 <Image src={tableau} alt="Tableau représentant une dégustations autour d'une table." className="border-6 border-white max-w-[350px] m-auto" />
                 <p className="max-w-[850px] m-auto mb-4">
                     Rassurez-vous on n'a pas, bien heureusement, inventé la dégustation du vin par Internet... Je viens vous proposer des méthodes pour « qu'en vrai et en direct », si je peux ainsi m'exprimer, vous compreniez nos différentes cuvées aux quatre points en commun. Ce sont, issus d'un seul domaine, d'un terroir identique, vinifié par le même vigneron et des vins qui ne soient pas de l'année. Comme le disait mon père lorsqu'il ouvrait un vin dans le temps, les jours de fêtes quand j'avais 20 ans : « Il doit avoir au moins 7 années de vie en bouteille... car c'est l'âge de raison ! » Elles n'ont pas non plus pour but de se substituer à un cours d'œnologie, ni aux commentaires de sommelier, mais sont complémentaires, pour saisir l'esprit des vins et peut-être aussi entre percevoir... l'âme du vin !

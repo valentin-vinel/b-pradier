@@ -88,7 +88,7 @@ a:hover {
   height: auto;
 }
 
-.bg-cave {
+/* .bg-cave {
   background-image: url('../../public/millesimes/cave-bg.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -100,14 +100,14 @@ a:hover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
+} */
 
 .border-article {
   border: 2px solid #6b1e1e;
 }
 
 .bg-total-cave {
-  background: radial-gradient(circle, #e4ceb6 0%, #331b05 60%, #020203 75%, #030303 90%);
+  background: radial-gradient(circle, #FFFBEB 0%, #331b05 60%, #020203 80%, #030303 90%);
 }
 
 .border-img {

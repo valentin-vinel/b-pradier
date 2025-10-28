@@ -40,10 +40,10 @@ export default function AddToCartButton({
       disabled={loading}
       className={`bg-[#D4BFA6] border-2  text-base hover:cursor-pointer hover:text-[#6b1e1e] relative w-[210px] ${className}`}
     >
-      <span className="w-[3px] h-[3px] bg-black absolute top-1 left-1 rounded-xl" />
-      <span className="w-[3px] h-[3px] bg-black absolute top-1 right-1 rounded-xl" />
-      <span className="w-[3px] h-[3px] bg-black absolute bottom-1 left-1 rounded-xl" />
-      <span className="w-[3px] h-[3px] bg-black absolute bottom-1 right-1 rounded-xl" />
+      <span className="w-[4px] h-[4px] bg-black absolute top-1 left-1 rounded" />
+      <span className="w-[4px] h-[4px] bg-black absolute top-1 right-1 rounded" />
+      <span className="w-[4px] h-[4px] bg-black absolute bottom-1 left-1 rounded" />
+      <span className="w-[4px] h-[4px] bg-black absolute bottom-1 right-1 rounded" />
       {loading ? "Ajout..." : "Ajouter au panier"}
     </button>
   );

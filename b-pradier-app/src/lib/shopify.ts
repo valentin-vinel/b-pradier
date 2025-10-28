@@ -270,3 +270,27 @@ export async function fetchCart(cartId: string) {
   const data = await fetchFromShopify<{ cart: { id: string; lines: { edges: any[] } } }>(query, variables);
   return data.cart.lines.edges.map(e => e.node);
 }
+
+export async function getProductByHandle(handle: string) {
+  const query = `
+    query getProductByHandle($handle: String!) {
+      product(handle: $handle) {
+        id
+        title
+        handle
+        featuredImage { url }
+        variants(first: 5) {
+          edges {
+            node {
+              id
+              title
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const data = await fetchFromShopify<{ product: any }>(query, { handle });
+  return data.product;
+}
