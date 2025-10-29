@@ -1,13 +1,15 @@
 // context/CartContext.tsx
 "use client";
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-import { createCart, addToCart, fetchCart } from "@/lib/shopify";
+import { createCart, addToCart, fetchCart, removeFromCart, updateCartLine } from "@/lib/shopify";
 import type { CartLine } from "@/types/shopify";
 
 interface CartContextType {
   cartId: string | null;
   items: CartLine[];
   addItem: (variantId: string, quantity?: number) => Promise<void>;
+  removeItem: (lineId: string) => Promise<void>;
+  updateQuantity: (lineId: string, quantity: number) => Promise<void>;
   totalQuantity: number;
 }
 
@@ -42,10 +44,22 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems(updatedCart.lines.edges.map(e => e.node));
   };
 
+  const removeItem = async (lineId: string) => {
+    if (!cartId) return;
+    const updatedCart = await removeFromCart(cartId, lineId);
+    setItems(updatedCart.lines.edges.map(e => e.node));
+  };
+
+  const updateQuantity = async (lineId: string, quantity: number) => {
+    if (!cartId) return;
+    const updatedCart = await updateCartLine(cartId, lineId, quantity);
+    setItems(updatedCart.lines.edges.map(e => e.node));
+  };
+
   const totalQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
-    <CartContext.Provider value={{ cartId, items, addItem, totalQuantity }}>
+    <CartContext.Provider value={{ cartId, items, addItem, removeItem, updateQuantity, totalQuantity }}>
       {children}
     </CartContext.Provider>
   );

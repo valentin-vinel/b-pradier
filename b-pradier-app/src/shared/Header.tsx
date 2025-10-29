@@ -53,7 +53,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
                     <Link href={'/cuvees'} className={linkClass("/cuvees")}>Cuvées</Link>
                     <Link href={'/degustation'} className={linkClass("/degustation")}> Dégustation</Link>
                     <Link href={'/millesimes'} className={linkClass("/millesimes")}>Millésimes</Link>
-                    <Link href={'/'} className="hover:text-[#C5A572] transition-colors relative">
+                    <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                         {totalQuantity > 0 && (
                             <span className="absolute -top-2 -right-4 bg-[#6B1E1E] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
@@ -71,7 +71,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
                     <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/cuvees")}>Cuvées</Link>
                     <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/degustation")}>Dégustation</Link>
                     <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/millesimes")}>Millésimes</Link>
-                    <Link href={'/'} className="hover:text-[#C5A572] transition-colors relative">
+                    <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                         {totalQuantity > 0 && (
                             <span className="absolute -top-2 -right-4 bg-[#6B1E1E] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">

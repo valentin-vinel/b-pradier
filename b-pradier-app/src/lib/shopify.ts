@@ -210,7 +210,7 @@ export async function addToCart(cartId: string, variantId: string, quantity = 1)
       cartLinesAdd(cartId: $cartId, lines: $lines) {
         cart {
           id
-          lines(first: 10) {
+          lines(first: 50) {
             edges {
               node {
                 id
@@ -219,8 +219,13 @@ export async function addToCart(cartId: string, variantId: string, quantity = 1)
                   ... on ProductVariant {
                     id
                     title
+                    priceV2 { 
+                      amount 
+                      currencyCode 
+                    }
                     product {
                       title
+                      featuredImage { url }
                     }
                   }
                 }
@@ -241,6 +246,89 @@ export async function addToCart(cartId: string, variantId: string, quantity = 1)
   return data.cartLinesAdd.cart;
 }
 
+// Modification d'un produit du panier (quantité)
+export async function updateCartLine(cartId: string, lineId: string, quantity: number) {
+  const query = `
+    mutation cartLinesUpdate($cartId: ID!, $lines: [CartLineUpdateInput!]!) {
+      cartLinesUpdate(cartId: $cartId, lines: $lines) {
+        cart {
+          id
+          lines(first: 50) {
+            edges {
+              node {
+                id
+                quantity
+                merchandise {
+                  ... on ProductVariant {
+                    id
+                    title
+                    priceV2 {
+                      amount
+                      currencyCode
+                    }
+                    product {
+                      title
+                      featuredImage { url }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+  const variables = {
+    cartId,
+    lines: [{ id: lineId, quantity }],
+  };
+  const data = await fetchFromShopify<{ cartLinesUpdate: { cart: Cart } }>(query, variables);
+  return data.cartLinesUpdate.cart;
+}
+
+// Suppression d'un produit du panier
+export async function removeFromCart(cartId: string, lineId: string): Promise<Cart> {
+  const query = `
+    mutation cartLinesRemove($cartId: ID!, $lineIds: [ID!]!) {
+      cartLinesRemove(cartId: $cartId, lineIds: $lineIds) {
+        cart {
+          id
+          lines(first: 50) {
+            edges {
+              node {
+                id
+                quantity
+                merchandise {
+                  ... on ProductVariant {
+                    id
+                    title
+                    priceV2 {
+                      amount
+                      currencyCode
+                    }
+                    product {
+                      title
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const variables = {
+    cartId,
+    lineIds: [lineId],
+  };
+
+  const data = await fetchFromShopify<{ cartLinesRemove: { cart: Cart } }>(query, variables);
+  return data.cartLinesRemove.cart;
+}
+
 export async function fetchCart(cartId: string) {
   const query = `
     query getCart($cartId: ID!) {
@@ -255,8 +343,13 @@ export async function fetchCart(cartId: string) {
                 ... on ProductVariant {
                   id
                   title
+                  priceV2 {
+                    amount
+                    currencyCode
+                  }
                   product {
                     title
+                    featuredImage { url }
                   }
                 }
               }
@@ -278,12 +371,53 @@ export async function getProductByHandle(handle: string) {
         id
         title
         handle
-        featuredImage { url }
-        variants(first: 5) {
+        descriptionHtml
+        featuredImage {
+          url
+          altText
+        }
+        variants(first: 10) {
           edges {
             node {
               id
               title
+              price {
+                amount
+                currencyCode
+              }
+              availableForSale
+              quantityAvailable
+              selectedOptions {
+                name
+                value
+              }
+            }
+          }
+        }
+        collections(first: 5) {
+          edges {
+            node {
+              id
+              title
+              handle
+              description
+              image {
+                url
+                altText
+              }
+              products(first: 5) {
+                edges {
+                  node {
+                    id
+                    title
+                    handle
+                    featuredImage {
+                      url
+                      altText
+                    }
+                  }
+                }
+              }
             }
           }
         }

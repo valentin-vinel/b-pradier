@@ -57,6 +57,10 @@ body {
   color: var(--color-text);
 }
 
+.bg-primary {
+  background-color: #6b1e1e;
+}
+
 h1,
 h5,
 h6 {
@@ -87,20 +91,6 @@ a:hover {
   width: auto;
   height: auto;
 }
-
-/* .bg-cave {
-  background-image: url('../../public/millesimes/cave-bg.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-.bg-cave-b {
-  background-image: url('../../public/millesimes/bg-cave2.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} */
 
 .border-article {
   border: 2px solid #6b1e1e;

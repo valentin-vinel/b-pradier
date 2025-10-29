@@ -50,8 +50,15 @@ export interface CartLine {
   merchandise: {
     id: string;
     title: string;
+    priceV2: {
+      amount: string;
+      currencyCode: string;
+    };
     product: {
       title: string;
+      featuredImage?: {
+        url: string;
+      };
     };
   };
 }
