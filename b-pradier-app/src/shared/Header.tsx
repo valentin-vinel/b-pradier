@@ -49,10 +49,10 @@ export default function Header({ cartQuantity }: HeaderProps) {
 
                 {/* Menu desktop */}
                 <nav className="hidden lg:flex md:gap-[50px] md:items-end text-[#6B1E1E] font-medium" aria-label="Menu principal">
-                    <Link href={'/histoire'} className={linkClass("/histoire")}>Histoire</Link>
-                    <Link href={'/cuvees'} className={linkClass("/cuvees")}>Cuvées</Link>
-                    <Link href={'/degustation'} className={linkClass("/degustation")}> Dégustation</Link>
-                    <Link href={'/millesimes'} className={linkClass("/millesimes")}>Millésimes</Link>
+                    <Link href={'/histoire'} className={linkClass("/histoire")}>HISTOIRE</Link>
+                    <Link href={'/cuvees'} className={linkClass("/cuvees")}>CUVÉES</Link>
+                    <Link href={'/degustation'} className={linkClass("/degustation")}> DÉGUSTATION</Link>
+                    <Link href={'/millesimes'} className={linkClass("/millesimes")}>MILLÉSIMES</Link>
                     <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                         {totalQuantity > 0 && (
@@ -67,10 +67,10 @@ export default function Header({ cartQuantity }: HeaderProps) {
             {/* Menu mobile déroulant */}
             {mobileMenuOpen && (
                 <nav className="flex flex-col gap-4 text-[#6B1E1E] font-medium items-center lg:hidden bg-white/50">
-                    <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/histoire")}>Histoire</Link>
-                    <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/cuvees")}>Cuvées</Link>
-                    <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/degustation")}>Dégustation</Link>
-                    <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/millesimes")}>Millésimes</Link>
+                    <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/histoire")}>HISTOIRE</Link>
+                    <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/cuvees")}>CUVÉES</Link>
+                    <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/degustation")}>DÉGUSTATION</Link>
+                    <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/millesimes")}>MILLÉSIMES</Link>
                     <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                         {totalQuantity > 0 && (

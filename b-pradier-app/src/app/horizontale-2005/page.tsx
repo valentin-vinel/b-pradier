@@ -12,16 +12,17 @@ export default function Cuvees() {
             <Header />
 
             <main className="text-justify">
-                <h2 className="text-center text-red mt-2 mb-4">« L'HORIZONTALE » CHÂTEAU D'HUGUES MILLESIME 2005.</h2>
-                <p className="max-w-[1250px] m-auto [text-align-last:justify] text-lg">
-                    Voici les commentaires du 18 octobre 2025, de « L'Horizontale millésime 2005 », avec l'oenologue  Olivier Roustang et sa collaboratrice Lydie Gauthier, confirmé le lendemain par deux couples clients, d'âges différents, et avec 3 verres plus classiques. J'ai poursuivi seul cette « Horizontale » jusqu'au WE suivant. Et elles ont peu évolué après 7 jours ! J'aurais aimé poursuivre leur dégustation... mais il ne restais que des fonds pour les deux repas du lundi !
+                <h2 className="text-center text-red mt-6 mb-4 text-2xl font-bold">« L'HORIZONTALE » CHÂTEAU D'HUGUES MILLÉSIME 2005.</h2>
+                <p className="max-w-[1250px] m-auto">
+                    Voici les commentaires du 18 octobre 2025, de « <em>L'Horizontale millésime 2005</em> », avec l'oenologue  Olivier Roustang et sa collaboratrice Lydie Gauthier, confirmé le lendemain par deux couples clients, d'âges différents, et avec 3 verres plus classiques. J'ai poursuivi seul cette « <em>Horizontale</em> » jusqu'au WE suivant. Et elles ont peu évolué après 7 jours ! J'aurais aimé poursuivre leur dégustation... mais il ne restais que des fonds pour les deux repas du lundi !
                 </p>
 
                 <section className="py-10 text-center border-b">
-                    <h3 className="text-center text-red mb-4 text-secondary">Premier verre, la GRANDE RESERVE 2005, de 13.5% vol; en bouteille verre de 750 ml. Bourguignonne</h3>
+                    <h3 className="text-center text-red mb-4 text-secondary text-2xl">Premier verre, la GRANDE RESERVE 2005</h3>
                     <figure className="m-auto text-center mb-8 ">
                         <Image src={bouteilles} alt="Photo des bouteilles de nos 3 cuvées, non contractuelle." className="m-auto w-[200px] shadow-2xl border-bouteille relative"></Image>
-                        <figcaption className="text-base mt-2">A gauche bouteille en verre de 750 ml bourguignonne, de la photo, non contractuelle, ci-dessus</figcaption>
+                        <figcaption className="text-base my-2">Première bouteille à gauche de la photo non contractuelle, ci-dessus.</figcaption>
+                        <p className="text-base">13.5% vol | Bouteille de 750 ml | Contient des sulfites | Product of France</p>
                     </figure>
 
                     <h4 className="text-red text-secondary">- Aspect visuel -</h4>
@@ -44,7 +45,8 @@ export default function Cuvees() {
                     <h3 className="text-center text-red mb-4 text-secondary">Dans le deuxième verre LA CUVÉE SYLVIANE 2005</h3>
                     <figure className="m-auto text-center mb-8 ">
                         <Image src={bouteilles} alt="Photo des bouteilles de nos 3 cuvées, non contractuelle." className="m-auto w-[200px] shadow-2xl border-bouteille relative"></Image>
-                        <figcaption className="text-base mt-2">Bouteille au centre de la photo non contractuelle, ci-dessus.</figcaption>
+                        <figcaption className="text-base my-2">Bouteille au centre de la photo non contractuelle, ci-dessus.</figcaption>
+                        <p className="text-base">13.5% vol | Bouteille de 750 ml | Contient des sulfites | Product of France</p>
                     </figure>
 
                     <h4 className="text-red text-secondary">- Aspect visuel -</h4>
@@ -67,16 +69,17 @@ export default function Cuvees() {
                     <h3 className="text-center text-red mb-4 text-secondary">Troisième verre, L'ORÉE DES COLLINES 2005</h3>
                     <figure className="m-auto text-center mb-8 ">
                         <Image src={bouteilles} alt="Photo des bouteilles de nos 3 cuvées, non contractuelle." className="m-auto w-[200px] shadow-2xl border-bouteille relative"></Image>
-                        <figcaption className="text-base mt-2">Troisième bouteille de la photo non contractuelle, ci-dessus</figcaption>
+                        <figcaption className="text-base my-2">Troisième bouteille de la photo non contractuelle, ci-dessus</figcaption>
+                        <p className="text-base">13.5% vol | Bouteille de 750 ml | Contient des sulfites | Product of France</p>
                     </figure>
 
-                    <p className="mb-4">Le guide des vins Gilbert & Gaillard 2009 lui avait attribué 86/100: «... nez épanoui, mêlant fruits rouges confiturés, notes garrigues et d'épices. On apprécie son ampleur, souplesse. Les arômes sont nets et persistent agréablement ».</p>
+                    <p className="mb-4">Le guide des vins Gilbert & Gaillard 2009 lui avait attribué 86/100: « <em>... nez épanoui, mêlant fruits rouges confiturés, notes garrigues et d'épices. On apprécie son ampleur, souplesse. Les arômes sont nets et persistent agréablement</em> ».</p>
 
                     <h4 className="text-red text-secondary">- Aspect visuel -</h4>
                     <p className="mb-4">Limpide, couleur rouge grenat profond...</p>
 
                     <h4 className="text-red text-secondary">- Au nez -</h4>
-                    <p className="mb-4">Très expressif, « qui vient à soi », impression de chocolat sucrant, de ésineux rappelant le Benjoin....</p>
+                    <p className="mb-4">Très expressif, « <em>qui vient à soi</em> », impression de chocolat sucrant, de ésineux rappelant le Benjoin....</p>
 
                     <h4 className="text-red text-secondary">- En bouche -</h4>
                     <p className="mb-4">Encore une belle fraîcheur... de jeunesse! Attaque franche avec de suite, un rappel de fruits. Tannins fermes et robustes qui soutiennent un édifice qui a encore du chemin à parcourir...</p>

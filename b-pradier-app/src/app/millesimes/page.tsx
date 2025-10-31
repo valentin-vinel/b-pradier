@@ -47,7 +47,7 @@ export default async function Products({ product }: { product: any }) {
                 </figure>
 
                 <div className="text-center my-8 underline">
-                  <Link href={'/horizontale-2005'}>Découvrez l'offre des 20 ans... L'horizontale 2005</Link>
+                  <Link href={'/horizontale-2005'}>Découvrez l'offre des 20 ans... « <em>L'Horizontale 2005</em> »</Link>
                 </div>
 
                 <div className="flex gap-6 m-auto text-center w-fit">
