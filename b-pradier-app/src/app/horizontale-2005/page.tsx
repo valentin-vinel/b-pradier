@@ -14,7 +14,7 @@ export default function Cuvees() {
             <main className="text-justify">
                 <h2 className="text-center text-red mt-2 mb-4">« L'HORIZONTALE » CHÂTEAU D'HUGUES MILLESIME 2005.</h2>
                 <p className="max-w-[1250px] m-auto [text-align-last:justify] text-lg">
-                    Voici les commentaires du 18 octobre de « L'Horizontale des 2005 », avec l'oenologue  Olivier Roustanget sa collaboratrice Lydie Gauthier, confirmé le lendemain par deux couples clients d'âges différents, et avec 3 verres plus classiques. J'ai poursuivi «L'Horizontale » jusqu'à ce WE. Et elles ont peu évolué après 7 jours ! J'aimerais poursuivre leur dégustation... mais il ne reste que des fonds pour mes deux repas de ce lundi !
+                    Voici les commentaires du 18 octobre 2025, de « L'Horizontale millésime 2005 », avec l'oenologue  Olivier Roustang et sa collaboratrice Lydie Gauthier, confirmé le lendemain par deux couples clients, d'âges différents, et avec 3 verres plus classiques. J'ai poursuivi seul cette « Horizontale » jusqu'au WE suivant. Et elles ont peu évolué après 7 jours ! J'aurais aimé poursuivre leur dégustation... mais il ne restais que des fonds pour les deux repas du lundi !
                 </p>
 
                 <section className="py-10 text-center border-b">

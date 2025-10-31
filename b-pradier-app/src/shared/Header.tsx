@@ -33,7 +33,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
     return (
         <>
             <header className="flex justify-between my-4">
-                <h1 className="text-2xl font-bold md:text-3xl">
+                <h1 className="text-2xl md:text-2xl">
                     <a href="/" rel="home">
                         Bernard Pradier
                     </a>
