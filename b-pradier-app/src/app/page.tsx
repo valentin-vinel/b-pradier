@@ -24,7 +24,7 @@ export default function Home() {
                     Le domaine viticole du Château d'Hugues a cessé d'exister... Il est rentré dans la légende !
                 </h3>
                 <p className="[text-align-last:justify]">
-                    Heureusement, depuis sa création, nous conservions, chaque année, des bouteilles de nos trois cuvées de grandes gardes, des « <em>Millésimes rares de 1988 jusqu'à 2010</em> », constituant ainsi un « <em>petit trésor</em> » !
+                    Heureusement, depuis sa création, nous conservions chaque année, des bouteilles de nos trois cuvées de grandes gardes, « <em>Millésimes rares de 1988 jusqu'à 2010</em> »... Nous constituant ainsi un « <em>petit trésor</em> » !
                 </p>
                 <p>
                     Grâce à cela je peux vous proposer encore des Château d'Hugues, mais uniquement par ce site ! 
@@ -36,7 +36,7 @@ export default function Home() {
                     « les trois cuvées de notre Millésime 2005, en l'honneur... de leur 20ème anniversaire ! »
                 </Link>
                 <p  className="">
-                    Ce samedi 18 octobre 2025, avec un œnologue, nous avons procéder à « <em>L'Horizontale de nos 2005</em> ». <br />Il en est ressorti une excellente évolution des vins et de l'état de conservation des bouchons en liège. Vous trouverez dans la « Page millésimes », les détails de cette dégustation. Il en va de même avec mes amis, pour les millésimes 2006 à 2010, parmi lesquels chaque fin de semaine, nous sélectionnons une année et choisissons une cuvée, pour la... « <em>controler</em> » !
+                    Ce samedi 18 octobre 2025, avec un œnologue, nous avons procéder à « <em>L'Horizontale de nos 2005</em> ». <br />Il en est ressorti une excellente évolution des vins et de l'état de conservation des bouchons en liège. Vous trouverez dans la « Page millésimes », les détails de cette dégustation. <br />Il en va de même pour les bouteilles des « <em>Millésimes 2006 à 2010</em> ». Car avec mes amis, chaque fin de semaine, nous sélectionnons une année et choisissons une cuvée, pour la... « <em>controler</em> » !
                 </p>
                 <p className="my-2">
                     Chers clients amis des quelques 20 premières années, croyez à mes très bons souvenirs ; et à vous aussi, <br />

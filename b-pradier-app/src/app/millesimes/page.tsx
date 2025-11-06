@@ -40,7 +40,7 @@ export default async function Products({ product }: { product: any }) {
             <Header />
 
             <main className="mb-6">
-                <h2 className="text-center font-bold mb-2 text-3xl title-millesime">Nos trois cuvées</h2>
+                <h2 className="text-center font-bold mb-2 text-3xl title-millesime">MILLESIMES DE NOS TROIS CUVEES</h2>
                 <figure className="m-auto text-center mb-4 ">
                     <Image src={bouteilles} alt="Photo des bouteilles de nos 3 cuvées, non contractuelle." className="m-auto w-[200px] shadow-2xl border-bouteille relative"></Image>
                     <figcaption className="text-base mt-2">Photo non contractuelle.</figcaption>

@@ -19,17 +19,17 @@ export default function Cuvees() {
                 </p>
 
                 <div className="flex flex-col gap-12 my-10">
-                    <section className="max-w-[800px] m-auto border p-4">
+                    <section className="max-w-[825px] m-auto border p-4">
                         <h3 className="text-secondary text-red text-center mb-2">1 / 3 : LES HORIZONTALES</h3>
-                        <p>
-                            Avec mes trois cuvées, cette « <em>forme</em> » de dégustation d'un même millésime, mais de cépages, de vinifications et d'élevages différents, vous cernerez ainsi les profils qui en résultent. Ainsi que l'incidence sur leurs typicités qu'on leurs « <em>modes</em> » d'élaboration... et les plus « <em>justes formules</em> » d'accords avec les mets.
+                        <p className="">
+                        Avec mes trois cuvées cette « Forme » de dégustation d’un même millésime, mais de cépages et modes de vinifications différents, vous cernerez ainsi l'incidence qu’ils ont sur leurs typicités pour les plus « <em>justes formules</em> » d’accords avec les mets. <br />Comme nous vous l’avons annoncé, en 2025, nous vous proposons une « <em>Horizontale de 20 ans d’âge… avec le 2005</em> » et pareillement en 2026, avec les 2006 !
                         </p>
                     </section>
 
                     <section className="max-w-[800px] m-auto border p-4">
                         <h3 className="text-secondary text-red text-center mb-2">2 / 3 : LES VERTICALES</h3>
                         <p>
-                            Deuxième figure de dégustation d'une cuvée, par exemple La Grande Réserve ou L'Orée des Collines sur au moins trois millésimes successifs. Dans ce cas, les millésimes impairs, soit 2009, 2007 et 2005 ! Cela vous permettra de suivre son évolution au fil des années et ainsi remonter le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille !</em> »
+                            Deuxième figure de dégustation d'une cuvée, par exemple La Grande Réserve ou L'Orée des Collines sur au moins trois millésimes successifs. Dans ce cas, les millésimes impairs, soit 2007 et 2005... et 2001 ! Cela vous permettra de suivre son évolution au fil des années et ainsi remonter le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille !</em> »
                         </p>
                     </section>
 
