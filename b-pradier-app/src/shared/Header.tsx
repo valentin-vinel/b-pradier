@@ -6,7 +6,7 @@ import { useCart } from "@/context/CartContext";
 import { usePathname } from "next/navigation";
 import menu from "../../public/bar.png";
 import Link from "next/link";
-import panier from "../../public/boite-ouverte.png"
+import panier from "../../public/boite-ouverte-noir.png"
 
 interface HeaderProps {
   cartQuantity?: number; 
@@ -33,7 +33,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
     return (
         <>
             <header className="flex justify-between my-4">
-                <h1 className="text-2xl md:text-2xl">
+                <h1 className="text-2xl md:text-2xl text-black">
                     <a href="/" rel="home">
                         Bernard Pradier
                     </a>
@@ -48,14 +48,14 @@ export default function Header({ cartQuantity }: HeaderProps) {
                 </div>
 
                 {/* Menu desktop */}
-                <nav className="hidden lg:flex md:gap-[50px] md:items-end text-[#6B1E1E] font-medium" aria-label="Menu principal">
+                <nav className="hidden lg:flex md:gap-[50px] md:items-end text-black font-medium" aria-label="Menu principal">
                     <Link href={'/histoire'} className={linkClass("/histoire")}>HISTOIRE</Link>
                     <Link href={'/cuvees'} className={linkClass("/cuvees")}>CUVÉES</Link>
                     <Link href={'/degustation'} className={linkClass("/degustation")}>DÉGUSTATION</Link>
                     <Link href={'/horizontale-2005'} className={linkClass("/horizontale-2005")}>OFFRE</Link>
                     <Link href={'/millesimes'} className={linkClass("/millesimes")}>MILLÉSIMES</Link>
                     <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
-                        <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
+                        <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9]/50 hover:rounded"></Image>
                         {totalQuantity > 0 && (
                             <span className="absolute -top-2 -right-4 bg-[#6B1E1E] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
                                 {totalQuantity}

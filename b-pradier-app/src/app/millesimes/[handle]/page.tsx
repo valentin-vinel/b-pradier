@@ -24,50 +24,53 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
       <Header />
 
-      <main className="text-center my-auto">
+      <main className="text-center my-auto flex gap-10 p-6">
+        <figure className="bg-white w-[300px]">
+          {product.featuredImage?.url && (
+            <img
+            src={product.featuredImage.url}
+            alt={product.title}
+            className="max-h-[400px] m-auto"
+            />
+          )}
+          <p className="text-sm">Photo non contractuelle</p>
+        </figure>
 
-        <h2 className="text-3xl font-bold">{product.title}</h2>
+          <div>
 
-        <div className="text-center text-base my-4 italic">
-          <p>Vin rouge – 13,5 % vol – 75 cl</p>
-          <p>Produit de France</p>
-          <p>Mis en bouteille à la propriété par Bernard Pradier, 84100 Uchaux</p>
-          <p>Contient des sulfites</p>
-        </div>
+            <h2 className="text-3xl font-bold">{product.title}</h2>
+            <div className="text-center text-base my-4 italic">
+              <p>Vin rouge – 13,5 % vol – 75 cl</p>
+              <p>Produit de France</p>
+              <p>Mis en bouteille à la propriété par Bernard Pradier, 84100 Uchaux</p>
+              <p>Contient des sulfites</p>
+            </div>
+  ^
+            {product.descriptionHtml ? (
+              <div
+                className="prose prose-lg text-gray-800 mb-4"
+                dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+              />
+            ) : (
+              <p className="text-gray-600 italic mb-4">Description à venir...</p>
+            )}
 
-        {product.featuredImage?.url && (
-        <img
-          src={product.featuredImage.url}
-          alt={product.title}
-          className="max-w-[300px] mb-4 rounded-lg shadow-lg"
-        />
-        )}
+            <p className="text-lg mb-2">
+              Stock disponible : <strong>{quantity}</strong>
+            </p>
 
-        {product.descriptionHtml ? (
-          <div
-            className="prose prose-lg text-gray-800 mb-4"
-            dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-          />
-        ) : (
-          <p className="text-gray-600 italic mb-4">Description à venir...</p>
-        )}
+            <p className="text-lg mb-2">
+              Prix : <strong>{price}</strong> €
+            </p>
 
-        <p className="text-lg mb-2">
-          Stock disponible : <strong>{quantity}</strong>
-        </p>
+            {variantId ? (
+              <AddToCartButton variantId={variantId} />
+            ) : (
+              <p className="text-red-500 text-sm">Indisponible</p>
+            )}
 
-        <p className="text-lg mb-2">
-          Prix : <strong>{price}</strong> €
-        </p>
-
-        {variantId ? (
-          <AddToCartButton variantId={variantId} />
-        ) : (
-          <p className="text-red-500 text-sm">Indisponible</p>
-        )}
-
-        <Link href={`/millesimes/${product.id}`}></Link>
-
+            {/* <Link href={`/millesimes/${product.id}`}></Link> */}
+          </div>
       </main>
 
       <Footer />

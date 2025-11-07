@@ -22,7 +22,7 @@ export default async function Products({ product }: { product: any }) {
 
   const collectionFonts: Record<string, string> = {
     "La Grande Réserve": "text-cookie",
-    "La Cuvée Sylviane": "",           // font de base, on laisse vide
+    "La Cuvée Sylviane": "text-secondary",
     "L'orée des Collines": "text-warning",
   };
 

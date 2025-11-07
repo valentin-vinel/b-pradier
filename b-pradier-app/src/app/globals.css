@@ -65,7 +65,7 @@ body {
   font-weight: 600;
 }
 
-h1,
+
 h5,
 h6 {
     font-family: var(--font-playfair);
@@ -101,7 +101,7 @@ a:hover {
 }
 
 .bg-total-cave {
-  background: radial-gradient(circle, #FFFBEB 0%, #331b05 60%, #020203 80%, #030303 90%);
+  background: radial-gradient(circle, #FFFBEB 0%, #331b05 80%, #020203 100%, #030303 100%);
 }
 
 .border-img {

@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import accueilImg from "../../public/accueil/dessin-accueil.png";
+import bouchon from "../../public/accueil/dessin-bouchon.png"
 import Header from "../shared/Header";
 import Footer from "@/shared/Footer";
 import Link from "next/link";
@@ -21,7 +22,7 @@ export default function Home() {
 
             <main className="md:text-justify whitespace-pre-line m-auto md:mt-2 md:mb-12 w-[970px]">
                 <h3 className="mt-4 inline-block text-secondary">
-                    Le domaine viticole du Château d'Hugues a cessé d'exister... Il est rentré dans la légende !
+                    Le domaine viticole du Château d'Hugues a cessé d'exister... Il est entré dans la légende !
                 </h3>
                 <p className="[text-align-last:justify]">
                     Heureusement, depuis sa création, nous conservions chaque année, des bouteilles de nos trois cuvées de grandes gardes, « <em>Millésimes rares de 1988 jusqu'à 2010</em> »... Nous constituant ainsi un « <em>petit trésor</em> » !
@@ -43,6 +44,8 @@ export default function Home() {
                     Madame, Monsieur, qui allait découvrir nos vins sans les connaître... À très bientôt de vous lire !
                 </p>
                 <p>Bernard Pradier</p>
+
+                <Image src={bouchon} alt="Dessin d'un bouchon de liège du chateau d'Hugues" className="m-auto w-[150px]"></Image>
             </main>
 
             <Footer />
