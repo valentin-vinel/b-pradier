@@ -24,53 +24,72 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
       <Header />
 
-      <main className="text-center my-auto flex gap-10 p-6">
-        <figure className="bg-white w-[300px]">
+      <main className="text-center my-auto flex gap-4">
+        <figure className="bg-white w-[300px] h-[680px] flex flex-col border-2">
           {product.featuredImage?.url && (
             <img
             src={product.featuredImage.url}
             alt={product.title}
-            className="max-h-[400px] m-auto"
+            className="h-[650px] m-auto"
             />
           )}
-          <p className="text-sm">Photo non contractuelle</p>
+          <figcaption className="text-sm">Photo non contractuelle.</figcaption>
         </figure>
+        
+        <div className="w-[900px] flex justify-center items-center border-2">
+          <div className="w-[760px] flex flex-col gap-4 m-auto">
+            <h2 className="text-3xl font-bold">- {product.title} -</h2>
 
-          <div>
+            <article>
+              <h3 className="font-bold text-secondary">- ORIGINE -</h3>
+              <p className="text-start">
+                Comme son nom l'indique, cette <em>Grande Réserve</em> est un vin de garde. Issue d'une sélection de nos vieilles vignes de plus de 40 ans, établies en « <em>gobelets</em> » afin d'un meilleur ensoleillement de la souche, et à petit rendement.
+              </p>
+              <Link href={'/cuvees'} className="text-lg italic">En savoir plus</Link>
+            </article>
 
-            <h2 className="text-3xl font-bold">{product.title}</h2>
-            <div className="text-center text-base my-4 italic">
-              <p>Vin rouge – 13,5 % vol – 75 cl</p>
-              <p>Produit de France</p>
-              <p>Mis en bouteille à la propriété par Bernard Pradier, 84100 Uchaux</p>
-              <p>Contient des sulfites</p>
-            </div>
-  ^
-            {product.descriptionHtml ? (
-              <div
-                className="prose prose-lg text-gray-800 mb-4"
-                dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
-              />
-            ) : (
-              <p className="text-gray-600 italic mb-4">Description à venir...</p>
-            )}
+            <article>
+              <h3 className="font-bold text-secondary">- TYPICITÉ -</h3>
+              <p className="text-start">
+                Une longue cuvaison traditionnelle de trois semaines de Syrah et Grenache contribue à lui donner sa couleur soutenue et une palette d'arômes complexes. <br /> Si nous avons choisi de ne pas l'élever en fut, c'est pour lui conserver son authenticité et sa fraîcheur.
+              </p>
+            </article>
 
-            <p className="text-lg mb-2">
-              Stock disponible : <strong>{quantity}</strong>
-            </p>
+            <article>
+              <h3 className="font-bold text-secondary">- PRESSE & ACCORDS VINS-METS -</h3>
+              {product.descriptionHtml ? (
+                <div
+                  className="prose prose-lg text-gray-800 mb-4 text-start"
+                  dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
+                />
+              ) : (
+                <p className="text-gray-600 italic mb-4">Description à venir...</p>
+              )}
+            </article>
 
-            <p className="text-lg mb-2">
-              Prix : <strong>{price}</strong> €
-            </p>
+            
+            <article>
+              <p className="text-lg ">
+                Stock disponible : <strong>{quantity}</strong>
+              </p>
+
+              <p className="text-lg">
+                Prix : <strong>{price}</strong> €
+              </p>
+            </article>
 
             {variantId ? (
-              <AddToCartButton variantId={variantId} />
+              <AddToCartButton variantId={variantId} className="m-auto" />
             ) : (
               <p className="text-red-500 text-sm">Indisponible</p>
             )}
 
             {/* <Link href={`/millesimes/${product.id}`}></Link> */}
+              <div className="text-center text-base mb-2 italic">
+                <p>Vin rouge. 13,5 % vol. 75 cl. Product of France. Contient des sulfites.</p>
+              </div>
           </div>
+        </div>
       </main>
 
       <Footer />
