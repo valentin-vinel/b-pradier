@@ -29,14 +29,14 @@ export default function Cuvees() {
                     <section className="max-w-[800px] m-auto border p-4">
                         <h3 className="text-secondary text-red text-center mb-2">2 / 3 : LES VERTICALES</h3>
                         <p>
-                            Deuxième figure de dégustation d'une cuvée, par exemple La Grande Réserve ou L'Orée des Collines sur au moins trois millésimes successifs. Dans ce cas, les millésimes impairs, soit 2007 et 2005... et 2001 ! Cela vous permettra de suivre son évolution au fil des années et ainsi remonter le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille !</em> »
+                            Dégustations d'une même cuvée, cette fois-ci je vous propose La Grande Réserve sur deux ou trois millésimes impairs 2007, 2005 et 2001 ! Vous vivrez ainsi son évolution au fil des années et remonterez le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille !</em> ».
                         </p>
                     </section>
 
                     <section className="max-w-[800px] m-auto border p-4">
                         <h3 className="text-secondary text-red text-center mb-2">3 / 3 : LES DIAGONALES</h3>
                         <p>
-                            Troisième « <em>angle</em> » de dégustation de nos vins, que nous aborderons plus tard, de différents millésimes et cuvées, mais avec un même dénominateur. Par exemple leur puissance tannique, leur finesse, afin de permettre « <em>des mariages d'amour... et non des mariages de raisons !</em> ».
+                            Troisième « <em>angle</em> » de dégustation de nos vins, de différents millésimes et cuvées, mais avec un même dénominateur. Par exemple leur puissance tannique, leur finesse... afin de permettre « <em>des mariages d'amour... et non des mariages de raisons !</em> ».
                         </p>
                     </section>
                 </div>

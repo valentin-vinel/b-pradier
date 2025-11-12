@@ -21,7 +21,7 @@ export default function Cuvees() {
 
                 <div className="flex flex-col gap-14 my-10 ">
                     <article className="flex flex-col gap-8 justify-between mb-10">
-                        <h3 className="text-2xl font-bold text-center">LA GRANDE RÉSERVE</h3>
+                        <h3 className="text-2xl font-bold text-center" id="grande-reserve">LA GRANDE RÉSERVE</h3>
                         <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center mt-4">
                             <p className="max-w-[820px]">
@@ -31,7 +31,7 @@ export default function Cuvees() {
                     </article>
 
                     <article className="flex flex-col gap-8 justify-between mb-10">
-                        <h3 className="text-2xl font-bold text-center">LA CUVÉE SYLVIANE</h3>
+                        <h3 className="text-2xl font-bold text-center" id="cuvee-sylviane">LA CUVÉE SYLVIANE</h3>
                         <Image src={cuveeSylvianeImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center mt-4">
                             <p className="max-w-[820px] ">
@@ -41,7 +41,7 @@ export default function Cuvees() {
                     </article>
 
                     <article className="flex flex-col gap-8 justify-between mb-10">
-                        <h3 className="text-2xl font-bold text-center">L'ORÉE DES COLLINES</h3>
+                        <h3 className="text-2xl font-bold text-center"  id="oree-des-collines">L'ORÉE DES COLLINES</h3>
                         <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center mt-4">
                             <p className="max-w-[820px] [text-align-last:justify]">

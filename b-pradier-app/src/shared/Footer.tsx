@@ -12,6 +12,12 @@ export default function Footer() {
                     <a href="#" className="">
                         CGV
                     </a>
+                    <a href="">
+                        Politique de confidentialité
+                    </a>
+                    <a href="">
+                        Politique de cookie
+                    </a>
                 </div>
                 <p className="mt-2 text-xs text-gray-500">
                     &copy; 2025 B. Pradier — Tous droits réservés.

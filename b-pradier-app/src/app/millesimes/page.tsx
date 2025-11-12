@@ -10,7 +10,7 @@ import bouteilles from "../../../public/millesimes/bouteilles-2.png"
 import Footer from "@/shared/Footer";
 import AddToCartButton from "@/shared/AddToCartButton";
 
-export default async function Products({ product }: { product: any }) {
+export default async function Products() {
 
   // 1️⃣ Récupération des 3 cuvées depuis Shopify
   const cuveesData = await getCuvees();
@@ -46,8 +46,8 @@ export default async function Products({ product }: { product: any }) {
                     <figcaption className="text-base mt-2">Photo non contractuelle.</figcaption>
                 </figure>
 
-                <div className="text-center my-8 underline">
-                  <Link href={'/horizontale-2005'}>Découvrez l'offre des 20 ans... « <em>L'Horizontale 2005</em> »</Link>
+                <div className="text-center my-8 bg-[#D4BFA6] w-[450px] h-[90px] m-auto rounded-full  flex justify-center items-center border-2">
+                  <Link href={'/horizontale-2005'}>Offre 2025 <br /> « <em>Horizontale 2005... 20ème anniversaire</em> »</Link>
                 </div>
 
                 <div className="flex gap-6 m-auto text-center w-fit">

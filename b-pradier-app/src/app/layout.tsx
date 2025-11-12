@@ -28,8 +28,11 @@ const playball = Playball({
 });
 
 export const metadata: Metadata = {
-    title: "B. Pradier — Millésimes rares de 1988 à 2010 | Château d'Hugues",
-    description: "Découvrez les millésimes rares du Château d'Hugues signés B. Pradier, de 1988 à 2010, conservés avec passion et proposés à la vente en ligne.",
+    title: {
+        default: "B. Pradier — Millésimes rares de 1988 à 2010",
+        template: "%s | B. Pradier"
+    },
+    description: "Découvrez les millésimes rares signés B. Pradier, de 1988 à 2010, conservés avec passion et proposés à la vente en ligne.",
 };
 
 export default function RootLayout({

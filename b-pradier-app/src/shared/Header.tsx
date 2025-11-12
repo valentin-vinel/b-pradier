@@ -33,10 +33,10 @@ export default function Header({ cartQuantity }: HeaderProps) {
     return (
         <>
             <header className="flex justify-between my-4">
-                <h1 className="text-2xl md:text-2xl text-black">
-                    <a href="/" rel="home">
+                <h1 className="text-2xl md:text-2xl text-black lg:mt-2">
+                    <Link href="/" rel="home" className={linkClass("/")}>
                         Bernard Pradier
-                    </a>
+                    </Link>
                 </h1>
 
                 {/* Bouton menu mobile */}

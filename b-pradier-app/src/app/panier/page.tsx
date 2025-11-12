@@ -4,9 +4,10 @@ import { useCart } from "@/context/CartContext";
 import Header from "@/shared/Header";
 import Footer from "@/shared/Footer";
 import Image from "next/image";
+import { getCheckoutUrl } from "@/lib/shopify";
 
 export default function PanierPage() {
-  const { items, removeItem, updateQuantity, totalQuantity } = useCart();
+  const { items, removeItem, updateQuantity, totalQuantity, cartId } = useCart();
 
   if (items.length === 0) {
     return (
@@ -26,6 +27,12 @@ export default function PanierPage() {
     return acc + price * item.quantity;
   }, 0);
 
+  const handleCheckout = async () => {
+    if (!cartId) return;
+    const checkoutUrl = await getCheckoutUrl(cartId);
+    window.location.href = checkoutUrl; // redirection vers Shopify Checkout
+  };
+
   return (
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
       <Header />
@@ -42,13 +49,15 @@ export default function PanierPage() {
                 {/* Image et nom du produit */}
                 <div className="flex items-center gap-4">
                   {item.merchandise.product.featuredImage?.url && (
-                    <Image
-                      src={item.merchandise.product.featuredImage.url}
-                      alt={item.merchandise.product.title}
-                      width={80}
-                      height={80}
-                      className="rounded"
-                    />
+                    <div className="relative w-[60px] h-[80px] rounded bg-white">
+                      <Image
+                        src={item.merchandise.product.featuredImage.url}
+                        alt={item.merchandise.product.title}
+                        width={80}
+                        height={80}
+                        className="object-contain object-center max-h-full"
+                      />
+                    </div>
                   )}
                   <div>
                     <p className="font-bold">{item.merchandise.product.title}</p>
@@ -91,6 +100,15 @@ export default function PanierPage() {
 
         <div className="mt-6 text-right font-bold text-2xl">
           Total ({totalQuantity} articles) : {totalPrice.toFixed(2)} €
+        </div>
+
+        <div className="mt-4 text-right">
+          <button
+            onClick={handleCheckout}
+            className="px-6 py-3 bg-[#D4BFA6] text-[#6b1e1e] font-bold rounded hover:bg-[#C5A572] hover:cursor-pointer transition"
+          >
+            Acheter
+          </button>
         </div>
       </main>
       <Footer />

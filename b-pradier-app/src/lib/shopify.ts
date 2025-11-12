@@ -309,6 +309,7 @@ export async function removeFromCart(cartId: string, lineId: string): Promise<Ca
                     }
                     product {
                       title
+                      featuredImage { url }
                     }
                   }
                 }
@@ -349,7 +350,10 @@ export async function fetchCart(cartId: string) {
                   }
                   product {
                     title
-                    featuredImage { url }
+                    featuredImage {
+                      url
+                      altText
+                    }
                   }
                 }
               }
@@ -427,4 +431,17 @@ export async function getProductByHandle(handle: string) {
 
   const data = await fetchFromShopify<{ product: any }>(query, { handle });
   return data.product;
+}
+
+export async function getCheckoutUrl(cartId: string): Promise<string> {
+  const query = `
+    query getCart($cartId: ID!) {
+      cart(id: $cartId) {
+        checkoutUrl
+      }
+    }
+  `;
+  const variables = { cartId };
+  const data = await fetchFromShopify<{ cart: { checkoutUrl: string } }>(query, variables);
+  return data.cart.checkoutUrl;
 }
