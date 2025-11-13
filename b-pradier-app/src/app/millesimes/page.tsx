@@ -9,6 +9,7 @@ import Image from "next/image";
 import bouteilles from "../../../public/millesimes/bouteilles-2.png"
 import Footer from "@/shared/Footer";
 import AddToCartButton from "@/shared/AddToCartButton";
+import MillesimesMobile from "@/shared/MillesimesMobile";
 
 export default async function Products() {
 
@@ -39,6 +40,7 @@ export default async function Products() {
             <div className="fixed z-[-1] w-full h-screen bg-total-cave opacity-60 left-0 top-0"></div>
             <Header />
 
+
             <main className="mb-6">
                 <h2 className="text-center font-bold mb-2 text-3xl title-millesime">MILLESIMES DE NOS TROIS CUVEES</h2>
                 <figure className="m-auto text-center mb-4 ">
@@ -46,11 +48,13 @@ export default async function Products() {
                     <figcaption className="text-base mt-2">Photo non contractuelle.</figcaption>
                 </figure>
 
-                <div className="text-center my-8 bg-[#D4BFA6] w-[450px] h-[90px] m-auto rounded-full  flex justify-center items-center border-2">
-                  <Link href={'/horizontale-2005'}>Offre 2025 <br /> « <em>Horizontale 2005... 20ème anniversaire</em> »</Link>
+                <div className="text-center my-8 bg-[#D4BFA6] max-w-[450px] h-[90px] m-auto rounded-full  flex justify-center items-center border-2">
+                  <Link href={'/horizontale-2005'}>Offre 2025 <br /> « <em>Horizontale 2005... <span className="text-nowrap">20ème anniversaire</span></em> »</Link>
                 </div>
 
-                <div className="flex gap-6 m-auto text-center w-fit">
+                <MillesimesMobile cuvees={collectionsWithVariants} />
+
+                <div className="hidden lg:flex gap-6 m-auto text-center w-fit">
                   {collectionsWithVariants.map(collection => (
                     <div key={collection.title} className="flex flex-col gap-6">
                       <figure className="flex flex-col justify-center items-center relative">

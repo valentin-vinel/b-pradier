@@ -44,7 +44,7 @@ export default function AddToCartButton({
       <span className="w-[4px] h-[4px] bg-black absolute top-1 right-1 rounded" />
       <span className="w-[4px] h-[4px] bg-black absolute bottom-1 left-1 rounded" />
       <span className="w-[4px] h-[4px] bg-black absolute bottom-1 right-1 rounded" />
-      {loading ? "Ajout..." : "Ajouter au panier"}
+      {loading ? "Ajout..." : "Ajouter à ma commande"}
     </button>
   );
 }

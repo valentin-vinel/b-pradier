@@ -51,7 +51,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
                 <nav className="hidden lg:flex md:gap-[50px] md:items-end text-black font-medium" aria-label="Menu principal">
                     <Link href={'/histoire'} className={linkClass("/histoire")}>HISTOIRE</Link>
                     <Link href={'/cuvees'} className={linkClass("/cuvees")}>CUVÉES</Link>
-                    <Link href={'/degustation'} className={linkClass("/degustation")}>DÉGUSTATION</Link>
+                    <Link href={'/degustation'} className={linkClass("/degustation")}>DÉGUSTATIONS</Link>
                     <Link href={'/horizontale-2005'} className={linkClass("/horizontale-2005")}>OFFRE</Link>
                     <Link href={'/millesimes'} className={linkClass("/millesimes")}>MILLÉSIMES</Link>
                     <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
@@ -67,12 +67,12 @@ export default function Header({ cartQuantity }: HeaderProps) {
 
             {/* Menu mobile déroulant */}
             {mobileMenuOpen && (
-                <nav className="flex flex-col gap-4 text-[#6B1E1E] font-medium items-center lg:hidden bg-white/50">
+                <nav className="flex flex-col gap-4 text-black font-medium items-center lg:hidden bg-white/50 mb-4">
                     <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/histoire")}>HISTOIRE</Link>
                     <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/cuvees")}>CUVÉES</Link>
-                    <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/degustation")}>DÉGUSTATION</Link>
+                    <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/degustation")}>DÉGUSTATIONS</Link>
                     <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/millesimes")}>MILLÉSIMES</Link>
-                    <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
+                    <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative mb-2">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9] hover:rounded"></Image>
                         {totalQuantity > 0 && (
                             <span className="absolute -top-2 -right-4 bg-[#6B1E1E] text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">

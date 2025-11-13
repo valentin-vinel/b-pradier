@@ -14,9 +14,9 @@ export default function Cuvees() {
             <Header />
 
             <main className="flex flex-col gap-4 mt-6 text-center lg:text-justify">
-                <h2 className="text-2xl text-center text-red font-bold">NOS TROIS CUVÉES DE GARDE « DIFFÉRENTES... ET COMPLÉMENTAIRES »</h2>
-                <p className="mb-4 max-w-[825px] mx-auto [text-align-last:justify]">
-                    Pourquoi complémentaires ? Parce qu'elles sont telles des « <em>Poupées Russes</em> », mais imbriquées à l'inverse des étiquettes présentées ci-dessous. C'est-à-dire que <br /> <em>La Grande Réserve est dans La Cuvée Sylviane et celles-ci sont dans L'Orée des Collines !</em>
+                <h2 className="text-xl lg:text-2xl text-center text-red font-bold">NOS TROIS CUVÉES DE GARDE « DIFFÉRENTES... ET COMPLÉMENTAIRES »</h2>
+                <p className="mb-4 max-w-[825px] mx-auto lg:[text-align-last:justify]">
+                    Pourquoi complémentaires ? Parce qu'elles sont telles des « <em>Poupées Russes</em> », mais imbriquées à l'inverse des étiquettes présentées ci-dessous. C'est-à-dire que <span className="hidden lg:inline"><br /></span> <em>La Grande Réserve est dans La Cuvée Sylviane et celles-ci sont dans L'Orée des Collines !</em>
                 </p>
 
                 <div className="flex flex-col gap-14 my-10 ">
@@ -44,8 +44,8 @@ export default function Cuvees() {
                         <h3 className="text-2xl font-bold text-center"  id="oree-des-collines">L'ORÉE DES COLLINES</h3>
                         <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center mt-4">
-                            <p className="max-w-[820px] [text-align-last:justify]">
-                                Son nom est dû à l'exposition d'une partie des vignes sur le flanc sud de nos Collines, <br />au terroir composé de grès siliceux et de grès calcaires. Il a obtenu en 2004 l'appellation <span className="text-nowrap">« <em>Village Massif d'Uchaux</em> »</span>. Assemblage identique à La Cuvée Sylviane, mais <span className="">« <em>élevée en fûts</em> »</span>, lui donne une élégance, où se mêlent fruits noirs confiturés, notes de garrigue, d'épices douces... Sur viandes blanches, agneau, volailles, gibiers à plumes... et fromages!
+                            <p className="max-w-[820px] lg:[text-align-last:justify]">
+                                Son nom est dû à l'exposition d'une partie des vignes sur le flanc sud de nos Collines, <span className="hidden lg:inline"><br /></span>au terroir composé de grès siliceux et de grès calcaires. Il a obtenu en 2004 l'appellation <span className="lg:text-nowrap">« <em>Villages Massif d'Uchaux</em> »</span>. Assemblage identique à La Cuvée Sylviane, mais « <em>élevée en fûts</em> », lui donne une élégance, où se mêlent fruits noirs confiturés, notes de garrigue, d'épices douces... Sur viandes blanches, agneau, volailles, gibiers à plumes... et fromages!
                             </p>
                         </div>
                     </article>

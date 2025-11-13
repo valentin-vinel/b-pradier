@@ -27,13 +27,13 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
       <Header />
 
-      <main className="text-center my-auto flex gap-4">
-        <figure className="bg-white w-[300px] h-[680px] flex flex-col border-2">
+      <main className="flex flex-col text-center my-auto lg:flex-row gap-4 m-auto">
+        <figure className="bg-white w-[280px] md:w-[300px] lg:h-[680px] flex flex-col border-2 m-auto">
           {product.featuredImage?.url && (
             <img
             src={product.featuredImage.url}
             alt={product.title}
-            className="h-[600px] m-auto"
+            className="h-[200px] p-2 lg:h-[600px] m-auto"
             />
           )}
           <figcaption className="text-sm">
@@ -41,9 +41,9 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
           </figcaption>
         </figure>
         
-        <div className="w-[900px] flex justify-center items-center border-2 bg-white">
-          <div className="w-[800px] flex flex-col gap-6 m-auto">
-            <h2 className="text-3xl font-bold uppercase">- {product.title} -</h2>
+        <div className="py-2 lg:py-0 max-w-[1000px] lg:h-[680px] flex justify-center items-center border-2 bg-white m-auto">
+          <div className="max-w-[850px] flex flex-col gap-6 m-auto">
+            <h2 className="text-xl md:text-2xl lg:text-3xl font-bold uppercase">- {product.title} -</h2>
 
             <article className="text-col-bleu">
               <h3 className="font-bold text-secondary">ORIGINE</h3>

@@ -29,8 +29,8 @@ export default function Histoire() {
                         <h2 className="text-red text-center my-2 text-2xl font-bold">- HISTORIQUE -</h2>
                         <p className="lg:[text-align-last:justify]">
                             Un soir, où nous recevions des amateurs de vin, j'ai ouvert une bouteille de mon père, de 20 ans d'âge. Il « <em>faisait son vin</em> », pour la consommation  familiale et « <em>se faire plaisir !</em> ». Tout était artisanal : pas de contrôle œnologique, bouteilles et bouchons achetés à la droguerie... <br /> 
-                            Le résultat était au « <em>petit bonheur la chance</em> », mais la magie du terroir avait déjà lieu ! <br />
-                            Ils me dire en dégustant: « <em>Qu'est ce que vous attendez pour faire votre vin !</em> ». L'idée germa. <br />
+                            Le résultat était au « <em>petit bonheur la chance</em> », mais la magie du terroir avait déjà lieu ! <span className="hidden lg:inline"><br /></span>
+                            Ils me dirent en dégustant: « <em>Qu'est ce que vous attendez pour faire votre vin !</em> ». L'idée germa. <span className="hidden lg:inline"><br /></span>
                             Peu de temps après Sylviane, mon épouse, me dit: « <em>Si nous créions notre cave !</em> ». C'est ainsi que nous avons pris la suite de nos parents. Au printemps commencèrent les travaux... 
                             <br /> Et, en septembre, nous vendangions, puis vinifions notre premier Millésime... le 1988 !
                         </p>
@@ -58,8 +58,8 @@ export default function Histoire() {
                     <div className="max-w-[770px]">
                         <h2 className="text-red text-center my-2 text-2xl font-bold">- NOS TROIS CUVÉES DE GARDE -</h2>
                         <p className="lg:[text-align-last:justify]">
-                            ... <em>La Grande Réserve, La Cuvée Sylviane et L'Orée des Collines</em> dans les 23 années <br /> que nous vous proposons, sont semblables car issues d'un même terroir, telles les membres d'une famille, et tout à la fois chaque Millésime de 1988 à 2010 est unique comme le sont leurs enfants !
-                            Et donc différents dans leurs diversités aromatiques, dans leurs structures tanniques... leur harmonie d'ensemble. Mon épouse disait : <br />« <em>Ils sont vrais !</em> ». Cette expression leur convient à souhait, en effet c'est la personnalité qui importe avant tout dans un vin... tout comme chez une personne !
+                            ... <em>La Grande Réserve, La Cuvée Sylviane et L'Orée des Collines</em> dans les 23 années <span className="hidden lg:inline"><br /></span> que nous vous proposons, sont semblables car issues d'un même terroir, telles les membres d'une famille, et tout à la fois chaque Millésime de 1988 à 2010 est unique comme le sont leurs enfants !
+                            Et donc différents dans leurs diversités aromatiques, dans leurs structures tanniques... leur harmonie d'ensemble. Mon épouse disait : <span className="hidden lg:inline"><br /></span>« <em>Ils sont vrais !</em> ». Cette expression leur convient à souhait, en effet c'est la personnalité qui importe avant tout dans un vin... tout comme chez une personne !
                         </p>
                     </div>
                 </article>

@@ -45,11 +45,11 @@ export default function PanierPage() {
             const linePrice = unitPrice * item.quantity;
 
             return (
-              <li key={item.id} className="flex justify-between items-center border p-4 rounded">
+              <li key={item.id} className="flex flex-col gap-4 justify-between items-center border p-4 rounded md:flex-row">
                 {/* Image et nom du produit */}
                 <div className="flex items-center gap-4">
                   {item.merchandise.product.featuredImage?.url && (
-                    <div className="relative w-[60px] h-[80px] rounded bg-white">
+                    <div className="relative w-[80px] h-[80px] p-1 rounded bg-white">
                       <Image
                         src={item.merchandise.product.featuredImage.url}
                         alt={item.merchandise.product.title}
@@ -65,27 +65,29 @@ export default function PanierPage() {
                   </div>
                 </div>
 
-                {/* Contrôle de quantité */}
-                <div className="flex items-center gap-2">
-                  <button
-                    onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                    disabled={item.quantity <= 1}
-                    className="px-2 py-1 border rounded hover:bg-white transition cursor-pointer"
-                  >
-                    -
-                  </button>
-                  <span className="mx-2">{item.quantity}</span>
-                  <button
-                    onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                    className="px-2 py-1 border rounded hover:bg-white transition cursor-pointer"
-                  >
-                    +
-                  </button>
+                <div className="flex items-center gap-8">
+                  {/* Contrôle de quantité */}
+                  <div className="flex items-center gap-2">
+                    <button
+                      onClick={() => updateQuantity(item.id, item.quantity - 1)}
+                      disabled={item.quantity <= 1}
+                      className="px-2 py-1 border rounded hover:bg-white transition cursor-pointer"
+                    >
+                      -
+                    </button>
+                    <span className="mx-2">{item.quantity}</span>
+                    <button
+                      onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                      className="px-2 py-1 border rounded hover:bg-white transition cursor-pointer"
+                    >
+                      +
+                    </button>
+                  </div>
+
+                  {/* Prix ligne */}
+                  <div className="font-bold">{linePrice.toFixed(2)} €</div>
+
                 </div>
-
-                {/* Prix ligne */}
-                <div className="font-bold">{linePrice.toFixed(2)} €</div>
-
                 {/* Supprimer */}
                 <button
                   onClick={() => removeItem(item.id)}
