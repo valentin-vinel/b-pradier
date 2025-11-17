@@ -32,8 +32,11 @@ export default async function Products() {
     products: collection.products.map(product => ({
       ...product,
       variantId: product.variants?.edges?.[0]?.node?.id ?? null,
+      stock: product.variants?.edges?.[0]?.node?.quantityAvailable ?? 0,
     })),
   }));
+
+  console.log(collectionsWithVariants)
 
   return (
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
@@ -68,8 +71,8 @@ export default async function Products() {
                       {collection.products.map(product => (
                         <article key={product.id} className="flex flex-col gap-4 mb-6 items-center">
                           <figure className="flex flex-col justify-center items-center relative">
-                            <Image src={bouchon} alt="Image d'un bouchon de liège" className="max-w-[130px]" />
-                            <figcaption className="lgd-bouchon text-3xl absolute h-fit m-auto translate-x-4 top-1.5 w-[140px] font-bold leading-0 hover:cursor-pointer hover:text-[#6b1e1e]">
+                            <Image src={bouchon} alt="Image d'un bouchon de liège" className={`max-w-[130px] transition-opacity ${product.stock === 0 ? "opacity-40 grayscale" : ""}`} />
+                            <figcaption className={`lgd-bouchon text-3xl absolute h-fit m-auto translate-x-4 top-1 w-[140px] font-bold leading-3 ${product.stock === 0 ? "pointer-events-none text-gray-700" : "hover:cursor-pointer hover:text-[#6b1e1e]"}`}>
                               <Link href={`/millesimes/${product.handle}`}>
                                 <span className="text-base">VOIR</span>
                                 <br />
@@ -78,11 +81,20 @@ export default async function Products() {
                             </figcaption>
                           </figure>
 
-                          {product.variantId ? (
-                            <AddToCartButton variantId={product.variantId} />
-                          ) : (
-                            <p className="text-red-500 text-sm">Indisponible</p>
+                          <div className="flex flex-col gap-0">
+                          <p className={`text-base ${product.stock > 0 && product.stock < 6 ? "text-red-900" : ""}`}>Stock : <span className="font-bold">{product.stock}</span></p>
+
+                          {product.variantId && product.stock > 0 ? (
+                              <AddToCartButton variantId={product.variantId} />
+                            ) : (
+                              <button
+                              disabled
+                              className=" border-2 text-base cursor-not-allowed relative w-[210px]"
+                              >
+                              Indisponible
+                            </button>
                           )}
+                          </div>
                         </article>
                       ))}
                     </div>

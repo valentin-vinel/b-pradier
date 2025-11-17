@@ -76,6 +76,7 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
                 node {
                   id
                   title
+                  quantityAvailable
                 }
               }
             }
@@ -106,6 +107,7 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
                 node {
                   id
                   title
+                  quantityAvailable
                 }
               }
             }
@@ -136,6 +138,7 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
                 node {
                   id
                   title
+                  quantityAvailable
                 }
               }
             }
@@ -379,6 +382,10 @@ export async function getProductByHandle(handle: string) {
         featuredImage {
           url
           altText
+        }
+        metafield(namespace: "custom", key: "vol") {
+          value
+          type
         }
         variants(first: 10) {
           edges {

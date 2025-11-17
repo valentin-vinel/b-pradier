@@ -19,6 +19,7 @@ export interface Product {
       node: {
         id: string;
         title: string;
+        quantityAvailable: number;
       };
     }[];
   };

@@ -3,9 +3,8 @@ import AddToCartButton from "@/shared/AddToCartButton";
 import Footer from "@/shared/Footer";
 import Header from "@/shared/Header";
 import Origine from "@/shared/OrigineProduct"
+import QuantitySelector from "@/shared/QuantitySelector";
 import Typicite from "@/shared/TypiciteProduct";
-import Image from "next/image";
-import Link from "next/link";
 
 export default async function MillesimePage({ params }: { params: Promise<{ handle: string }> }) {
   const { handle } = await params;
@@ -19,7 +18,7 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
 
   const variantId = product?.variants?.edges?.[0]?.node?.id;
 
-  console.log(product)
+  // console.log(product)
 
   if (!product) return <p>Produit introuvable.</p>;
 
@@ -37,7 +36,7 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
             />
           )}
           <figcaption className="text-sm">
-            Photo non contractuelle. <br /> Vin rouge. 13,5 % vol. 75 cl. <br />Product of France. Contient des sulfites.
+            Photo non contractuelle. <br /> Vin rouge. {product.metafield?.value}% vol. 75 cl. <br />Product of France. Contient des sulfites.
           </figcaption>
         </figure>
         
@@ -78,11 +77,19 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
               </p>
             </article>
 
-            {variantId ? (
-              <AddToCartButton variantId={variantId} className="m-auto" />
+            {quantity > 0 ? (
+              <div>
+                <QuantitySelector variantId={variantId} max={quantity} />
+              </div>
             ) : (
               <p className="text-red-500 text-sm">Indisponible</p>
             )}
+
+            {/* {quantity > 0 ? (
+              <AddToCartButton variantId={variantId} className="m-auto" />
+            ) : (
+              <p className="text-red-500 text-sm">Indisponible</p>
+            )} */}
 
           </div>
         </div>
