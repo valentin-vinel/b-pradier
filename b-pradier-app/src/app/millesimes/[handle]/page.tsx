@@ -5,6 +5,40 @@ import Header from "@/shared/Header";
 import Origine from "@/shared/OrigineProduct"
 import QuantitySelector from "@/shared/QuantitySelector";
 import Typicite from "@/shared/TypiciteProduct";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ handle: string }> }): Promise<Metadata> {
+  const { handle } = await params;
+
+  const product = await getProductByHandle(handle);
+
+  if (!product) {
+    return {
+      title: "Millésime introuvable",
+      description: "Ce millésime n'est plus disponible.",
+    };
+  }
+
+  const title = product.title ?? "Millésime B. Pradier";
+  const description =
+    product.description?.slice(0, 160) ??
+    "Découvrez la typicité, les citations et les accords vins-mets de ce millésime signé Bernard Pradier.";
+
+  const image =
+    product.featuredImage?.url ??
+    product.images?.edges?.[0]?.node?.url ??
+    "/default.jpg";
+
+  return {
+    title: `${title} — B. Pradier`,
+    description,
+    openGraph: {
+      title: `${title} — B. Pradier`,
+      description,
+      images: [{ url: image }],
+    },
+  };
+}
 
 export default async function MillesimePage({ params }: { params: Promise<{ handle: string }> }) {
   const { handle } = await params;

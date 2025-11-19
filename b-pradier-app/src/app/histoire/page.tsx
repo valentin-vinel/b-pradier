@@ -9,7 +9,7 @@ import Footer from "@/shared/Footer";
 export const metadata = {
   title: "Histoire",
   description:
-    "Depuis 1988, Bernard Pradier révèle la richesse d'un terroir préservé, où chaque millésime raconte une histoire. Entre tradition et exigence, nos vignes expriment toute la singularité d'un savoir-faire transmis avec passion.",
+    "Explorez l'histoire de Bernard Pradier, du domaine et de son terroir remarquable. Découvrez l'origine des trois cuvées emblématiques, fruits d'une vision et d'un savoir-faire transmis depuis 1988.",
 };
 
 export default function Histoire() {

@@ -4,6 +4,12 @@ import Header from "../../shared/Header";
 import tableau from "../../../public/degustation/tableau-degustation.png"
 import Footer from "@/shared/Footer";
 
+export const metadata = {
+  title: "Les dégustations",
+  description:
+    "Choisissez la dégustation qui vous ressemble : trois expériences pensées pour explorer les millésimes rares de Bernard Pradier et comprendre la singularité de chaque cuvée.",
+};
+
 export default function Cuvees() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">

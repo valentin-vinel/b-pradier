@@ -11,6 +11,12 @@ import Footer from "@/shared/Footer";
 import AddToCartButton from "@/shared/AddToCartButton";
 import MillesimesMobile from "@/shared/MillesimesMobile";
 
+export const metadata = {
+  title: "Millésimes",
+  description:
+    "Parcourez l'ensemble des millésimes de Bernard Pradier, de 1988 à 2010 : une collection rare, préservée avec exigence et disponible à la vente.",
+};
+
 export default async function Products() {
 
   // 1️⃣ Récupération des 3 cuvées depuis Shopify

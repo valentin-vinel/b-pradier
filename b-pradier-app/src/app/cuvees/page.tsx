@@ -6,6 +6,12 @@ import cuveeSylvianeImg from "../../../public/cuvees/etq-cuvee-sylviane.png"
 import oreeImg from "../../../public/cuvees/etq-oree.png"
 import Footer from "@/shared/Footer";
 
+export const metadata = {
+  title: "Nos Cuvées",
+  description:
+    "Découvrez nos trois cuvées : des expressions uniques et complémentaires du terroir, révélant finesse, caractère et authenticité.",
+};
+
 export default function Cuvees() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
