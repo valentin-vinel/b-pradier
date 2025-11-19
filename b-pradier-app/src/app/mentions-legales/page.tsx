@@ -17,9 +17,9 @@ export default function MentionsLegales() {
             <ul className="list-disc pl-10">
                 <li>Nom de l'entreprise : Bernard Pradier</li>
                 <li>Forme juridique : Micro-entreprise</li>
-                <li>Adresse : 1740 chemin de la d'Hugues, 84100 Uchaux.</li>
+                <li>Adresse : 1740 Chemin de la d'Hugue, 84100 Uchaux</li>
                 <li>SIREN : 390 771 103</li>
-                <li>RCS : RCS Avignon 390 771 103</li>
+                <li>RCS : 390 771 103 R.C.S. Avignon </li>
                 <li>TVA intracommunautaire : Non applicable</li>
                 <li>Responsable légal : Bernard Pradier</li>
                 <li>Email de contact : bernard.pradier84@gmail.com</li>
@@ -59,8 +59,7 @@ export default function MentionsLegales() {
             <p>Licene requise :</p>
             <ul className="list-disc pl-10">
                 <li>Petite Licence à Emporter</li>
-                <li>Numéro : [À compléter]</li>
-                <li>Date de délivrance : [À compléter]</li>
+                <li>Date de délivrance : 29/10/2025</li>
             </ul>
         </section>
         

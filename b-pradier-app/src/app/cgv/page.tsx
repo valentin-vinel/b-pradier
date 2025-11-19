@@ -20,7 +20,7 @@ export default function Cgv() {
             <h3 className="font-bold">Présentation</h3>
             <p>Les présentes Conditions Générales de Vente (CGV) s'appliquent à toutes les commandes passées sur le site exploité par :</p>
             <ul className="list-disc pl-10">
-                <li>Bernard Pradier, micro-entreprise, dont l'adresse est : 1740 chemin de la d'Hugues, 84100 Uchaux.</li>
+                <li>Bernard Pradier, micro-entreprise, dont l'adresse est : 1740 Chemin de la d'Hugue, 84100 Uchaux.</li>
                 <li>L'acheteur reconnaît avoir lu et accepté les CGV avant le paiement.</li>
             </ul>
         </section>
@@ -67,8 +67,8 @@ export default function Cgv() {
 
             <h4 className="font-semibold">Délais</h4>
             <ul className="list-disc pl-10">
-                <li>Préparation : [À compléter, ex. 24–48h]</li>
-                <li>Transport : [À compléter, ex. 48–72h selon transporteur]</li>
+                <li>Préparation : [À compléter]</li>
+                <li>Transport : [À compléter]</li>
             </ul>
 
             <h4 className="font-semibold">Tarifs</h4>

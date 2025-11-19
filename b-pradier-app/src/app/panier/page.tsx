@@ -1,5 +1,3 @@
-// 'use client';
-
 import PanierClient from "@/shared/PanierClient";
 
 export const metadata = {

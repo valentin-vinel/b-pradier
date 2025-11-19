@@ -19,8 +19,8 @@ export default function PolitiqueConfidentialite() {
         <section>
             <h3 className="font-bold">Responsable du traitement</h3>
             <p>Bernard Pradier</p>
-            <p>Adresse : [À compléter]</p>
-            <p>Email : [À compléter]</p>
+            <p>Adresse : 1740 Chemin de la d'Hugue, 84100 Uchaux</p>
+            <p>Email : bernard.pradier84@gmail.com</p>
         </section>
 
         <section>
