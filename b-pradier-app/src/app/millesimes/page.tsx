@@ -51,8 +51,8 @@ export default async function Products() {
                     <figcaption className="text-base mt-2">Photo non contractuelle.</figcaption>
                 </figure>
 
-                <div className="text-center my-8 bg-[#D4BFA6] max-w-[450px] h-[90px] m-auto rounded-full  flex justify-center items-center border-2">
-                  <Link href={'/horizontale-2005'}>Offre 2025 <br /> « <em>Horizontale 2005... <span className="text-nowrap">20ème anniversaire</span></em> »</Link>
+                <div className="text-center my-8 bg-white max-w-[600px] h-[100px] m-auto rounded-full flex justify-center items-center border-3 font-bold lg:text-[26px]">
+                  <Link href={'/horizontale-2005'}>Offre  de dégustation 2025 <br /> « <em>Horizontale 2005... <span className="text-nowrap">20ème anniversaire</span></em> »</Link>
                 </div>
 
                 <MillesimesMobile cuvees={collectionsWithVariants} />
@@ -82,7 +82,7 @@ export default async function Products() {
                           </figure>
 
                           <div className="flex flex-col gap-0">
-                          <p className={`text-base ${product.stock > 0 && product.stock < 6 ? "text-red-900" : ""}`}>Stock : <span className="font-bold">{product.stock}</span></p>
+                          <p className={`text-base ${product.stock > 0 && product.stock < 6 ? "text-red-900" : ""}`}>Disponible : <span className="font-bold">{product.stock}</span></p>
 
                           {product.variantId && product.stock > 0 ? (
                               <AddToCartButton variantId={product.variantId} />
@@ -91,7 +91,7 @@ export default async function Products() {
                               disabled
                               className=" border-2 text-base cursor-not-allowed relative w-[210px]"
                               >
-                              Indisponible
+                              Ajouter à ma commande
                             </button>
                           )}
                           </div>
