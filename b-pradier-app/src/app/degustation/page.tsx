@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Image from "next/image";
 import Header from "../../shared/Header";
 import tableau from "../../../public/degustation/tableau-degustation.png"

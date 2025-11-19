@@ -1,4 +1,4 @@
-"use client";
+// "use client";
 import Image from "next/image";
 import Header from "../../shared/Header";
 import grandeReserveImg from "../../../public/cuvees/etq-grande-reserve.png"
