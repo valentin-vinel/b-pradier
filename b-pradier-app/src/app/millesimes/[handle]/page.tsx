@@ -60,8 +60,8 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
       <Header />
 
-      <main className="flex flex-col text-center my-auto lg:flex-row gap-4 m-auto">
-        <figure className="bg-white w-[280px] md:w-[300px] lg:h-[680px] flex flex-col border-2 m-auto">
+      <main className="flex flex-col text-center lg:flex-row gap-4 m-auto my-6">
+        <figure className="bg-white w-[280px] md:w-[300px] lg:h-[680px] flex flex-col border-2 ">
           {product.featuredImage?.url && (
             <img
             src={product.featuredImage.url}
@@ -74,7 +74,7 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
           </figcaption>
         </figure>
         
-        <div className="py-2 lg:py-0 max-w-[1000px] lg:h-[680px] flex justify-center items-center border-2 bg-white m-auto">
+        <div className="py-2 max-w-[1000px] lg:min-h-[680px] flex justify-center items-center border-2 bg-white m-auto">
           <div className="max-w-[850px] flex flex-col gap-6 m-auto">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-bold uppercase">- {product.title} -</h2>
 
@@ -88,7 +88,7 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
               <Typicite title={product.title} />
             </article>
 
-            <article className="text-col-bleu">
+            <article className="text-col-bleu px-1">
               <h3 className="font-bold text-secondary">CITATION GUIDE & ACCORDS VINS-METS</h3>
               {product.descriptionHtml ? (
                 <div
