@@ -17,7 +17,7 @@ export default function Origine({ title }: { title: string }) {
     );
   }
 
-  if (title.includes("orée des Collines")) {
+  if (title.includes("Orée des Collines")) {
     return (
       <p className="text-center lg:w-[750px] m-auto px-1 lg:px-0">
         Son nom est dû à l'exposition d'une partie de ses vignes sur le flanc sud de nos Collines, au terroir composé de grès siliceux et de grès calcaires. <span className="hidden lg:inline"><br /></span> Elle a obtenu en 2004 l'appellation « <em>Villages Massif d'Uchaux</em> »... <Link href={'/histoire'} className="text-base lg:text-lg italic block md:inline">En savoir plus</Link>

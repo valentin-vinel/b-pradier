@@ -17,7 +17,7 @@ export default function Typicite({ title }: { title: string }) {
     );
   }
 
-  if (title.includes("orée des Collines")) {
+  if (title.includes("Orée des Collines")) {
     return (
         <p className="text-center lg:w-[730px] m-auto">
             Assemblage identique à La Cuvée Sylviane, mais « élevée en fûts », lui donne une élégance, du à ses tannins arrondies par le bois, où se mêlent fruits noirs confiturés, notes de garrigue, d'épices douces... <Link href={'/cuvees#oree-des-collines'} className="text-base lg:text-lg italic block md:inline">En savoir plus</Link>
