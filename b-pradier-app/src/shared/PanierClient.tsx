@@ -33,6 +33,7 @@ export default function PanierClient() {
     window.location.href = checkoutUrl; // redirection vers Shopify Checkout
   };
 
+  
   return (
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
       <Header />
@@ -43,7 +44,7 @@ export default function PanierClient() {
           {items.map((item) => {
             const unitPrice = parseFloat(item.merchandise.priceV2.amount);
             const linePrice = unitPrice * item.quantity;
-
+            
             return (
               <li key={item.id} className="flex flex-col gap-4 justify-between items-center border p-4 rounded md:flex-row">
                 {/* Image et nom du produit */}

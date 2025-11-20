@@ -92,7 +92,7 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
               <h3 className="font-bold text-secondary">CITATION GUIDE & ACCORDS VINS-METS</h3>
               {product.descriptionHtml ? (
                 <div
-                  className="prose prose-lg mb-4 text-bleu lg:w-[780px] m-auto text-center"
+                  className="product-description"
                   dangerouslySetInnerHTML={{ __html: product.descriptionHtml }}
                 />
               ) : (

@@ -58,12 +58,12 @@ export default async function Products() {
                 </figure>
 
                 <div className="text-center my-8 bg-white max-w-[600px] h-[100px] m-auto rounded-full flex justify-center items-center border-3 font-bold lg:text-[26px]">
-                  <Link href={'/horizontale-2005'}>Offre  de dégustation 2025 <br /> « <em>Horizontale 2005... <span className="text-nowrap">20ème anniversaire</span></em> »</Link>
+                  <Link href={'/horizontale-2005'}>« <em>L'horizontale Millésimes 2005</em> »<br /> Offre en 2025... <span className="text-nowrap">20ème anniversaire</span> »</Link>
                 </div>
 
                 <MillesimesMobile cuvees={collectionsWithVariants} />
 
-                <div className="hidden lg:flex gap-6 m-auto text-center w-fit">
+                <div className="hidden lg:flex gap-10 m-auto text-center w-fit">
                   {collectionsWithVariants.map(collection => (
                     <div key={collection.title} className="flex flex-col gap-6">
                       <figure className="flex flex-col justify-center items-center relative">
