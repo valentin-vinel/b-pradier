@@ -35,7 +35,7 @@ export default function Cuvees() {
                     <section className="max-w-[800px] m-auto border p-4">
                         <h3 className="text-secondary text-red text-center mb-2">2 / 3 : LES VERTICALES</h3>
                         <p>
-                            Dégustations d'une même cuvée, cette fois-ci je vous propose La Grande Réserve sur deux ou trois millésimes impairs 2007, 2005 et 2001 ! Vous vivrez ainsi son évolution au fil des années et remonterez le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille !</em> ».
+                        Les dégustations d'une même cuvée. Cette fois-ci je vous propose avec La Grande Réserve sur deux ou trois millésimes impairs 2007, 2005 et 2001 ! <br />Vous vivrez ainsi son évolution au fil des années et remonterez le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille</em> ».
                         </p>
                     </section>
 
