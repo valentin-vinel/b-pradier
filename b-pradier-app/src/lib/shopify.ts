@@ -124,7 +124,7 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
         }
       }
     }
-    loree: collection(handle: "l-oree-des-collines") {
+    loree: collection(handle: "loree-des-collines") {
       title
       products(first: 50) {
         edges {
