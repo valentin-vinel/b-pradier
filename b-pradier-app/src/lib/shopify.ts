@@ -1,6 +1,6 @@
 import { Cart, CartLine, CollectionWithProducts, CuveesResponse, Product, ProductsResponse } from "@/types/shopify";
 
-const endpoint = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/2025-10/graphql.json`;
+const endpoint = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/2025-01/graphql.json`;
 const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN;
 
 async function fetchFromShopify<T>(query: string, variables: Record<string, any> = {}): Promise<T> {
