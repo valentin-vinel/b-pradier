@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { CartProvider } from "../context/CartContext";
 import { Lora, Playfair_Display, Caveat, Playball } from "next/font/google";
 import "./globals.css";
+import AgeGate from "@/shared/AgeGate";
 
 const playfair = Playfair_Display({
     subsets: ["latin"],
@@ -43,6 +44,7 @@ export default function RootLayout({
     return (
         <html lang="fr">
             <body className={`${playfair.variable} ${caveat.variable} ${lora.variable} ${playball.variable} antialiased md:text-xl`}>
+                <AgeGate />
                 <CartProvider>
                     {children}
                 </CartProvider>

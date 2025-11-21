@@ -1,4 +1,4 @@
-import { Cart, CollectionWithProducts, CuveesResponse, Product, ProductsResponse } from "@/types/shopify";
+import { Cart, CollectionWithProducts, CuveesResponse, Product, ProductsResponse, CartAttributesUpdateResponse } from "@/types/shopify";
 
 const endpoint = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/2025-01/graphql.json`;
 const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN;
@@ -369,6 +369,37 @@ export async function fetchCart(cartId: string) {
   const variables = { cartId };
   const data = await fetchFromShopify<{ cart: { id: string; lines: { edges: any[] } } }>(query, variables);
   return data.cart.lines.edges.map(e => e.node);
+}
+
+export async function setAgeVerified(cartId: string) {
+  const mutation = `
+    mutation cartAttributesUpdate($cartId: ID!, $attributes: [AttributeInput!]!) {
+      cartAttributesUpdate(cartId: $cartId, attributes: $attributes) {
+        cart {
+          id
+          attributes {
+            key
+            value
+          }
+        }
+        userErrors {
+          field
+          message
+        }
+      }
+    }
+  `;
+
+  const variables = {
+    cartId,
+    attributes: [{ key: "age_verified", value: "true" }],
+  };
+
+  const data = await fetchFromShopify<CartAttributesUpdateResponse>(mutation, variables);
+  if (data.cartAttributesUpdate.userErrors.length > 0) {
+    console.error("Erreur mise à jour age_verified :", data.cartAttributesUpdate.userErrors);
+  }
+  return data.cartAttributesUpdate.cart.attributes;
 }
 
 export async function getProductByHandle(handle: string) {

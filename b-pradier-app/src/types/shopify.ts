@@ -76,3 +76,18 @@ export interface CartContextType {
   totalQuantity: number;
   addItem: (variantId: string, quantity?: number) => Promise<void>;
 }
+
+interface CartAttribute {
+  key: string;
+  value: string;
+}
+
+export interface CartAttributesUpdateResponse {
+  cartAttributesUpdate: {
+    cart: {
+      id: string;
+      attributes: CartAttribute[];
+    };
+    userErrors: { field?: string[]; message: string }[];
+  };
+}
