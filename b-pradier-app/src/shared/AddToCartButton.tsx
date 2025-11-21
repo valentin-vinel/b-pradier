@@ -4,7 +4,7 @@ import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 
 interface AddToCartButtonProps {
-  variantId: string;
+  variantId?: string;
   quantity?: number;
   className?: string;
 }

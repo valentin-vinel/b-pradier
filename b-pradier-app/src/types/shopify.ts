@@ -55,6 +55,10 @@ export interface CartLine {
       amount: string;
       currencyCode: string;
     };
+    compareAtPriceV2: {
+      amount: string;
+      currencyCode: string;
+    }
     product: {
       title: string;
       featuredImage?: {
@@ -90,4 +94,21 @@ export interface CartAttributesUpdateResponse {
     };
     userErrors: { field?: string[]; message: string }[];
   };
+}
+
+type ProductVariant = {
+  id: string;
+  title: string;
+  priceV2: { amount: string; currencyCode: string };
+  compareAtPriceV2: { amount: string; currencyCode: string } | null;
+  availableForSale: boolean;
+};
+
+export interface CoffretProduct {
+    id: string;
+    title: string;
+    handle: string;
+    descriptionHtml: string;
+    featuredImage?: { url: string };
+    variants?: { edges: { node: ProductVariant }[] };
 }

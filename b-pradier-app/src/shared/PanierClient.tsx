@@ -44,6 +44,7 @@ export default function PanierClient() {
           {items.map((item) => {
             const unitPrice = parseFloat(item.merchandise.priceV2.amount);
             const linePrice = unitPrice * item.quantity;
+            const compareAt = item.merchandise.compareAtPriceV2 ? Number(item.merchandise.compareAtPriceV2.amount) : null;
             
             return (
               <li key={item.id} className="flex flex-col gap-4 justify-between items-center border p-4 rounded md:flex-row">
@@ -86,6 +87,11 @@ export default function PanierClient() {
                   </div>
 
                   {/* Prix ligne */}
+                  {compareAt !== null && (
+                    <div className="line-through text-red mr-2">
+                      {compareAt.toFixed(2)} €
+                    </div>
+                  )}
                   <div className="font-bold">{linePrice.toFixed(2)} €</div>
 
                 </div>

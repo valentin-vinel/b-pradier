@@ -1,4 +1,4 @@
-import { Cart, CollectionWithProducts, CuveesResponse, Product, ProductsResponse, CartAttributesUpdateResponse } from "@/types/shopify";
+import { Cart, CollectionWithProducts, CuveesResponse, Product, ProductsResponse, CartAttributesUpdateResponse, CoffretProduct } from "@/types/shopify";
 
 const endpoint = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/2025-01/graphql.json`;
 const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN;
@@ -225,6 +225,10 @@ export async function addToCart(cartId: string, variantId: string, quantity = 1)
                     priceV2 { 
                       amount 
                       currencyCode 
+                    }
+                    compareAtPriceV2 {
+                      amount
+                      currencyCode
                     }
                     product {
                       title
@@ -532,4 +536,35 @@ export async function getProductsFrom2005() {
   }>(query);
 
   return data.collection.products.edges.map(e => e.node);
+}
+
+export async function getCoffret2005(): Promise<CoffretProduct | null> {
+  const query = `
+    query {
+      productByHandle(handle: "horizontale-2005-coffret-6-bouteilles") {
+        id
+        title
+        description
+        descriptionHtml
+        handle
+        featuredImage { url }
+        variants(first: 10) {
+          edges {
+            node {
+              id
+              title
+              priceV2 { amount currencyCode }
+              compareAtPriceV2 { amount currencyCode }
+              availableForSale
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const data = await fetchFromShopify<{ productByHandle: CoffretProduct }>(query);
+
+  // retourne le produit ou null si pas trouvé
+  return data.productByHandle || null;
 }

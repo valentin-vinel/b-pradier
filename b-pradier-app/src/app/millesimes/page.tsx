@@ -54,7 +54,7 @@ export default async function Products() {
                 </figure>
 
                 <div className="text-center my-8 bg-white max-w-[600px] h-[100px] m-auto rounded-full flex justify-center items-center border-3 font-bold lg:text-[26px]">
-                  <Link href={'/horizontale-2005'}>« <em>L'horizontale Millésimes 2005</em> »<br /> Offre en 2025... <span className="text-nowrap">20ème anniversaire</span> »</Link>
+                  <Link href={'/offre'}>« <em>L'horizontale Millésimes 2005</em> »<br /> « Offre en 2025... <span className="text-nowrap">20ème anniversaire</span> »</Link>
                 </div>
 
                 <MillesimesMobile cuvees={collectionsWithVariants} />

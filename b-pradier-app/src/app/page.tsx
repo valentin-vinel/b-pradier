@@ -33,7 +33,7 @@ export default function Home() {
                 <p className="lg:[text-align-last:justify]">
                     La raison est qu'il y a deux ans, j'ai fait un A V C. J'en ai réchappé, si ce n'est avec quelques séquelles, qui m'empêchent à ce jour, de vous recevoir... mais pas de vous lire ! Aussi je vous invite à profiter, pour vos repas de fêtes de Nöel, du nouvel an... et offrir, ou mettre dans votre cave, en particulier en 2025 : 
                 </p>
-                <Link href={'/horizontale-2005'} className="lg:text-nowrap font-bold block text-center mb-2">
+                <Link href={'/offre'} className="lg:text-nowrap font-bold block text-center mb-2">
                     « Les trois cuvées de notre Millésime 2005, en l'honneur... de leur 20ème anniversaire ! »
                 </Link>
                 <p  className="">

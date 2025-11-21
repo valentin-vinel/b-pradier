@@ -6,11 +6,16 @@ import Header from "@/shared/Header";
 import Image from "next/image";
 import AddAllToCartButton from "@/shared/AddAllToCartButton";
 import Link from "next/link";
+import { useCoffret2005 } from "@/hooks/useCoffret2005";
+import AddToCartButton from "@/shared/AddToCartButton";
 
 export default function Offre() {
   const { products, loading } = useOfferProducts();
+  const { product, loading: loadingCoffret, error } = useCoffret2005();
 
-  if (loading) return <p>Chargement...</p>;
+  if (loading || loadingCoffret) return <p>Chargement...</p>;
+  if (error) return <p>Erreur : {error.message}</p>;
+  if (!product) return <p>Produit non trouvé</p>;
 
   // --- Logique avant le return ---
   const bottlesPerProduct = 2; // chaque produit contribue à 2 bouteilles
@@ -33,19 +38,13 @@ export default function Offre() {
     };
   });
 
-    // // Calcul TOTAL du pack
-    // const totalPrice = productsWithTotal.reduce((sum, p) => sum + p.total, 0);
-    // const totalCompare = productsWithTotal.reduce(
-    //     (sum, p) => sum + (p.totalCompare ?? 0),
-    //     0
-    // );
-
+  console.log(product);
   return (
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
       <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
       <Header />
 
-      <main>
+      <main className="mt-10">
         <h2 className="text-center text-red font-bold text-2xl my-6">
           Horizontale Château d'Hugues Millésime 2005
         </h2>
@@ -54,7 +53,9 @@ export default function Offre() {
             <Link href={"horizontale-2005"}>Découvrez les détails de la dégustation de cette Horizontale</Link>
         </div>
 
-        <div className="flex gap-6">
+        <p className="text-center mb-4">L'offre de l'Horizontale 2005 présente un carton de 6 bouteilles :</p>
+
+        <div className="flex gap-6 flex-col lg:flex-row ">
           {productsWithTotal.map(product => (
             <div
               key={product.id}
@@ -86,27 +87,17 @@ export default function Offre() {
               </div>
             </div>
           ))}
-
         </div>
 
-          {/* --- Ligne TOTAL ---
-          <div className="mt-4 p-4 border-t flex items-center text-lg">
-            <span></span>
-            {totalCompare > 0 && (
-              <span className="line-through text-red-500">{totalCompare.toFixed(2)} €</span>
-            )}
-            <span className="font-bold text-xl">{totalPrice.toFixed(2)} €</span>
-          </div> */}
+          {/*  --- Ligne TOTAL --- */}
+          <p className="text-center my-4">Vin rouge. 13,5% vol. 75 cl. - Produit de France. Contient des sulfites.</p>
+          <p className="text-center my-4">Prix : <span className="line-through text-red">{product.variants?.edges[0].node.compareAtPriceV2?.amount} €</span> <span className="text-2xl font-bold">{product.variants?.edges[0].node.priceV2.amount} €</span></p>
+          <p className="text-center">Profitez de 10% de remise sur cette offre</p>
 
           {/* --- Bouton unique pour ajouter les 6 bouteilles --- */}
-          {productsWithTotal.length > 0 && (
+          {product.variants?.edges?.length! > 0 && (
             <div className="mt-6 flex justify-center">
-              <AddAllToCartButton
-                items={productsWithTotal.map(p => ({
-                  variantId: p.variantId,
-                  quantity: p.quantity, // 2 bouteilles par produit
-                }))}
-              />
+              <AddToCartButton variantId={product.variants?.edges[0]?.node.id}  />
             </div>
           )}
       </main>

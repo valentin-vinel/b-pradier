@@ -52,7 +52,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
                     <Link href={'/histoire'} className={linkClass("/histoire")}>L'HISTOIRE</Link>
                     <Link href={'/cuvees'} className={linkClass("/cuvees")}>LES CUVÉES</Link>
                     <Link href={'/degustation'} className={linkClass("/degustation")}>LES DÉGUSTATIONS</Link>
-                    <Link href={'/horizontale-2005'} className={linkClass("/horizontale-2005")}>L'OFFRE</Link>
+                    <Link href={'/offre'} className={linkClass("/offre")}>L'OFFRE</Link>
                     <Link href={'/millesimes'} className={linkClass("/millesimes")}>LES MILLÉSIMES</Link>
                     <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative">
                         <Image src={panier} alt="Icône panier" className="w-[40px]  hover:bg-[#E7DFC9]/50 hover:rounded"></Image>
@@ -70,6 +70,7 @@ export default function Header({ cartQuantity }: HeaderProps) {
                 <nav className="flex flex-col gap-4 text-black font-medium items-center lg:hidden bg-white/50 mb-4">
                     <Link href={'/histoire'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/histoire")}>L'HISTOIRE</Link>
                     <Link href={'/cuvees'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/cuvees")}>LES CUVÉES</Link>
+                    <Link href={'/offre'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/offre")}>L'OFFRE</Link>
                     <Link href={'/degustation'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/degustation")}>LES DÉGUSTATIONS</Link>
                     <Link href={'/millesimes'} onClick={() => setMobileMenuOpen(false)} className={linkClass("/millesimes")}>LES MILLÉSIMES</Link>
                     <Link href={'/panier'} className="hover:text-[#C5A572] transition-colors relative mb-2">
