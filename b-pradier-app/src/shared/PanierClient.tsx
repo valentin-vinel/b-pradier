@@ -99,6 +99,7 @@ export default function PanierClient() {
               </li>
             );
           })}
+          <li className="text-base text-end"><em>Prix de la livraison non-inclus. Défini lors de la validation de la commande.</em></li>
         </ul>
 
         <div className="mt-6 text-right font-bold text-2xl">
@@ -110,7 +111,7 @@ export default function PanierClient() {
             onClick={handleCheckout}
             className="px-6 py-3 bg-[#D4BFA6] text-[#6b1e1e] font-bold rounded hover:bg-[#C5A572] hover:cursor-pointer transition"
           >
-            Acheter
+            Valider
           </button>
         </div>
       </main>

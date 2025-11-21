@@ -55,8 +55,8 @@ export default function MentionsLegales() {
         <section>
             <h3 className="font-bold">Vente d'alcool</h3>
             <p>La vente d'alcool est strictement réservée aux personnes majeures (+18 ans).</p>
-            <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération</p>
-            <p>Licene requise :</p>
+            <p>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</p>
+            <p>Licence requise :</p>
             <ul className="list-disc pl-10">
                 <li>Petite Licence à Emporter</li>
                 <li>Date de délivrance : 29/10/2025</li>

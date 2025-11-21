@@ -1,4 +1,4 @@
-import { Cart, CartLine, CollectionWithProducts, CuveesResponse, Product, ProductsResponse } from "@/types/shopify";
+import { Cart, CollectionWithProducts, CuveesResponse, Product, ProductsResponse } from "@/types/shopify";
 
 const endpoint = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/2025-01/graphql.json`;
 const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN;
@@ -451,4 +451,54 @@ export async function getCheckoutUrl(cartId: string): Promise<string> {
   const variables = { cartId };
   const data = await fetchFromShopify<{ cart: { checkoutUrl: string } }>(query, variables);
   return data.cart.checkoutUrl;
+}
+
+export async function getProductsFrom2005() {
+  const query = `
+    query {
+      collection(handle: "2005") {
+        products(first: 3) {
+          edges {
+            node {
+              id
+              title
+              handle
+              featuredImage {
+                url
+              }
+              variants(first: 1) {
+                edges {
+                  node {
+                    id
+                    priceV2 {
+                      amount
+                      currencyCode
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const data = await fetchFromShopify<{
+    collection: {
+      products: {
+        edges: {
+          node: {
+            id: string;
+            title: string;
+            handle: string;
+            featuredImage: { url: string } | null;
+            variants: { edges: { node: any }[] };
+          };
+        }[];
+      };
+    };
+  }>(query);
+
+  return data.collection.products.edges.map(e => e.node);
 }
