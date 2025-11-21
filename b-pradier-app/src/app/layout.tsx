@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { CartProvider } from "../context/CartContext";
+import { CartProvider, useCart } from "../context/CartContext";
 import { Lora, Playfair_Display, Caveat, Playball } from "next/font/google";
 import "./globals.css";
 import AgeGate from "@/shared/AgeGate";

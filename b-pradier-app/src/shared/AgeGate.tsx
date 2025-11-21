@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 
 interface AgeGateProps {
-  cartId: string; // tu passes l'ID du panier actuel
+  cartId?: string;
 }
 
 export default function AgeGate({ cartId }: AgeGateProps) {
