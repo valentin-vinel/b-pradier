@@ -34,7 +34,7 @@ export default function AgeGate({ cartId }: AgeGateProps) {
     if (isVerified) return null;
 
     return (
-        <div className="w-full h-screen fixed  flex backdrop-blur-md">
+        <div className="w-full h-screen fixed  flex backdrop-blur-md z-100">
         <div className="modal max-w-[600px] h-[200px] m-auto text-center p-4 justify-center items-center bg-white flex flex-col gap-2 border-2">
             <h2 className='font-bold'>Vérification d'âge</h2>
             <p className='mb-4'>Vous devez avoir 18 ans ou plus pour accéder à ce site.</p>

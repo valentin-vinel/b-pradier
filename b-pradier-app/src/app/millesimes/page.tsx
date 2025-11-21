@@ -25,8 +25,6 @@ export default async function Products() {
   // 2️⃣ Transformation de l’objet en tableau pour itérer plus facilement
   const cuvees = Object.values(cuveesData);
 
-  // console.log(cuvees)
-
   const collectionFonts: Record<string, string> = {
     "La Grande Réserve": "text-cookie",
     "La Cuvée Sylviane": "text-secondary",
@@ -41,8 +39,6 @@ export default async function Products() {
       stock: product.variants?.edges?.[0]?.node?.quantityAvailable ?? 0,
     })),
   }));
-
-  console.log(collectionsWithVariants)
 
   return (
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">

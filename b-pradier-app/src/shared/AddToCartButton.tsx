@@ -18,7 +18,6 @@ export default function AddToCartButton({
   const [loading, setLoading] = useState(false);
 
     const handleClick = async () => {
-        console.log("variantId:", variantId);
         if (!variantId) {
             console.error("Aucune variante trouvée pour ce produit !");
             return;

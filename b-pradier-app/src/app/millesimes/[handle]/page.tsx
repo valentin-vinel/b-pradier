@@ -1,5 +1,4 @@
 import { getProductByHandle } from "@/lib/shopify";
-import AddToCartButton from "@/shared/AddToCartButton";
 import Footer from "@/shared/Footer";
 import Header from "@/shared/Header";
 import Origine from "@/shared/OrigineProduct"
@@ -44,15 +43,12 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
   const { handle } = await params;
 
   const product = await getProductByHandle(handle);
-  console.log("produit: ", product)
   const quantity = product?.variants?.edges?.[0]?.node?.quantityAvailable ?? 0;
   
   const rawPrice = product?.variants?.edges?.[0]?.node?.price?.amount;
   const price = rawPrice ? parseFloat(rawPrice).toFixed(2) : null;
 
   const variantId = product?.variants?.edges?.[0]?.node?.id;
-
-  // console.log(product)
 
   if (!product) return <p>Produit introuvable.</p>;
 
@@ -61,12 +57,12 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
       <Header />
 
       <main className="flex flex-col text-center lg:flex-row gap-4 m-auto my-6">
-        <figure className="bg-white w-[280px] md:w-[300px] lg:h-[680px] flex flex-col border-2 ">
+        <figure className="bg-white w-[280px] md:w-[300px] lg:h-[680px] flex flex-col border-2 m-auto lg:m-0">
           {product.featuredImage?.url && (
             <img
-            src={product.featuredImage.url}
-            alt={product.title}
-            className="h-[200px] p-2 lg:h-[600px] m-auto"
+              src={product.featuredImage.url}
+              alt={product.title}
+              className="h-[200px] p-2 lg:h-[600px] m-auto"
             />
           )}
           <figcaption className="text-sm">
@@ -118,12 +114,6 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
             ) : (
               <p className="text-red-500 text-sm">Indisponible</p>
             )}
-
-            {/* {quantity > 0 ? (
-              <AddToCartButton variantId={variantId} className="m-auto" />
-            ) : (
-              <p className="text-red-500 text-sm">Indisponible</p>
-            )} */}
 
           </div>
         </div>
