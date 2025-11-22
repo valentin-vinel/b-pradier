@@ -37,7 +37,7 @@ export default function Home() {
                     « Les trois cuvées de notre Millésime 2005, en l'honneur... de leur 20ème anniversaire ! »
                 </Link>
                 <p  className="">
-                    Ce samedi 18 octobre 2025, avec un œnologue, nous avons procéder à « <em>L'Horizontale de nos 2005</em> ». <br /> Vous trouverez dans la page<Link href={'/millesimes'}> « Millésimes</Link> », les détails de cette dégustation. <span className="hidden md:inline"><br /></span>Concernant les bouteilles des « <em>Millésimes 2006 à 2010</em> », avec des amis, chaque fin de semaine, nous sélectionnons une année et choisissons une cuvée, pour... « <em>la contrôler</em> » ! Nous ne dégusterons pas les Millésimes 1999 à 1988, ce sont des pièces de collections marquant la fin du XX<span className="text-sm">ème</span> siècle et début du XXI<span className="text-sm">ème</span>!
+                    Ce samedi 18 octobre 2025, avec un œnologue, nous avons procéder à « <em>L'Horizontale de nos 2005</em> ». <br /> Vous trouverez dans la page<Link href={'/millesimes'}> « Millésimes</Link> », les détails de cette dégustation. <span className="hidden md:inline"><br /></span>Concernant les bouteilles des « <em>Millésimes 2006 à 2010</em> », avec des amis, chaque fin de semaine, nous sélectionnons une année et choisissons une cuvée, pour... « <em>la contrôler</em> » ! Nous ne dégusterons pas les Millésimes 1999 à 1988, ce sont des pièces de collections de la fin du XX<span className="text-base">ème</span> siècle et début du XXI<span className="text-sm">ème</span>!
                 </p>
                 <p className="my-2">
                     Chers clients amis des premières années, croyez à mes très bons souvenirs ; et à vous aussi, <br />
