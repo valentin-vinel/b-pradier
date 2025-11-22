@@ -44,7 +44,7 @@ export default function Offre() {
       <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
       <Header />
 
-      <main className="mt-10">
+      <main className="mt-6 lg:mt-10">
         <h2 className="text-center text-red font-bold text-2xl my-6">
           Horizontale Château d'Hugues Millésime 2005
         </h2>
@@ -55,7 +55,7 @@ export default function Offre() {
 
         <p className="text-center mb-4">L'offre de l'Horizontale 2005 présente un carton de 6 bouteilles :</p>
 
-        <div className="flex gap-6 flex-col lg:flex-row ">
+        <div className="flex gap-6 flex-col-reverse lg:flex-row-reverse ">
           {productsWithTotal.map(product => (
             <div
               key={product.id}
