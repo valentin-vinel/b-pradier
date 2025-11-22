@@ -60,7 +60,7 @@ export default function MillesimesMobile({ cuvees }: { cuvees: Cuvee[] }) {
           {selectedCuvee.products.map((product) => (
             <article key={product.id} className="flex flex-col gap-3 mb-4 items-center">
               <figure className="flex flex-col justify-center items-center relative">
-                <Image src={bouchon} alt="Image d'un bouchon de liège" className="max-w-[100px]" />
+                <Image src={bouchon} alt="Image d'un bouchon de liège" className={`max-w-[130px] transition-opacity ${product.stock === 0 ? "opacity-40 grayscale" : ""}`} />
                 <figcaption className={`lgd-bouchon text-3xl absolute h-fit m-auto translate-x-2 top-1 w-[140px] font-bold leading-3 ${product.stock === 0 ? "pointer-events-none text-gray-700" : "hover:cursor-pointer hover:text-[#6b1e1e]"}`}>
                   <Link href={`/millesimes/${product.handle}`}>
                     <span className="text-sm">VOIR</span>
