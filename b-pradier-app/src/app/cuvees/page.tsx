@@ -31,7 +31,7 @@ export default function Cuvees() {
                         <Image src={grandeReserveImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center mt-4">
                             <p className="max-w-[820px]">
-                                Son nom l'indique c'est un vin de garde, issu d'une longue cuvaison de trois semaines. Le mariage Syrah et Grenache, nous donne une couleur soutenue avec une palette d'arômes de petits fruits noirs et rouges. Nous avons choisi de ne pas l'élever en fut, pour lui conserver toute sa fraîcheur. Sa bouche riche en fruits confiturés et d'épices, accompagnera un magret de canard, des pièces de bœuf... même un poisson bleu !
+                                Son nom l'indique c'est un vin de garde, issu d'une longue cuvaison de trois semaines. Le mariage Syrah et Grenache, nous donne une couleur soutenue avec une palette d'arômes de petits fruits noirs et rouges. Nous avons choisi de ne pas l'élever en fût, pour lui conserver toute sa fraîcheur. Sa bouche riche en fruits confiturés et d'épices, accompagnera un magret de canard, des pièces de bœuf... même un poisson bleu !
                             </p>
                         </div>
                     </article>

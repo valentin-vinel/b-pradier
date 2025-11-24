@@ -14,7 +14,7 @@ export default function PanierClient() {
       <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
         <Header />
         <main className="text-center my-10">
-          <h2 className="text-2xl font-bold mb-4">Votre panier est vide</h2>
+          <h2 className="text-2xl font-bold mb-4">Votre panier est vide.</h2>
         </main>
         <Footer />
       </div>

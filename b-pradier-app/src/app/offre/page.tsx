@@ -90,7 +90,7 @@ export default function Offre() {
         </div>
 
           {/*  --- Ligne TOTAL --- */}
-          <p className="text-center my-4">Vin rouge. 13,5% vol. 75 cl. - Produit de France. Contient des sulfites.</p>
+          <p className="text-center my-4">Vin rouge. 13,5% vol. 75 cl. Produit de France. Contient des sulfites.</p>
           <p className="text-center my-4">Prix : <span className="line-through text-red">{product.variants?.edges[0].node.compareAtPriceV2?.amount} €</span> <span className="text-2xl font-bold">{product.variants?.edges[0].node.priceV2.amount} €</span></p>
           <p className="text-center">Profitez de 10% de remise sur cette offre</p>
 

@@ -31,17 +31,17 @@ export default function Home() {
                     Grâce à cela je peux vous proposer de mes vins, pendant encore 3 ans, mais uniquement par ce site ! 
                 </p> 
                 <p className="lg:[text-align-last:justify]">
-                    La raison est qu'il y a deux ans, j'ai fait un A V C. J'en ai réchappé, si ce n'est avec quelques séquelles, qui m'empêchent à ce jour, de vous recevoir... mais pas de vous lire ! Aussi je vous invite à profiter, pour vos repas de fêtes de Nöel, du nouvel an... et offrir, ou mettre dans votre cave, en particulier en 2025 : 
+                    La raison est qu'il y a deux ans, j'ai fait un A V C. J'en ai réchappé, si ce n'est avec quelques séquelles, qui m'empêchent à ce jour, de vous recevoir... mais pas de vous lire ! Aussi je vous invite à profiter, pour vos repas de fêtes de Noël, du nouvel an... et offrir, ou mettre dans votre cave, en particulier en 2025 : 
                 </p>
                 <Link href={'/offre'} className="lg:text-nowrap font-bold block text-center mb-2">
                     « Les trois cuvées de notre Millésime 2005, en l'honneur... de leur 20ème anniversaire ! »
                 </Link>
                 <p  className="">
-                    Ce samedi 18 octobre 2025, avec un œnologue, nous avons procéder à « <em>L'Horizontale de nos 2005</em> ». <br /> Vous trouverez dans la page<Link href={'/millesimes'}> « Millésimes</Link> », les détails de cette dégustation. <span className="hidden md:inline"><br /></span>Concernant les bouteilles des « <em>Millésimes 2006 à 2010</em> », avec des amis, chaque fin de semaine, nous sélectionnons une année et choisissons une cuvée, pour... « <em>la contrôler</em> » ! Nous ne dégusterons pas les Millésimes 1999 à 1988, ce sont des pièces de collections marquant la fin du XXème... début du XXIème !
+                    Ce samedi 18 octobre 2025, avec un œnologue, nous avons procédé à « <em>L'Horizontale de nos 2005</em> ». <br /> Vous trouverez dans la page<Link href={'/millesimes'}> « Millésimes</Link> », les détails de cette dégustation. <span className="hidden md:inline"><br /></span>Concernant les bouteilles des « <em>Millésimes 2006 à 2010</em> », avec des amis, chaque fin de semaine, nous sélectionnons une année et choisissons une cuvée, pour... « <em>la contrôler</em> » ! Nous ne dégusterons pas les Millésimes 1999 à 1988, ce sont des pièces de collections marquant la fin du XXème... début du XXIème !
                 </p>
                 <p className="my-2">
                     Chers clients amis des premières années, croyez à mes très bons souvenirs ; et à vous aussi, <br />
-                    Madame, Monsieur, qui allait découvrir nos vins sans les connaître... À très bientôt de vous lire !
+                    Madame, Monsieur, qui allez découvrir nos vins sans les connaître... À très bientôt de vous lire !
                 </p>
                 <p>Bernard Pradier</p>
 

@@ -30,7 +30,7 @@ export default function Histoire() {
                         <p className="lg:[text-align-last:justify]">
                             Un soir, où nous recevions des amateurs de vin, j'ai ouvert une bouteille de mon père, de 20 ans d'âge. Il « <em>faisait son vin</em> », pour la consommation  familiale et « <em>se faire plaisir !</em> ». Tout était artisanal : pas de contrôle œnologique, bouteilles et bouchons achetés à la droguerie... <br /> 
                             Le résultat était au « <em>petit bonheur la chance</em> », mais la magie du terroir avait déjà lieu ! <span className="hidden lg:inline"><br /></span>
-                            Ils me dirent en dégustant: « <em>Qu'est ce que vous attendez pour faire votre vin !</em> ». L'idée germa. <span className="hidden lg:inline"><br /></span>
+                            Ils me dirent en dégustant: « <em>Qu'est-ce que vous attendez pour faire votre vin !</em> ». L'idée germa. <span className="hidden lg:inline"><br /></span>
                             Peu de temps après Sylviane, mon épouse, me dit: « <em>Si nous créions notre cave !</em> ». C'est ainsi que nous avons pris la suite de nos parents. Au printemps commencèrent les travaux... 
                             <br /> Et, en septembre, nous vendangions, puis vinifions notre premier Millésime... le 1988 !
                         </p>
