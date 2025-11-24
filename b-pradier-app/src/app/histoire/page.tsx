@@ -27,7 +27,7 @@ export default function Histoire() {
                     </figure>
                     <div>
                         <h2 className="text-red text-center my-2 text-2xl font-bold">- HISTORIQUE -</h2>
-                        <p className="lg:[text-align-last:justify]">
+                        <p className="text-center lg:text-justify lg:[text-align-last:justify]">
                             Un soir, où nous recevions des amateurs de vin, j'ai ouvert une bouteille de mon père, de 20 ans d'âge. Il « <em>faisait son vin</em> », pour la consommation  familiale et « <em>se faire plaisir !</em> ». Tout était artisanal : pas de contrôle œnologique, bouteilles et bouchons achetés à la droguerie... <br /> 
                             Le résultat était au « <em>petit bonheur la chance</em> », mais la magie du terroir avait déjà lieu ! <span className="hidden lg:inline"><br /></span>
                             Ils me dirent en dégustant: « <em>Qu'est-ce que vous attendez pour faire votre vin !</em> ». L'idée germa. <span className="hidden lg:inline"><br /></span>
@@ -40,7 +40,7 @@ export default function Histoire() {
                 <article className="flex flex-col-reverse gap-6 lg:gap-10 items-center lg:flex-row mb-10 mx-auto">
                     <div>
                         <h2 className="text-red text-center my-2 text-2xl font-bold">- TERROIR -</h2>
-                        <p className="">
+                        <p className="text-center lg:text-justify">
                             Exposées au flanc sud des collines du Massif d'Uchaux, arborées de pins, chênes, genévriers... Nos vignes bénéficiaient d'un terroir silico-calcaire, en Côtes du Rhône. Les vieux ceps, à petit rendement, étaient « taillés en gobelet » pour un meilleur ensoleillement. Les grappes, cueillies à la main, transportées en caisses, puis retriées sur table à la cave. S'en suivaient diverses cuvaisons pour donner des typicités « différentes et complémentaires », à chacune de nos trois cuvées de garde...
                         </p>
                     </div>
@@ -57,7 +57,7 @@ export default function Histoire() {
                     </figure>
                     <div className="max-w-[770px]">
                         <h2 className="text-red text-center my-2 text-2xl font-bold">- NOS TROIS CUVÉES DE GARDE -</h2>
-                        <p className="lg:[text-align-last:justify]">
+                        <p className="text-center lg:text-justify lg:[text-align-last:justify]">
                             ... <em>La Grande Réserve, La Cuvée Sylviane et L'Orée des Collines</em> dans les 23 années <span className="hidden lg:inline"><br /></span> que nous vous proposons, sont semblables car issues d'un même terroir, telles les membres d'une famille, et tout à la fois chaque Millésime de 1988 à 2010 est unique comme le sont leurs enfants !
                             Et donc différents dans leurs diversités aromatiques, dans leurs structures tanniques... leur harmonie d'ensemble. Mon épouse disait : <span className="hidden lg:inline"><br /></span>« <em>Ils sont vrais !</em> ». Cette expression leur convient à souhait, en effet c'est la personnalité qui importe avant tout dans un vin... tout comme chez une personne !
                         </p>
