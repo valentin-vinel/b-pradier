@@ -66,7 +66,7 @@ export default async function MillesimePage({ params }: { params: Promise<{ hand
             />
           )}
           <figcaption className="text-sm">
-            Photo non contractuelle. <br /> Vin rouge. {product.metafield?.value}% vol. 75 cl. <br />Product of France. Contient des sulfites.
+            Photo non contractuelle. <br /> Vin rouge. {product.appellation.value}. {product.vol.value}% vol. 75 cl. <br />Product of France. Contient des sulfites.
           </figcaption>
         </figure>
         

@@ -418,7 +418,11 @@ export async function getProductByHandle(handle: string) {
           url
           altText
         }
-        metafield(namespace: "custom", key: "vol") {
+        vol: metafield(namespace: "custom", key: "vol") {
+          value
+          type
+        }
+        appellation: metafield(namespace: "custom", key: "appellation") {
           value
           type
         }
