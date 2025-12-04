@@ -51,7 +51,7 @@ export default function Cuvees() {
                         <Image src={oreeImg} alt="Photo de l'entré de la cave" className="img-shadow m-auto w-80 md:w-[350px] md:h-[150px] -rotate-5"></Image>
                         <div className="flex flex-col justify-center items-center mt-4">
                             <p className="max-w-[820px] lg:[text-align-last:justify]">
-                                Son nom est dû à l'exposition d'une partie des vignes sur le flanc sud de nos Collines, <span className="hidden lg:inline"><br /></span>au terroir composé de grès siliceux et de grès calcaires. Il a obtenu en 2004 l'appellation <span className="lg:text-nowrap">« <em>Villages Massif d'Uchaux</em> »</span>. Assemblage identique à La Cuvée Sylviane, mais « <em>élevée en fûts</em> », lui donne une élégance, où se mêlent fruits noirs confiturés, notes de garrigue, d'épices douces... Sur viandes blanches, agneau, volailles, gibiers à plumes... et fromages!
+                                Son nom est dû à l'exposition d'une partie des vignes sur le flanc sud de nos Collines, <span className="hidden lg:inline"><br /></span>au terroir composé de grès siliceux et de grès calcaires. Il a obtenu en 2004 l'appellation <span className="lg:text-nowrap">« <em>Villages Massif d'Uchaux</em> »</span>. Assemblage identique à La Cuvée Sylviane, mais « <em>élevée en fûts</em> », lui donne une élégance, où se mêlent fruits noirs confiturés, notes de garrigue, d'épices douces... Sur viandes blanches, agneau, volailles, gibiers à plume... et fromages!
                             </p>
                         </div>
                     </article>
