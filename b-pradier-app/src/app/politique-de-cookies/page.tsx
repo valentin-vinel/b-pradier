@@ -3,7 +3,7 @@
 import Footer from "@/shared/Footer";
 import Header from "@/shared/Header";
 
-export default function PolitiqueConfidentialite() {
+export default function PolitiqueCookie() {
 
   return (
     <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">

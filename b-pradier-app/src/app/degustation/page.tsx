@@ -10,7 +10,7 @@ export const metadata = {
     "Choisissez la dégustation qui vous ressemble : trois expériences pensées pour explorer les millésimes rares de Bernard Pradier et comprendre la singularité de chaque cuvée.",
 };
 
-export default function Cuvees() {
+export default function Degustation() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
             <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>

@@ -4,7 +4,7 @@ import Header from "../../shared/Header";
 import bouteilles from "../../../public/millesimes/bouteilles-2.png"
 import Footer from "@/shared/Footer";
 
-export default function Cuvees() {
+export default function Horizontale() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-3 lg:px-0">
             <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>

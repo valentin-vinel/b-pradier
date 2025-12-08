@@ -6,11 +6,13 @@
         "dev": "next dev --turbopack",
         "build": "next build --turbopack",
         "start": "next start",
+        "postbuild": "next-sitemap",
         "lint": "biome check",
         "format": "biome format --write"
     },
     "dependencies": {
         "next": "^15.5.7",
+        "next-sitemap": "^4.2.3",
         "react": "^19.1.2",
         "react-dom": "^19.1.2"
     },

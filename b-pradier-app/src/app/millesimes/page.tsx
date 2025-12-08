@@ -1,5 +1,3 @@
-// 'use client'
-
 import { getCuvees } from "@/lib/shopify";
 import Header from "@/shared/Header";
 import bouchon from "../../../public/bouchon.png"
