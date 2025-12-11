@@ -5,9 +5,12 @@ export default function Footer() {
         <footer className="mt-8 py-2 text-center text-sm text-gray-700 md:mt-auto">
             <p className="p-2 border-t border-[#C5A572] text-gray-600"><em>L'abus d'alcool est dangereux pour la santé, à consommer avec modération.</em></p>
                 <div className="space-x-6 mb-2 flex flex-wrap justify-center ">
-                    {/* <Link href={'/'} className="">
+                    <Link href="https://www.facebook.com/BPChateaudhugues" target="_blank">
                         Facebook
-                    </Link> */}
+                    </Link>
+                    <Link href="https://www.instagram.com/bernard.pradier/" target="_blank">
+                        Instagram
+                    </Link>
                     <Link href={'/mentions-legales'} className="text-nowrap">
                         Mentions légales
                     </Link>
