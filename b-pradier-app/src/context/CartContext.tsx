@@ -20,28 +20,45 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartLine[]>([]);
 
   useEffect(() => {
-    const init = async () => {
-        let id = localStorage.getItem("cartId");
-        if (!id) {
-        const cart = await createCart();
-        id = cart.id;
-        localStorage.setItem("cartId", id);
-        }
-        setCartId(id);
+      const initCart = async () => {
+      let currentCartId = localStorage.getItem("cartId");
 
-        // ⚡️ Récupérer les items existants du panier
-        if (id) {
-        const existingItems = await fetchCart(id);
-        setItems(existingItems);
-        }
+      if (!currentCartId) {
+        // Pas de cartId → créer un nouveau panier
+        const newCart = await createCart();
+        currentCartId = newCart.id;
+        localStorage.setItem("cartId", currentCartId);
+        setCartId(currentCartId);
+        setItems([]);
+        console.log("Nouveau panier créé au chargement du site :", currentCartId);
+        return;
+      }
+
+      // Vérifier si le panier existe encore côté Shopify
+      const existingItems = await fetchCart(currentCartId);
+      if (!existingItems || existingItems.length === 0) {
+        console.warn("Cart expired, creating a new one on site load");
+        const newCart = await createCart();
+        currentCartId = newCart.id;
+        localStorage.setItem("cartId", currentCartId);
+        setCartId(currentCartId);
+        setItems([]);
+        console.log("🔄 Panier expiré recréé lors de l'ajout :", currentCartId);
+        return;
+      }
+
+      // Panier existant valide → mettre à jour le state
+      setCartId(currentCartId);
+      setItems(existingItems);
     };
-    init();
+
+    initCart();
     }, []);
 
   const addItem = async (variantId: string, quantity = 1) => {
     if (!cartId) return;
     const updatedCart = await addToCart(cartId, variantId, quantity);
-    setItems(updatedCart.lines.edges.map(e => e.node));
+    setItems(updatedCart.lines.edges.map(e => e.node) || []);
   };
 
   const removeItem = async (lineId: string) => {
