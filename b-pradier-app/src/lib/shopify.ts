@@ -208,6 +208,9 @@ export async function createCart(): Promise<{ id: string }> {
 
 // Ajout un produit au panier
 export async function addToCart(cartId: string, variantId: string, quantity = 1): Promise<Cart> {
+  const existingCartRaw = await fetchCart(cartId);
+  const existingCart = existingCartRaw || [];
+
   const query = `
     mutation cartLinesAdd($cartId: ID!, $lines: [CartLineInput!]!) {
       cartLinesAdd(cartId: $cartId, lines: $lines) {
@@ -250,7 +253,30 @@ export async function addToCart(cartId: string, variantId: string, quantity = 1)
   };
 
   const data = await fetchFromShopify<{ cartLinesAdd: { cart: Cart } }>(query, variables);
-  return data.cartLinesAdd.cart;
+  const addedCart = data.cartLinesAdd.cart;
+
+  const mergedLinesMap: Record<string, any> = {};
+
+  existingCart.forEach((line: any) => {
+    mergedLinesMap[line.merchandise.id] = { ...line };
+  });
+
+  addedCart.lines.edges.forEach((edge: any) => {
+    const merchId = edge.node.merchandise.id;
+    if (mergedLinesMap[merchId]) {
+      // Si déjà présent, incrémente la quantité
+      mergedLinesMap[merchId].quantity = edge.node.quantity;
+    } else {
+      mergedLinesMap[merchId] = { ...edge.node };
+    }
+  });
+
+  return {
+    id: addedCart.id,
+    lines: {
+      edges: Object.values(mergedLinesMap).map(node => ({ node })),
+    },
+  };
 }
 
 // Modification d'un produit du panier (quantité)
@@ -371,7 +397,13 @@ export async function fetchCart(cartId: string) {
     }
   `;
   const variables = { cartId };
-  const data = await fetchFromShopify<{ cart: { id: string; lines: { edges: any[] } } }>(query, variables);
+  const data = await fetchFromShopify<{ cart: { id: string; lines: { edges: any[] } } | null }>(query, variables);
+
+  if (!data.cart) {
+    console.warn("Cart not found or expired", cartId);
+    return [];
+  }
+
   return data.cart.lines.edges.map(e => e.node);
 }
 
