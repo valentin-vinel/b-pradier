@@ -17,9 +17,9 @@ export default function Presse() {
       <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
       <Header />
 
-        <h2 className="text-xl lg:text-2xl text-center text-red font-bold my-8">LES CHÂTEAU D'HUGUES MILLÉSIMES 1988 À 2010</h2>
+        <h2 className="text-xl lg:text-2xl text-center text-red font-bold my-8"> REVUE DE PRESSE - LES CHÂTEAU D'HUGUES MILLÉSIMES 1988 À 2010</h2>
         
-        <div className="flex justify-between">
+        <div className="flex justify-between text-lg">
             <PresseGR />
 
             <PresseCS />
