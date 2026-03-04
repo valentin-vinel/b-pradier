@@ -99,7 +99,7 @@ export default function PresseGR() {
                 <Image src={grandeReserveImg} alt="Image de l'étiquette de La Grande Réserve" className="img-shadow m-auto w-80 -rotate-5 my-12 max-w-[300px]"></Image>
                 
                 {millesimes.map((millesime) => (
-                    <article className="border-b pb-2 mb-2">
+                    <article className="border p-2 mb-2" key={millesime.title}>
                         <h3 className="text-secondary text-center mb-2">
                             <Link href={`millesimes/${millesime.slug}`} className="font-bold ">{millesime.title}</Link>
                         </h3>

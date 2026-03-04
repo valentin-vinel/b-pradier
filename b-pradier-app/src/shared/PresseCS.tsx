@@ -6,7 +6,7 @@ export default function PresseCS() {
   const millesimes = [
     {
         title: "La Cuvée Sylviane 2009",
-        description1: "uide Bettane & Desseauve 2015 «... Les différentes cuvées produites ont toutes une expression très droite et au toucher fin » Note 14/20.",
+        description1: "Guide Bettane & Desseauve 2015 «... Les différentes cuvées produites ont toutes une expression très droite et au toucher fin » Note 14/20.",
         description2: "",
         slug: "la-cuvee-sylviane-2009"
     },
@@ -29,7 +29,7 @@ export default function PresseCS() {
                 <Image src={cuveeSylvianeImg} alt="Image de l'étiquette de La Cuvée Sylviane" className="img-shadow m-auto w-80 -rotate-5 my-12 max-w-[300px]"></Image>
                 
                 {millesimes.map((millesime) => (
-                    <article className="border-b pb-2 mb-2">
+                    <article className="border p-2 mb-2"  key={millesime.title}>
                         <h3 className="text-secondary text-center mb-2">
                             <Link href={`millesimes/${millesime.slug}`} className="font-bold ">{millesime.title}</Link>
                         </h3>
