@@ -96,21 +96,21 @@ export default function PresseGR() {
 
   return (
     <div className="flex flex-col max-w-1/3 px-2 gap-6">
-                <Image src={grandeReserveImg} alt="Image de l'étiquette de La Grande Réserve" className="img-shadow m-auto w-80 -rotate-5 my-12 max-w-[300px]"></Image>
+        <Image src={grandeReserveImg} alt="Image de l'étiquette de La Grande Réserve" className="img-shadow m-auto w-80 -rotate-5 my-12 max-w-[300px]"></Image>
                 
-                {millesimes.map((millesime) => (
-                    <article className="border p-2 mb-2" key={millesime.title}>
-                        <h3 className="text-secondary text-center mb-2">
-                            <Link href={`millesimes/${millesime.slug}`} className="font-bold ">{millesime.title}</Link>
-                        </h3>
-                        <p className="mb-1">
-                             {millesime.description1}
-                        </p>
-                        <p>
+        {millesimes.reverse().map((millesime) => (
+            <article className="border p-2 mb-2" key={millesime.title}>
+                <h3 className="text-secondary text-center mb-2">
+                    <Link href={`millesimes/${millesime.slug}`} className="font-bold ">{millesime.title}</Link>
+                </h3>
+                <p className="mb-1">
+                    {millesime.description1}
+                </p>
+                <p>
                             {millesime.description2}
-                        </p>
-                    </article>
-                ))}
-            </div>
+                </p>
+            </article>
+        ))}
+    </div>
   )
 }
