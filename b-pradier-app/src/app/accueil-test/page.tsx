@@ -1,14 +1,14 @@
 "use client";
 import Image from "next/image";
-import accueilImg from "../../public/accueil/dessin-accueil.png";
-import bouchon from "../../public/accueil/dessin-bouchon.png"
+import accueilImg from "../../../public/accueil/dessin-accueil.png";
+import bouchon from "../../../public/accueil/dessin-bouchon.png"
 import Header from "@/shared/Header";
 import Footer from "@/shared/Footer";
 import Link from "next/link";
 
 export default function Home() {
     return (
-        <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-4 lg:px-0">
+        <div className="min-h-screen flex flex-col max-w-[1100px] m-auto px-4 lg:px-0">
             {/* <div className="fixed top-0 left-0 w-full h-full bg-[#72605e] z-[-1]"></div> */}
             <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
             <Header />
