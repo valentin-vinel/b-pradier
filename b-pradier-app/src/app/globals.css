@@ -34,37 +34,36 @@ body {
 }
 
 .text-primary {
-  font-family: var(--font-playfair);
+    font-family: var(--font-playfair);
 }
 
 .text-secondary {
-  font-family: var(--font-lora);
+    font-family: var(--font-lora);
 }
 
 .text-warning {
-  font-family: var(--font-caveat);
+    font-family: var(--font-caveat);
 }
 
 .text-cookie {
-  font-family: var(--font-playball);
+    font-family: var(--font-playball);
 }
 
 .text-red {
-  color: var(--color-title);
+    color: var(--color-title);
 }
 
 .text-col-bleu {
-  color: var(--color-text);
+    color: var(--color-text);
 }
 
 .bg-primary {
-  background-color: #6b1e1e;
+    background-color: #6b1e1e;
 }
 
 .semi-bld {
-  font-weight: 600;
+    font-weight: 600;
 }
-
 
 h5,
 h6 {
@@ -73,7 +72,10 @@ h6 {
     /* font-weight: 700; */
 }
 
-h4, h3, .lgd-bouchon, .title-millesime {
+h4,
+h3,
+.lgd-bouchon,
+.title-millesime {
     font-family: var(--font-playfair);
 }
 
@@ -88,37 +90,37 @@ a:hover {
 }
 
 .img-shadow {
-  box-shadow: -7px 10px 30px 0px rgba(0,0,0,0.8);
+    box-shadow: -7px 10px 30px 0px rgba(0, 0, 0, 0.8);
 }
 
 .img-etq {
-  width: auto;
-  height: auto;
+    width: auto;
+    height: auto;
 }
 
 .border-article {
-  border: 2px solid #6b1e1e;
+    border: 2px solid #6b1e1e;
 }
 
 .bg-total-cave {
-  background: radial-gradient(circle, #FFFBEB 0%, #331b05 80%, #020203 100%, #030303 100%);
+    background: radial-gradient(circle, #fffbeb 0%, #331b05 80%, #020203 100%, #030303 100%);
 }
 
 .border-img {
-  border: 6px solid #D5BFA7;
+    border: 6px solid #d5bfa7;
 }
 
 .border-bouteille {
-  border: 5px solid rgb(0, 0, 58);
+    border: 5px solid rgb(0, 0, 58);
 }
 
 .ardoise-shadow {
-  box-shadow: -6px 8px 5px 0px rgba(0,0,0,0.59);
+    box-shadow: -6px 8px 5px 0px rgba(0, 0, 0, 0.59);
 }
 
 .product-description {
-  all: unset;
-  display: block;
-  color: inherit;
-  font: inherit;
+    all: unset;
+    display: block;
+    color: inherit;
+    font: inherit;
 }

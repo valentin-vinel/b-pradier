@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import accueilImg from "../../public/accueil/dessin-accueil.png";
-import bouchon from "../../public/accueil/dessin-bouchon.png"
+import bouchon from "../../public/accueil/dessin-bouchon.png";
 import Header from "@/shared/Header";
 import Footer from "@/shared/Footer";
 import Link from "next/link";
@@ -21,26 +21,22 @@ export default function Home() {
             </figure>
 
             <main className="text-center md:text-start lg:text-justify whitespace-pre-line m-auto md:mt-2 md:mb-12 max-w-[990px]">
-                <h3 className="mt-4 inline-block text-secondary">
-                    Le domaine viticole du Château d'Hugues a cessé d'exister... Il est entré dans la légende !
-                </h3>
+                <h3 className="mt-4 inline-block text-secondary">Le domaine viticole du Château d'Hugues a cessé d'exister... Il est entré dans la légende !</h3>
                 <p className="lg:[text-align-last:justify]">
                     Bien heureusement, depuis sa création, nous conservions chaque année, des bouteilles de vin de nos trois cuvées de grandes gardes, des <em>Millésimes rares de 1988 jusqu'à 2010</em>, constituant ainsi un « <em>petit trésor</em> » ...
                 </p>
-                <p>
-                    Aussi grâce à cela je peux vous proposer encore des Château d'Hugues, mais uniquement par ce site ! 
-                </p> 
+                <p>Aussi grâce à cela je peux vous proposer encore des Château d'Hugues, mais uniquement par ce site !</p>
                 <p className="">
-                    La raison est qu'il y aura en mai trois ans, j'ai fait un A V C... J'en ai réchappé, mais avec quelques séquelles, qui m'empêchent à ce jour, de vous recevoir... mais pas de vous lire ! Aussi, je vous invite à profiter encore, pour vos repas de fêtes, pour offrir, ou mettre dans votre cave. Et tout particulièrement cette année :
+                    La raison est qu'il y aura en mai trois ans, j'ai fait un A V C... J'en ai réchappé, mais avec quelques séquelles, qui m'empêchent à ce jour, de vous recevoir... mais pas de vous lire ! Aussi, je vous invite à profiter encore, pour vos repas de fêtes, pour offrir, ou mettre dans votre cave. Et tout
+                    particulièrement cette année :
                 </p>
-                <Link href={'/offre'} className="lg:text-nowrap font-bold block text-center my-2">
+                <Link href={"/offre"} className="lg:text-nowrap font-bold block text-center my-2">
                     Les trois cuvées du Millésime 2006, en promotion du fait de leur... 20ème anniversaire !
                 </Link>
-                <p  className="">
-                    De plus nous maintenons les vins du Millésime 2005 au même tarif que l'année dernière, car notre site a été ouvert en décembre dernier.
-                </p>
+                <p className="">De plus nous maintenons les vins du Millésime 2005 au même tarif que l'année dernière, car notre site a été ouvert en décembre dernier.</p>
                 <p>
-                    Comme l'année dernière, avec un ami œnologue, nous allons procéder ce mois de mars, à <em className="lg:text-nowrap">« L'Horizontale de nos cuvées 2006 »</em>. Vous trouverez prochainement, dans la page <Link href={'/millesimes'}>Millésimes</Link>, en détail cette dégustation. En ce qui concerne les Millésimes 2000 à 2010, avec des amis, chaque fin de semaine, nous sélectionnons une année parmis lesquels nous choisissons une cuvée, pour la... « <em>contrôler</em> » !
+                    Comme l'année dernière, avec un ami œnologue, nous allons procéder ce mois de mars, à <em className="lg:text-nowrap">« L'Horizontale de nos cuvées 2006 »</em>. Vous trouverez prochainement, dans la page <Link href={"/millesimes"}>Millésimes</Link>, en détail cette dégustation. En ce qui concerne les
+                    Millésimes 2000 à 2010, avec des amis, chaque fin de semaine, nous sélectionnons une année parmis lesquels nous choisissons une cuvée, pour la... « <em>contrôler</em> » !
                 </p>
                 <p>
                     Et les bouteilles 1999 à 1988, Millésimes de la fin du XX<span className="text-base">ème</span> siècle, ce sont des pièces de collections.

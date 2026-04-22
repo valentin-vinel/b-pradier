@@ -1,13 +1,12 @@
 // "use client";
 import Image from "next/image";
 import Header from "../../shared/Header";
-import tableau from "../../../public/degustation/tableau-degustation.png"
+import tableau from "../../../public/degustation/tableau-degustation.png";
 import Footer from "@/shared/Footer";
 
 export const metadata = {
-  title: "Les dégustations",
-  description:
-    "Choisissez la dégustation qui vous ressemble : trois expériences pensées pour explorer les millésimes rares de Bernard Pradier et comprendre la singularité de chaque cuvée.",
+    title: "Les dégustations",
+    description: "Choisissez la dégustation qui vous ressemble : trois expériences pensées pour explorer les millésimes rares de Bernard Pradier et comprendre la singularité de chaque cuvée.",
 };
 
 export default function Degustation() {
@@ -18,24 +17,33 @@ export default function Degustation() {
             <Header />
 
             <main className="flex flex-col gap-4 mt-4 text-center lg:text-justify">
-                <h2 className="text-center text-red text-2xl font-bold">LES DÉGUSTATIONS <span className="text-nowrap">« EN</span> LIGNES... GÉOMÉTRIQUES »</h2>
+                <h2 className="text-center text-red text-2xl font-bold">
+                    LES DÉGUSTATIONS <span className="text-nowrap">« EN</span> LIGNES... GÉOMÉTRIQUES »
+                </h2>
                 <Image src={tableau} alt="Tableau représentant une dégustations autour d'une table." className="border-6 border-white md:max-w-[350px] m-auto mb-2" />
                 <p className="max-w-[840px] m-auto mb-4">
-                    Rassurez-vous on n'a pas, bien heureusement, inventé la dégustation du vin par Internet... Je vous propose 3 méthodes pour « <em>qu'en vrai et en direct</em> », si je peux ainsi m'exprimer, vous compreniez nos différentes cuvées aux quatre points communs. Qui sont, issus d'un seul domaine, d'un terroir identique, vinifiés par le même vigneron et des vins qui ne soient pas de l'année. Comme le disait mon père lorsqu'il ouvrait un vin, dans le temps les jours de fêtes, quand j'avais 20 ans : « <em>Il doit avoir au moins 7 années de vie en bouteille... car c'est l'âge de raison !</em> ». Elles n'ont pas pour but de se substituer à un cours d'œnologie, ni aux commentaires de sommeliers, mais sont complémentaires, pour saisir l'esprit des vins et peut-être aussi percevoir... l'âme du vin !
+                    Rassurez-vous on n'a pas, bien heureusement, inventé la dégustation du vin par Internet... Je vous propose 3 méthodes pour « <em>qu'en vrai et en direct</em> », si je peux ainsi m'exprimer, vous compreniez nos différentes cuvées aux quatre points communs. Qui sont, issus d'un seul domaine, d'un
+                    terroir identique, vinifiés par le même vigneron et des vins qui ne soient pas de l'année. Comme le disait mon père lorsqu'il ouvrait un vin, dans le temps les jours de fêtes, quand j'avais 20 ans : « <em>Il doit avoir au moins 7 années de vie en bouteille... car c'est l'âge de raison !</em> ».
+                    Elles n'ont pas pour but de se substituer à un cours d'œnologie, ni aux commentaires de sommeliers, mais sont complémentaires, pour saisir l'esprit des vins et peut-être aussi percevoir... l'âme du vin !
                 </p>
 
                 <div className="flex flex-col gap-12 my-10">
                     <section className="max-w-[825px] m-auto border p-4">
                         <h3 className="text-secondary text-red text-center mb-2">1 / 3 : LES HORIZONTALES</h3>
                         <p className="">
-                        Avec mes trois cuvées cette « Forme » de dégustation d'un même millésime, mais de cépages et modes de vinifications différents, vous cernerez ainsi l'incidence qu'ils ont sur leurs typicités pour les plus « <em>justes formules</em> » d'accords avec les mets. <span className="hidden lg:inline"><br /></span>Comme nous vous l'avons annoncé, en 2025, nous vous proposons une « <em>Horizontale de 20 ans d'âge… avec le 2005</em> » et pareillement en 2026, avec les 2006 !
+                            Avec mes trois cuvées cette « Forme » de dégustation d'un même millésime, mais de cépages et modes de vinifications différents, vous cernerez ainsi l'incidence qu'ils ont sur leurs typicités pour les plus « <em>justes formules</em> » d'accords avec les mets.{" "}
+                            <span className="hidden lg:inline">
+                                <br />
+                            </span>
+                            Comme nous vous l'avons annoncé, en 2025, nous vous proposons une « <em>Horizontale de 20 ans d'âge… avec le 2005</em> » et pareillement en 2026, avec les 2006 !
                         </p>
                     </section>
 
                     <section className="max-w-[800px] m-auto border p-4">
                         <h3 className="text-secondary text-red text-center mb-2">2 / 3 : LES VERTICALES</h3>
                         <p>
-                        Les dégustations d'une même cuvée. Cette fois-ci je vous propose avec La Grande Réserve sur deux ou trois millésimes impairs 2007, 2005 et 2001 ! <br />Vous vivrez ainsi son évolution au fil des années et remonterez le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille</em> ».
+                            Les dégustations d'une même cuvée. Cette fois-ci je vous propose avec La Grande Réserve sur deux ou trois millésimes impairs 2007, 2005 et 2001 ! <br />
+                            Vous vivrez ainsi son évolution au fil des années et remonterez le temps, « <em>pour revivre la genèse d'un vin... comme si l'on feuillettait un album photos de famille</em> ».
                         </p>
                     </section>
 

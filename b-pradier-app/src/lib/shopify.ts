@@ -4,25 +4,25 @@ const endpoint = `https://${process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN}/api/20
 const token = process.env.NEXT_PUBLIC_SHOPIFY_STOREFRONT_TOKEN;
 
 async function fetchFromShopify<T>(query: string, variables: Record<string, any> = {}): Promise<T> {
-  const res = await fetch(endpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      "X-Shopify-Storefront-Access-Token": token!,
-    },
-    body: JSON.stringify({ query, variables }),
-  });
+    const res = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-Shopify-Storefront-Access-Token": token!,
+        },
+        body: JSON.stringify({ query, variables }),
+    });
 
-  const data = await res.json();
-  if (data.errors) {
-    console.error(data.errors);
-    throw new Error("Shopify API error");
-  }
-  return data.data as T;
+    const data = await res.json();
+    if (data.errors) {
+        console.error(data.errors);
+        throw new Error("Shopify API error");
+    }
+    return data.data as T;
 }
 
 export async function getProducts(): Promise<ProductsResponse["products"]["edges"]> {
-  const query = `
+    const query = `
   {
     products(first: 20) {
       edges {
@@ -53,14 +53,12 @@ export async function getProducts(): Promise<ProductsResponse["products"]["edges
     }
   }`;
 
-  const data = await fetchFromShopify<ProductsResponse>(query);
-  return data.products.edges;
+    const data = await fetchFromShopify<ProductsResponse>(query);
+    return data.products.edges;
 }
 
-
-
 export async function getCuvees(): Promise<Record<string, CollectionWithProducts>> {
-  const query = `
+    const query = `
   {
     grandeReserve: collection(handle: "la-grande-reserve") {
       title
@@ -157,43 +155,41 @@ export async function getCuvees(): Promise<Record<string, CollectionWithProducts
     }
   }`;
 
-  const data = await fetchFromShopify<CuveesResponse>(query);
+    const data = await fetchFromShopify<CuveesResponse>(query);
 
-  // Fonction pour trier les produits par année décroissante
-  const sortProductsByYear = (productsEdges: { node: Product }[]) => {
-    return productsEdges
-      .map(({ node }) => {
-        const anneeCollection = node.collections.edges.find(edge =>
-          /\d{4}/.test(edge.node.title)
-        );
-        return {
-          ...node,
-          annee: anneeCollection ? parseInt(anneeCollection.node.title) : 0,
-        };
-      })
-      .sort((a, b) => b.annee! - a.annee!);
-  };
+    // Fonction pour trier les produits par année décroissante
+    const sortProductsByYear = (productsEdges: { node: Product }[]) => {
+        return productsEdges
+            .map(({ node }) => {
+                const anneeCollection = node.collections.edges.find((edge) => /\d{4}/.test(edge.node.title));
+                return {
+                    ...node,
+                    annee: anneeCollection ? parseInt(anneeCollection.node.title) : 0,
+                };
+            })
+            .sort((a, b) => b.annee! - a.annee!);
+    };
 
-  // Préparer les collections avec produits triés
-  return {
-    grandeReserve: {
-      title: data.grandeReserve.title,
-      products: sortProductsByYear(data.grandeReserve.products.edges),
-    },
-    sylviane: {
-      title: data.sylviane.title,
-      products: sortProductsByYear(data.sylviane.products.edges),
-    },
-    loree: {
-      title: data.loree.title,
-      products: sortProductsByYear(data.loree.products.edges),
-    },
-  };
+    // Préparer les collections avec produits triés
+    return {
+        grandeReserve: {
+            title: data.grandeReserve.title,
+            products: sortProductsByYear(data.grandeReserve.products.edges),
+        },
+        sylviane: {
+            title: data.sylviane.title,
+            products: sortProductsByYear(data.sylviane.products.edges),
+        },
+        loree: {
+            title: data.loree.title,
+            products: sortProductsByYear(data.loree.products.edges),
+        },
+    };
 }
 
 // Création d'un panier
 export async function createCart(): Promise<{ id: string }> {
-  const query = `
+    const query = `
     mutation {
       cartCreate {
         cart {
@@ -202,16 +198,16 @@ export async function createCart(): Promise<{ id: string }> {
       }
     }
   `;
-  const data = await fetchFromShopify<{ cartCreate: { cart: { id: string } } }>(query);
-  return data.cartCreate.cart;
+    const data = await fetchFromShopify<{ cartCreate: { cart: { id: string } } }>(query);
+    return data.cartCreate.cart;
 }
 
 // Ajout un produit au panier
 export async function addToCart(cartId: string, variantId: string, quantity = 1): Promise<Cart> {
-  const existingCartRaw = await fetchCart(cartId);
-  const existingCart = existingCartRaw || [];
+    const existingCartRaw = await fetchCart(cartId);
+    const existingCart = existingCartRaw || [];
 
-  const query = `
+    const query = `
     mutation cartLinesAdd($cartId: ID!, $lines: [CartLineInput!]!) {
       cartLinesAdd(cartId: $cartId, lines: $lines) {
         cart {
@@ -247,41 +243,41 @@ export async function addToCart(cartId: string, variantId: string, quantity = 1)
     }
   `;
 
-  const variables = {
-    cartId,
-    lines: [{ merchandiseId: variantId, quantity }],
-  };
+    const variables = {
+        cartId,
+        lines: [{ merchandiseId: variantId, quantity }],
+    };
 
-  const data = await fetchFromShopify<{ cartLinesAdd: { cart: Cart } }>(query, variables);
-  const addedCart = data.cartLinesAdd.cart;
+    const data = await fetchFromShopify<{ cartLinesAdd: { cart: Cart } }>(query, variables);
+    const addedCart = data.cartLinesAdd.cart;
 
-  const mergedLinesMap: Record<string, any> = {};
+    const mergedLinesMap: Record<string, any> = {};
 
-  existingCart.forEach((line: any) => {
-    mergedLinesMap[line.merchandise.id] = { ...line };
-  });
+    existingCart.forEach((line: any) => {
+        mergedLinesMap[line.merchandise.id] = { ...line };
+    });
 
-  addedCart.lines.edges.forEach((edge: any) => {
-    const merchId = edge.node.merchandise.id;
-    if (mergedLinesMap[merchId]) {
-      // Si déjà présent, incrémente la quantité
-      mergedLinesMap[merchId].quantity = edge.node.quantity;
-    } else {
-      mergedLinesMap[merchId] = { ...edge.node };
-    }
-  });
+    addedCart.lines.edges.forEach((edge: any) => {
+        const merchId = edge.node.merchandise.id;
+        if (mergedLinesMap[merchId]) {
+            // Si déjà présent, incrémente la quantité
+            mergedLinesMap[merchId].quantity = edge.node.quantity;
+        } else {
+            mergedLinesMap[merchId] = { ...edge.node };
+        }
+    });
 
-  return {
-    id: addedCart.id,
-    lines: {
-      edges: Object.values(mergedLinesMap).map(node => ({ node })),
-    },
-  };
+    return {
+        id: addedCart.id,
+        lines: {
+            edges: Object.values(mergedLinesMap).map((node) => ({ node })),
+        },
+    };
 }
 
 // Modification d'un produit du panier (quantité)
 export async function updateCartLine(cartId: string, lineId: string, quantity: number) {
-  const query = `
+    const query = `
     mutation cartLinesUpdate($cartId: ID!, $lines: [CartLineUpdateInput!]!) {
       cartLinesUpdate(cartId: $cartId, lines: $lines) {
         cart {
@@ -312,17 +308,17 @@ export async function updateCartLine(cartId: string, lineId: string, quantity: n
       }
     }
   `;
-  const variables = {
-    cartId,
-    lines: [{ id: lineId, quantity }],
-  };
-  const data = await fetchFromShopify<{ cartLinesUpdate: { cart: Cart } }>(query, variables);
-  return data.cartLinesUpdate.cart;
+    const variables = {
+        cartId,
+        lines: [{ id: lineId, quantity }],
+    };
+    const data = await fetchFromShopify<{ cartLinesUpdate: { cart: Cart } }>(query, variables);
+    return data.cartLinesUpdate.cart;
 }
 
 // Suppression d'un produit du panier
 export async function removeFromCart(cartId: string, lineId: string): Promise<Cart> {
-  const query = `
+    const query = `
     mutation cartLinesRemove($cartId: ID!, $lineIds: [ID!]!) {
       cartLinesRemove(cartId: $cartId, lineIds: $lineIds) {
         cart {
@@ -354,17 +350,17 @@ export async function removeFromCart(cartId: string, lineId: string): Promise<Ca
     }
   `;
 
-  const variables = {
-    cartId,
-    lineIds: [lineId],
-  };
+    const variables = {
+        cartId,
+        lineIds: [lineId],
+    };
 
-  const data = await fetchFromShopify<{ cartLinesRemove: { cart: Cart } }>(query, variables);
-  return data.cartLinesRemove.cart;
+    const data = await fetchFromShopify<{ cartLinesRemove: { cart: Cart } }>(query, variables);
+    return data.cartLinesRemove.cart;
 }
 
 export async function fetchCart(cartId: string) {
-  const query = `
+    const query = `
     query getCart($cartId: ID!) {
       cart(id: $cartId) {
         id
@@ -396,19 +392,19 @@ export async function fetchCart(cartId: string) {
       }
     }
   `;
-  const variables = { cartId };
-  const data = await fetchFromShopify<{ cart: { id: string; lines: { edges: any[] } } | null }>(query, variables);
+    const variables = { cartId };
+    const data = await fetchFromShopify<{ cart: { id: string; lines: { edges: any[] } } | null }>(query, variables);
 
-  if (!data.cart) {
-    console.warn("Cart not found or expired", cartId);
-    return [];
-  }
+    if (!data.cart) {
+        console.warn("Cart not found or expired", cartId);
+        return [];
+    }
 
-  return data.cart.lines.edges.map(e => e.node);
+    return data.cart.lines.edges.map((e) => e.node);
 }
 
 export async function setAgeVerified(cartId: string) {
-  const mutation = `
+    const mutation = `
     mutation cartAttributesUpdate($cartId: ID!, $attributes: [AttributeInput!]!) {
       cartAttributesUpdate(cartId: $cartId, attributes: $attributes) {
         cart {
@@ -426,20 +422,20 @@ export async function setAgeVerified(cartId: string) {
     }
   `;
 
-  const variables = {
-    cartId,
-    attributes: [{ key: "age_verified", value: "true" }],
-  };
+    const variables = {
+        cartId,
+        attributes: [{ key: "age_verified", value: "true" }],
+    };
 
-  const data = await fetchFromShopify<CartAttributesUpdateResponse>(mutation, variables);
-  if (data.cartAttributesUpdate.userErrors.length > 0) {
-    console.error("Erreur mise à jour age_verified :", data.cartAttributesUpdate.userErrors);
-  }
-  return data.cartAttributesUpdate.cart.attributes;
+    const data = await fetchFromShopify<CartAttributesUpdateResponse>(mutation, variables);
+    if (data.cartAttributesUpdate.userErrors.length > 0) {
+        console.error("Erreur mise à jour age_verified :", data.cartAttributesUpdate.userErrors);
+    }
+    return data.cartAttributesUpdate.cart.attributes;
 }
 
 export async function getProductByHandle(handle: string) {
-  const query = `
+    const query = `
     query getProductByHandle($handle: String!) {
       product(handle: $handle) {
         id
@@ -507,25 +503,25 @@ export async function getProductByHandle(handle: string) {
     }
   `;
 
-  const data = await fetchFromShopify<{ product: any }>(query, { handle });
-  return data.product;
+    const data = await fetchFromShopify<{ product: any }>(query, { handle });
+    return data.product;
 }
 
 export async function getCheckoutUrl(cartId: string): Promise<string> {
-  const query = `
+    const query = `
     query getCart($cartId: ID!) {
       cart(id: $cartId) {
         checkoutUrl
       }
     }
   `;
-  const variables = { cartId };
-  const data = await fetchFromShopify<{ cart: { checkoutUrl: string } }>(query, variables);
-  return data.cart.checkoutUrl;
+    const variables = { cartId };
+    const data = await fetchFromShopify<{ cart: { checkoutUrl: string } }>(query, variables);
+    return data.cart.checkoutUrl;
 }
 
 export async function getProductsFrom2005() {
-  const query = `
+    const query = `
     query {
       collection(handle: "2005") {
         products(first: 3) {
@@ -555,29 +551,110 @@ export async function getProductsFrom2005() {
     }
   `;
 
-  const data = await fetchFromShopify<{
-    collection: {
-      products: {
-        edges: {
-          node: {
-            id: string;
-            title: string;
-            handle: string;
-            featuredImage: { url: string } | null;
-            variants: { edges: { node: any }[] };
-          };
-        }[];
-      };
-    };
-  }>(query);
+    const data = await fetchFromShopify<{
+        collection: {
+            products: {
+                edges: {
+                    node: {
+                        id: string;
+                        title: string;
+                        handle: string;
+                        featuredImage: { url: string } | null;
+                        variants: { edges: { node: any }[] };
+                    };
+                }[];
+            };
+        };
+    }>(query);
 
-  return data.collection.products.edges.map(e => e.node);
+    return data.collection.products.edges.map((e) => e.node);
 }
 
 export async function getCoffret2005(): Promise<CoffretProduct | null> {
-  const query = `
+    const query = `
+  query {
+    productByHandle(handle: "horizontale-2005-coffret-6-bouteilles") {
+      id
+      title
+      description
+      descriptionHtml
+      handle
+      featuredImage { url }
+      variants(first: 10) {
+        edges {
+          node {
+            id
+            title
+            priceV2 { amount currencyCode }
+            compareAtPriceV2 { amount currencyCode }
+            availableForSale
+            }
+            }
+            }
+            }
+            }
+            `;
+
+    const data = await fetchFromShopify<{ productByHandle: CoffretProduct }>(query);
+
+    // retourne le produit ou null si pas trouvé
+    return data.productByHandle || null;
+}
+
+export async function getProductsFrom2006() {
+    const query = `
+              query {
+                collection(handle: "2006") {
+                  products(first: 3) {
+                    edges {
+                      node {
+                        id
+                        title
+                        handle
+                        featuredImage {
+                          url
+                        }
+                        variants(first: 1) {
+                          edges {
+                            node {
+                              id
+                              priceV2 {
+                                amount
+                                currencyCode
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            `;
+
+    const data = await fetchFromShopify<{
+        collection: {
+            products: {
+                edges: {
+                    node: {
+                        id: string;
+                        title: string;
+                        handle: string;
+                        featuredImage: { url: string } | null;
+                        variants: { edges: { node: any }[] };
+                    };
+                }[];
+            };
+        };
+    }>(query);
+
+    return data.collection.products.edges.map((e) => e.node);
+}
+
+export async function getCoffret2006(): Promise<CoffretProduct | null> {
+    const query = `
     query {
-      productByHandle(handle: "horizontale-2005-coffret-6-bouteilles") {
+      productByHandle(handle: "horizontale-2006-coffret-6-bouteilles") {
         id
         title
         description
@@ -592,15 +669,15 @@ export async function getCoffret2005(): Promise<CoffretProduct | null> {
               priceV2 { amount currencyCode }
               compareAtPriceV2 { amount currencyCode }
               availableForSale
+              }
             }
           }
         }
       }
-    }
-  `;
+    `;
 
-  const data = await fetchFromShopify<{ productByHandle: CoffretProduct }>(query);
+    const data = await fetchFromShopify<{ productByHandle: CoffretProduct }>(query);
 
-  // retourne le produit ou null si pas trouvé
-  return data.productByHandle || null;
+    // retourne le produit ou null si pas trouvé
+    return data.productByHandle || null;
 }
