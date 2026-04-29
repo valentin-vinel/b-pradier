@@ -15,8 +15,8 @@ export default function Presse() {
             <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
             <Header />
 
-            <h2 className="text-xl lg:text-2xl text-center text-red font-bold mt-8">REVUE DE PRESSE</h2>
-            <p className="text-xl text-center text-red font-bold mb-8">LES CHÂTEAU D'HUGUES MILLÉSIMES 1988 À 2010</p>
+            <h2 className="text-xl lg:text-3xl text-center text-red font-bold mt-8">- REVUE PRESSE -</h2>
+            <p className="text-xl text-center text-red font-bold mb-8">« LES CHÂTEAU D'HUGUES MILLÉSIMES 1988 À 2010 »</p>
 
             <div className="flex justify-between text-lg">
                 <PresseGR />

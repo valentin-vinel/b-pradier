@@ -104,7 +104,7 @@ export default function OffreComponent() {
                 <Link href={"horizontale-2005"}>Découvrez les détails de la dégustation de cette Horizontale</Link>
             </div>
 
-            <p className="text-center mb-4">L'offre de l'Horizontale 2006 présente un carton de 6 bouteilles :</p>
+            <p className="text-center mb-4 text-3lg font-bold">Offre « Horizontale 2006 », proposée en un carton de 6 bouteilles :</p>
 
             <div className="flex gap-6 flex-col-reverse lg:flex-row-reverse ">
                 {productsWithTotal.map((product) => (
@@ -129,10 +129,10 @@ export default function OffreComponent() {
 
             {/*  --- Ligne TOTAL --- */}
             <p className="text-center my-4">Vin rouge. 13,5% vol. 75 cl. Produit de France. Contient des sulfites.</p>
+            <p className="text-center">Profitez de 10% de remise sur cette offre</p>
             <p className="text-center my-4">
                 Prix : <span className="line-through text-red">{Number(product.variants?.edges[0].node.compareAtPriceV2?.amount).toFixed(2)} €</span> <span className="text-2xl font-bold">{Number(product.variants?.edges[0].node.priceV2.amount).toFixed(2)} €</span>
             </p>
-            <p className="text-center">Profitez de 10% de remise sur cette offre</p>
 
             {/* --- Bouton unique pour ajouter les 6 bouteilles --- */}
             {product.variants?.edges?.length! > 0 && (

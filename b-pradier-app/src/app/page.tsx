@@ -35,15 +35,14 @@ export default function Home() {
                 </Link>
                 <p className="">De plus nous maintenons les vins du Millésime 2005 au même tarif que l'année dernière, car notre site a été ouvert en décembre dernier.</p>
                 <p>
-                    Comme l'année dernière, avec un ami œnologue, nous allons procéder ce mois de mars, à <em className="lg:text-nowrap">« L'Horizontale de nos cuvées 2006 »</em>. Vous trouverez prochainement, dans la page <Link href={"/millesimes"}>Millésimes</Link>, en détail cette dégustation. En ce qui concerne les
-                    Millésimes 2000 à 2010, avec des amis, chaque fin de semaine, nous sélectionnons une année parmis lesquels nous choisissons une cuvée, pour la... « <em>contrôler</em> » !
+                    Comme l'année dernière, avec un ami œnologue, nous avons procédé ce mois d'avril, à <em className="lg:text-nowrap">« L'Horizontale de nos cuvées 2006 »</em>. Vous trouverez, dans la page <Link href={"/millesimes"}>Millésimes</Link>, en détail cette dégustation. En ce qui concerne les Millésimes 2000 à 2010, avec des amis, chaque fin de semaine, nous sélectionnons une année parmis lesquels nous choisissons une cuvée, pour la... « <em>contrôler</em> » !
                 </p>
                 <p>
-                    Et les bouteilles 1999 à 1988, Millésimes de la fin du XX<span className="text-base">ème</span> siècle, ce sont des pièces de collections.
+                    Et les bouteilles 1999 à 1988, Millésimes de la fin du XX<span className="text-base">ème</span> siècle, sont des pièces de collections...
                 </p>
                 <p className="my-2">
-                    Chers clients amis des premières années, croyez à mes très bons souvenirs ; et à vous aussi, <br />
-                    Madame, Monsieur, qui allez découvrir nos vins sans les connaître... À très bientôt de vous lire !
+                    Chers clients amis des premières années, croyez en mes très bons souvenirs ; et à vous aussi, <br />
+                    Chères Madame, chèr Monsieur, qui allez découvrir nos vins sans les connaître... À très bientôt de vous lire !
                 </p>
                 <p>Bernard Pradier</p>
 
