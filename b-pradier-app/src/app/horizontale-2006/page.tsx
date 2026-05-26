@@ -85,10 +85,6 @@ export default function Horizontale() {
                         <p className="text-base">13.5% vol. Bouteille de 750 ml. Contient des sulfites. Product of France</p>
                     </figure>
 
-                    <p className="mb-4">
-                        Le guide des vins Gilbert & Gaillard 2009 lui avait attribué 86/100: « <em>... nez épanoui, mêlant fruits rouges confiturés, notes garrigues et d'épices. On apprécie son ampleur, souplesse. Les arômes sont nets et persistent agréablement</em> ».
-                    </p>
-
                     <h4 className="text-red text-secondary text-[22px]">- Aspect visuel -</h4>
                     <p className="mb-4">Belle ampleur, belle brillance. Couleur rouge grenat profond...</p>
 
