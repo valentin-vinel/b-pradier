@@ -80,8 +80,8 @@ export default function PresseOC() {
                             {millesime.title}
                         </Link>
                     </h3>
-                    <p className="mb-1">{millesime.description1}</p>
-                    <p>{millesime.description2}</p>
+                    <p className="mb-1 text-justify hyphens-auto">{millesime.description1}</p>
+                    <p className="text-justify hyphens-auto">{millesime.description2}</p>
                 </article>
             ))}
         </div>

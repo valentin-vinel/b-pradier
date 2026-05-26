@@ -36,8 +36,8 @@ export default function PresseCS() {
                             {millesime.title}
                         </Link>
                     </h3>
-                    <p className="mb-1">{millesime.description1}</p>
-                    <p>{millesime.description2}</p>
+                    <p className="mb-1 text-justify px-1">{millesime.description1}</p>
+                    <p className=" text-justify px-1">{millesime.description2}</p>
                 </article>
             ))}
         </div>
