@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import accueilImg from "../../public/accueil/dessin-accueil.png";
+import parution_vigneron from "../../public/accueil/article-vigneron-bp.webp";
 import bouchon from "../../public/accueil/dessin-bouchon.png";
 import Header from "@/shared/Header";
 import Footer from "@/shared/Footer";
@@ -9,7 +10,6 @@ import Link from "next/link";
 export default function Home() {
     return (
         <div className="min-h-screen flex flex-col max-w-[1200px] m-auto px-4 lg:px-0">
-            {/* <div className="fixed top-0 left-0 w-full h-full bg-[#72605e] z-[-1]"></div> */}
             <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
             <Header />
 
@@ -20,7 +20,7 @@ export default function Home() {
                 <figcaption className="text-sm text-center mt-4">Château d'Hugues et son vignoble au flanc des collines du Massif d'Uchaux</figcaption>
             </figure>
 
-            <main className="text-center md:text-start lg:text-justify whitespace-pre-line m-auto md:mt-2 md:mb-12 max-w-[990px]">
+            <main className="text-center md:text-start lg:text-justify whitespace-pre-line m-auto md:mt-2 md:mb-12 max-w-[1000px]">
                 <h3 className="mt-4 inline-block text-secondary">Le domaine viticole du Château d'Hugues a cessé d'exister... Il est entré dans la légende !</h3>
                 <p className="lg:[text-align-last:justify]">
                     Bien heureusement, depuis sa création, nous conservions chaque année, des bouteilles de vin de nos trois cuvées de grandes gardes, des <em>Millésimes rares de 1988 jusqu'à 2010</em>, constituant ainsi un « <em>petit trésor</em> » ...
@@ -47,6 +47,15 @@ export default function Home() {
                 <p>Bernard Pradier</p>
 
                 <Image src={bouchon} alt="Dessin d'un bouchon de liège du chateau d'Hugues" className="m-auto max-w-[150px] mt-6 lg:mt-0"></Image>
+
+                <div className="border-t m-14 md:m-20 border-[#6b1e1e]/50"></div>
+
+                <section className="mb-12">
+                    <h2 className="text-red text-center text-[22px] lg:mt-8 md:text-3xl  mb-6 md:mb-12">ACTUALITÉS</h2>
+                    <h3 className="text-secondary mb-6 text-center">Parution dans Le magazine du Vigneron, juin 2026.</h3>
+                    <Image src={parution_vigneron} alt="Extrait du magazine Le Vigneron" className="m-auto shadow-lg"></Image>
+                </section>
+
             </main>
 
             <Footer />
