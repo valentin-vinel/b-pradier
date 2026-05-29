@@ -52,7 +52,7 @@ export default function Home() {
 
                 <section className="mb-12">
                     <h2 className="text-red text-center text-[22px] lg:mt-8 md:text-3xl  mb-6 md:mb-12">ACTUALITÉS</h2>
-                    <h3 className="text-secondary mb-6 text-center">Parution dans Le magazine du Vigneron, juin 2026.</h3>
+                    <h3 className="text-secondary mb-6 text-center">Parution dans le Magazine du Vigneron des côtes du Rhône et de la vallée du Rhône, juin 2026.</h3>
                     <Image src={parution_vigneron} alt="Extrait du magazine Le Vigneron" className="m-auto shadow-lg"></Image>
                 </section>
 
