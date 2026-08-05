@@ -5,7 +5,6 @@ import parution_vigneron from "../../../public/accueil/article-vigneron-bp.webp"
 import bouchon from "../../../public/accueil/dessin-bouchon.png";
 import Header from "@/shared/Header";
 import Footer from "@/shared/Footer";
-import Link from "next/link";
 
 export default function HomeTest() {
     return (
@@ -13,29 +12,48 @@ export default function HomeTest() {
             <div className="fixed top-0 left-0 w-full h-full bg-[#FFFBEB]/40 z-[-1]"></div>
             <Header />
 
-            <h2 className="text-red text-center text-[22px] lg:mt-8 md:text-3xl">« LES MILLÉSIMES DE 1988... JUSQU'À 2010 DU CHATEAU D'HUGUES »</h2>
+            <h2 className="text-red text-center text-[22px] mb-2 lg:mt-8 md:text-3xl">
+                LES CHÂTEAU D'HUGUES 
+            </h2>
+            <p className="text-center text-red text-[22px]">« Millésimes rares fin du XXème et début du XXIème siècle »</p>
 
             <figure className="mx-auto mt-4 lg:mt-4">
                 <Image src={accueilImg} alt="Peinture du Château d'Hugues et son vignoble au flanc des collines du Massif d'Uchaux" className="w- rounded-lg img-shadow m-auto" />
                 <figcaption className="text-sm text-center mt-4">Château d'Hugues et son vignoble au flanc des collines du Massif d'Uchaux</figcaption>
             </figure>
 
-            <main className="text-center md:text-start lg:text-justify whitespace-pre-line m-auto md:mt-2 md:mb-12 max-w-[980px]">
-                <h3 className="mt-4 inline-block text-secondary">Le domaine viticole du Château d'Hugues a cessé d'exister de vivre, définitivement...</h3>
-                <p className="lg:[text-align-last:justify] mb-2">
-                    Ses vignes, ainsi que ses vins, sont entrés dans la légende ! 
-                    Mon successeur ayant déposé le bilan et mal entretenu les vignes, j'ai du me résoudre, la mort dans l'âme, à faire arracher leurs ceps.
+            <main className="text-center md:text-start lg:text-justify whitespace-pre-line m-auto md:mt-2 md:mb-12 max-w-[780px]">
+                {/* <h3 className="mt-4 inline-block text-secondary">Le domaine viticole du Château d'Hugues a cessé d'exister de vivre, définitivement...</h3> */}
+                <p className="my-4">Chers clients, chères Mesdames, chers Messieurs,</p>
+                {/* <p className="lg:[text-align-last:justify]"> */}
+                <p>
+                    Vous le savez, le domaine viticole du Château d'Hugues a cessé d'exister...
                 </p>
-                <p className="mb-2">
-                    Il me reste en souvenir des Millésimes rares à présent, en rouges, de 1988 jusqu'à 2010. En effet, depuis sa création, nous conservions avec mon épouse, chaque année, des bouteilles de vin de nos trois cuvées de grandes gardes.
-                    Grâce à cela, je viens vous proposer par ce site de profiter encore si vous êtes déjà clients, les bouteilles des trois cuvées de grande garde du Château d'Hugues !
+                <p className="">
+                    Il est devenu une tragique mais belle et grande légende !
                 </p>
-                <p className="mb-2">
-                    Après un A.V.C., quelques séquelles m'empêchent à ce jour, de vous recevoir... mais pas de vous lire ! Magrés tout, pour des raisons de santé, je dois d'ici fin 2027, je ne dirais pas liquider mais écouler mon stock d'environ 5000 cols.
+                <p className="mb-4">
+                    Mon successeur, avant de déposer le bilan, avait mal entretenu le vignoble pendant des années, j'ai du me résoudre aussi à arracher ses vieux ceps. Il reste en souvenir de lui, ses Millésimes rares à présent, de 1988 jusqu'à 2010.
+                </p>
+                <p className="mb-4">
+                    En effet, depuis son origine, nous conservions avec mon épouse, chaque année, des bouteilles de vin de nos trois cuvées de très grandes gardes.
+                    Grâce à cela, je viens vous proposer, par ce site uniquement, de profiter que vous soyez déjà clients ou pas encore, des derniers vins du Château d'Hugues !
+                    Après un A.V.C., quelques séquelles m'empêchent à ce jour, de vous recevoir...
+                    Pour ces raisons de santé, je dois d'ici fin 2027, écouler mes environ 5000 cols.
+                </p>
+
+                <p>
+                    « Millésimes 2010 à 2000, début du XXIème siècle » : Avec des amis, plusieurs fois par an, nous sélectionnons une année pour une dégustation de nos trois cuvées; Dont certains ont déjà fêté leurs 20ème anniversaire...
+                </p>
+                <p>
+                    Cette année, comme il se doit, c'est le Millésime 2006 qui est à l'honneur. Une belle année prête à déguster, à la différence entres autres avec le 2005, à peine ouvert.
+                </p>
+                <p>
+                    Par ce site je viens vous demander de m'y aider, avant de les proposer à des négociants en vin, en vous offrant des remises quantitatives :
                 </p>
 
                 {/* INSERTION DU TABLEAU DE REMISES */}
-                <div className="mt-6 mb-4 flex justify-center lg:justify-start lg:ml-10">
+                <div className="my-4 flex justify-center lg:justify-start lg:ml-10">
                     <table className="border-collapse text-center lg:w-160">
                         <tbody>
                             <tr className="border-b border-[#6b1e1e]/30">
@@ -62,40 +80,42 @@ export default function HomeTest() {
                     </table>
                 </div>
 
-                <p className="mb-6 border-l-2 border-[#6b1e1e]/40 pl-6 my-4 text-lg">
+                {/* <p className="mb-6 border-l-2 border-[#6b1e1e]/40 pl-6 my-4 text-lg">
                     Commande et tarif quantités supérieures, me contacter. <br />
                     Aucun envoie d'échantillons, même payant, n'est possible. <br />
                     À la demande, les dates de dégustations étalées de septembre à février sont d'ores et déjà prévues pour cinq dégustateurs inscrits. <br />
                     Sept vins, tarif 50€ par personne, le matin de 10 heures à 12 heures. <br />
                     Possibilité de vous réserver un restaurant tout proche ainsi que d'un hôtel.
+                </p> */}
+
+                <p className="mb-4">
+                    En carton de six bouteilles d'un même millésime et cuvée.
+                    Tarif quantités supérieures, me contacter.
+                    Vu les difficultés à me déplacer, aucun envoie d'échantillons même payant, n'est envisageable.
+                    Sur demande, les dates de matinées dégustations de septembre à février sont prévues, pour cinq acheteurs uniquement professionnels.
+                    Une <em>« Horizontale »</em> et une <em>« Verticale »</em> de sept vins, animées par un sommelier, le tarif est de 50€ oar personne.
+                    Possibilité de vous réserver une bonne table et proche du Château d'Hugues.
                 </p>
 
                 <p>
-                    La plus part ont récemment, si je peux m'exprimer ainsi, fêter leur 20ème anniversaire !
+                    Et pour les bouteilles « Millésimes 1999 à 1988, fun du XXème siècle », cela fait longtemps que nous en avons débouché... Ce sont des pièces de collection !
                 </p>
-                <p className="mb-2">
-                    Cette année, c'est le Millésime 2006 qui est en fête ! C'est un millésime prêt à déguster à la différence du 2005, qui est à peine ouvert et l'ayant célébré l'an passé.
+                <p className="mb-4">
+                    Ainsi, chers amis, clients, futurs clients, particuliers ou professionnels, je reste à votre « écoute » par mail, et vous présente mes sincères et cordiales salutations.
                 </p>
-                <p>
-                    Les « Millésimes 2000 à 2010 », avec des connaissances, plusieurs fois par an, nous sélectionnons une année pour faire une dégustation « Horizontale de nos 3 cuvées ».
+                <p className="mb-6">
+                    Bernard Pradier, fondateur et liquidateur du Château d'Hugues.
                 </p>
-                <p>
-                    Concernant les bouteilles de 1999 à 1988, Millésimes de la fin du XXème siècle, cela fait bien longtemps que nous n'en avons débouchées... Ce sont des pièces de collection ! Je reste à votre disposition pour vous conseiller par mail.
-                </p>
-                <p className="my-2">
-                    Chers clients, amis, futurs clients, particuliers ou professionnels, je vous présente mes plus sincères salutations.
-                </p>
-                <p>Bernard Pradier</p>
 
                 <Image src={bouchon} alt="Dessin d'un bouchon de liège du chateau d'Hugues" className="m-auto max-w-[150px] mt-6 lg:mt-0"></Image>
 
-                <div className="border-t m-14 md:m-20 border-[#6b1e1e]/50"></div>
+                {/* <div className="border-t m-14 md:m-20 border-[#6b1e1e]/50"></div>
 
                 <section className="mb-12">
                     <h2 className="text-red text-center text-[22px] lg:mt-8 md:text-3xl  mb-6 md:mb-12">ACTUALITÉS</h2>
                     <h3 className="text-secondary mb-6 text-center">Parution dans le Magazine du Vigneron des côtes du Rhône et de la vallée du Rhône, juin 2026.</h3>
                     <Image src={parution_vigneron} alt="Extrait du magazine Le Vigneron" className="m-auto shadow-lg"></Image>
-                </section>
+                </section> */}
 
             </main>
 
