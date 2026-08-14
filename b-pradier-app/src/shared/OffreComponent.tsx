@@ -101,10 +101,10 @@ export default function OffreComponent() {
             <h2 className="text-center text-red font-bold text-2xl my-6">Horizontale Château d'Hugues Millésime 2006</h2>
 
             <div className="text-center mb-10">
-                <Link href={"horizontale-2005"}>Découvrez les détails de la dégustation de cette Horizontale</Link>
+                <Link href={"horizontale-2006"}>Cliquez ici pour découvrir les détails de la dégustation.</Link>
             </div>
 
-            <p className="text-center mb-4 text-3lg font-bold">Offre « Horizontale 2006 », proposée en un carton de 6 bouteilles :</p>
+            <p className="text-center mb-4 text-3lg font-bold">Découverte « Horizontale 2006 », proposée en un carton de 6 bouteilles, et franco de port :</p>
 
             <div className="flex gap-6 flex-col-reverse lg:flex-row-reverse ">
                 {productsWithTotal.map((product) => (
@@ -129,7 +129,6 @@ export default function OffreComponent() {
 
             {/*  --- Ligne TOTAL --- */}
             <p className="text-center my-4">Vin rouge. 13,5% vol. 75 cl. Produit de France. Contient des sulfites.</p>
-            <p className="text-center">Profitez de 10% de remise sur cette offre</p>
             <p className="text-center my-4">
                 Prix : <span className="line-through text-red">{Number(product.variants?.edges[0].node.compareAtPriceV2?.amount).toFixed(2)} €</span> <span className="text-2xl font-bold">{Number(product.variants?.edges[0].node.priceV2.amount).toFixed(2)} €</span>
             </p>

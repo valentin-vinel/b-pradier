@@ -84,7 +84,8 @@ export default function PanierClient() {
                         );
                     })}
                     <li className="text-base text-end">
-                        <em>Prix de la livraison non-inclus. Défini lors de la validation de la commande.</em>
+                        <em>Prix de la livraison non-inclus. Défini lors de la validation de la commande.</em> <br />
+                        <em>Les remises quantitatives à partir de 36 bouteilles sont appliqués à l'étape suivante.</em>
                     </li>
                 </ul>
 

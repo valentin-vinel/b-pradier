@@ -35,7 +35,7 @@ export default function Degustation() {
                             <span className="hidden lg:inline">
                                 <br />
                             </span>
-                            Comme nous vous l'avons annoncé, en 2025, nous vous proposons une « <em>Horizontale de 20 ans d'âge… avec le 2005</em> » et pareillement en 2026, avec les 2006 !
+                            Comme nous vous l'avons annoncé, en 2026, nous vous proposons une « <em>Horizontale de 20 ans d'âge… avec le 2006</em> » !
                         </p>
                     </section>
 
